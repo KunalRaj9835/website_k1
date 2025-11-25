@@ -3,7 +3,6 @@
 import { useEffect, useState, useRef } from "react";
 import { Menu, X } from "lucide-react";
 
-// Arrow Component (uses your move/up.svg and move/down.svg)
 const Arrow = ({ isOpen }) => (
   <img
     src={isOpen ? "/move/up.svg" : "/move/down.svg"}
@@ -22,16 +21,13 @@ export default function Header() {
     const handleScroll = () => {
       setShowTop(window.scrollY <= 10);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const handleEnter = (menuName) => {
-    if (closeTimeoutRef.current) {
-      clearTimeout(closeTimeoutRef.current);
-      closeTimeoutRef.current = null;
-    }
+    if (closeTimeoutRef.current) clearTimeout(closeTimeoutRef.current);
+    closeTimeoutRef.current = null;
     setOpenMenu(menuName);
   };
 
@@ -43,6 +39,7 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 shadow bg-white">
+      
       {/* Top Bar */}
       <div
         className={`transition-all duration-300 overflow-hidden bg-[#f8fafc] border-red-500 border-b
@@ -62,40 +59,44 @@ export default function Header() {
       </div>
 
       {/* Navigation */}
-      <nav className="bg-white border-b">
+      <nav className="bg-white border-red-500 border-b">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          
+
           {/* Logo */}
-          <div className="flex items-center">
+          <a href="/" className="flex items-center">
             <img src="/logo.svg" alt="Logo" className="h-24 w-auto" />
-          </div>
+          </a>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-10 font-medium text-[#0e355d]">
 
-            <a href="/" className="hover:text-red-500">Home</a>
+            <a href="/#whyus" className="hover:text-red-500">Why Us</a>
+            <a href="/#industries" className="hover:text-red-500">Industry</a>
 
-            {/* ABOUT US */}
+            {/* TECHNOLOGY EXPERTISE */}
             <div 
               className="relative"
-              onMouseEnter={() => handleEnter("about")}
+              onMouseEnter={() => handleEnter("tech")}
               onMouseLeave={handleLeave}
             >
               <button className="hover:text-red-500 flex items-center gap-1">
-                About Us
-                <Arrow isOpen={openMenu === "about"} />
+                Technology Expertise
+                <Arrow isOpen={openMenu === "tech"} />
               </button>
 
-              <div className={`absolute left-0 mt-2 bg-white shadow-lg rounded p-4 w-44
+              <div className={`absolute left-0 mt-2 bg-white shadow-lg rounded p-4 w-64
                 transition-all duration-300 origin-top
-                ${openMenu === "about"
-                  ? "opacity-100 translate-y-0 max-h-40"
+                ${openMenu === "tech"
+                  ? "opacity-100 translate-y-0 max-h-96"
                   : "opacity-0 -translate-y-2 max-h-0 pointer-events-none"}
               `}
               >
-                <a href="/about" className="block py-2 hover:text-red-500">Who We Are</a>
-                <a href="/careers" className="block py-2 hover:text-red-500">Careers</a>
-                <a href="/blog" className="block py-2 hover:text-red-500">Blog</a>
+                <a href="/tech/cloud-analytics" className="block py-2 hover:text-red-500">Cloud & Analytics</a>
+                <a href="/tech/frameworks" className="block py-2 hover:text-red-500">Frameworks</a>
+                <a href="/tech/infrastructure" className="block py-2 hover:text-red-500">Infrastructure</a>
+                <a href="/tech/orchestration" className="block py-2 hover:text-red-500">Orchestration Platforms</a>
+                <a href="/tech/backend-engineering" className="block py-2 hover:text-red-500">Backend Engineering</a>
+                <a href="/tech/storage-databases" className="block py-2 hover:text-red-500">Storage & Databases</a>
               </div>
             </div>
 
@@ -120,43 +121,41 @@ export default function Header() {
                 <a href="/talent-intelligence" className="block py-2 hover:text-red-500">Talent Intelligence</a>
                 <a href="/talent-acquisition" className="block py-2 hover:text-red-500">Talent Acquisition</a>
                 <a href="/global-peo-service" className="block py-2 hover:text-red-500">Global PEO Service</a>
-                <a href="/rpo" className="block py-2 hover:text-red-500">Recruitment Process Outsourcing</a>
+                <a href="/rpo" className="block py-2 hover:text-red-500">RPO</a>
                 <a href="/executive-search" className="block py-2 hover:text-red-500">Executive Search</a>
               </div>
             </div>
 
-            {/* Scroll Links */}
-            <a href="/#whyus" className="hover:text-red-500">Why Keptel</a>
-            <a href="/#industries" className="hover:text-red-500">Industries</a>
-
-            {/* CLIENTS */}
+            {/* COMPANY */}
             <div 
               className="relative"
-              onMouseEnter={() => handleEnter("clients")}
+              onMouseEnter={() => handleEnter("company")}
               onMouseLeave={handleLeave}
             >
               <button className="hover:text-red-500 flex items-center gap-1">
-                Clients
-                <Arrow isOpen={openMenu === "clients"} />
+                Company
+                <Arrow isOpen={openMenu === "company"} />
               </button>
 
-              <div className={`absolute left-0 mt-2 bg-white shadow-lg rounded p-4 w-40 
+              <div className={`absolute left-0 mt-2 bg-white shadow-lg rounded p-4 w-44 
                 transition-all duration-300 origin-top
-                ${openMenu === "clients"
-                  ? "opacity-100 translate-y-0 max-h-32"
+                ${openMenu === "company"
+                  ? "opacity-100 translate-y-0 max-h-52"
                   : "opacity-0 -translate-y-2 max-h-0 pointer-events-none"}
               `}
               >
-                <a href="/case-study" className="block py-2 hover:text-red-500">Case Study</a>
+                <a href="/about" className="block py-2 hover:text-red-500">About Us</a>
+                <a href="/careers" className="block py-2 hover:text-red-500">Careers</a>
+                <a href="/case-study" className="block py-2 hover:text-red-500">Case Studies</a>
+                <a href="/blog" className="block py-2 hover:text-red-500">Blog</a>
               </div>
             </div>
 
-            <button className="bg-red-500 px-6 py-3 text-white rounded-full font-semibold hover:bg-red-700">
-              Speak To An Expert
-            </button>
+            {/* CONTACT */}
+            <a href="/contact-us" className="hover:text-red-500">Contact</a>
           </div>
 
-          {/* Hamburger Button */}
+          {/* Mobile Button */}
           <button
             className="md:hidden text-[#0e355d]"
             onClick={() => setMenuOpen(!menuOpen)}
@@ -165,63 +164,43 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Mobile Menu (Animated) */}
-        
-        {/* Mobile Menu (Animated) */}
+        {/* Mobile Menu */}
         <div
           className={`
             md:hidden bg-white overflow-hidden 
             transition-all duration-500 ease-in-out
-            ${menuOpen ? "max-h-[800px] py-6" : "max-h-0 py-0"}
+            ${menuOpen ? "max-h-[900px] py-6" : "max-h-0 py-0"}
           `}
         >
           <div className="flex flex-col px-6 gap-4 font-medium text-[#0e355d]">
 
-            {/* Home */}
-            <a
-              href="/"
-              className={`
-                hover:text-red-500 transform transition-all duration-500 
-                ${menuOpen ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"}
-              `}
-              style={{ transitionDelay: "0ms" }}
-            >
-              Home
-            </a>
+            <a href="/#whyus" className="hover:text-red-500">Why Us</a>
+            <a href="/#industries" className="hover:text-red-500">Industry</a>
 
-            {/* About Us Dropdown */}
-            <div
-              className={`
-                transform transition-all duration-500 
-                ${menuOpen ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"}
-              `}
-              style={{ transitionDelay: "70ms" }}
-            >
+            {/* Mobile Tech Expertise */}
+            <div>
               <button 
-                onClick={() => setOpenMenu(openMenu === "about-mobile" ? null : "about-mobile")}
+                onClick={() => setOpenMenu(openMenu === "tech-mobile" ? null : "tech-mobile")}
                 className="hover:text-red-500 flex items-center gap-1 w-full text-left"
               >
-                About Us
-                <Arrow isOpen={openMenu === "about-mobile"} />
+                Technology Expertise
+                <Arrow isOpen={openMenu === "tech-mobile"} />
               </button>
               <div className={`
                 overflow-hidden transition-all duration-300 pl-4
-                ${openMenu === "about-mobile" ? "max-h-40 mt-2" : "max-h-0"}
+                ${openMenu === "tech-mobile" ? "max-h-80 mt-2" : "max-h-0"}
               `}>
-                <a href="/about" className="block py-2 hover:text-red-500">Who We Are</a>
-                <a href="/careers" className="block py-2 hover:text-red-500">Careers</a>
-                <a href="/blog" className="block py-2 hover:text-red-500">Blog</a>
+                <a href="/tech/cloud-analytics" className="block py-2">Cloud & Analytics</a>
+                <a href="/tech/frameworks" className="block py-2">Frameworks</a>
+                <a href="/tech/infrastructure" className="block py-2">Infrastructure</a>
+                <a href="/tech/orchestration" className="block py-2">Orchestration Platforms</a>
+                <a href="/tech/backend-engineering" className="block py-2">Backend Engineering</a>
+                <a href="/tech/storage-databases" className="block py-2">Storage & Databases</a>
               </div>
             </div>
 
-            {/* Services Dropdown */}
-            <div
-              className={`
-                transform transition-all duration-500 
-                ${menuOpen ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"}
-              `}
-              style={{ transitionDelay: "140ms" }}
-            >
+            {/* Mobile Services */}
+            <div>
               <button 
                 onClick={() => setOpenMenu(openMenu === "services-mobile" ? null : "services-mobile")}
                 className="hover:text-red-500 flex items-center gap-1 w-full text-left"
@@ -231,74 +210,37 @@ export default function Header() {
               </button>
               <div className={`
                 overflow-hidden transition-all duration-300 pl-4
-                ${openMenu === "services-mobile" ? "max-h-96 mt-2" : "max-h-0"}
+                ${openMenu === "services-mobile" ? "max-h-80 mt-2" : "max-h-0"}
               `}>
-                <a href="/talent-intelligence" className="block py-2 hover:text-red-500">Talent Intelligence</a>
-                <a href="/talent-acquisition" className="block py-2 hover:text-red-500">Talent Acquisition</a>
-                <a href="/global-peo-service" className="block py-2 hover:text-red-500">Global PEO Service</a>
-                <a href="/rpo" className="block py-2 hover:text-red-500">Recruitment Process Outsourcing</a>
-                <a href="/executive-search" className="block py-2 hover:text-red-500">Executive Search</a>
+                <a href="/talent-intelligence" className="block py-2">Talent Intelligence</a>
+                <a href="/talent-acquisition" className="block py-2">Talent Acquisition</a>
+                <a href="/global-peo-service" className="block py-2">Global PEO Service</a>
+                <a href="/rpo" className="block py-2">RPO</a>
+                <a href="/executive-search" className="block py-2">Executive Search</a>
               </div>
             </div>
 
-            {/* Why Keptel */}
-            <a
-              href="/#whyus"
-              className={`
-                hover:text-red-500 transform transition-all duration-500 
-                ${menuOpen ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"}
-              `}
-              style={{ transitionDelay: "210ms" }}
-            >
-              Why Keptel
-            </a>
-
-            {/* Industries */}
-            <a
-              href="/#industries"
-              className={`
-                hover:text-red-500 transform transition-all duration-500 
-                ${menuOpen ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"}
-              `}
-              style={{ transitionDelay: "280ms" }}
-            >
-              Industries
-            </a>
-
-            {/* Clients Dropdown */}
-            <div
-              className={`
-                transform transition-all duration-500 
-                ${menuOpen ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"}
-              `}
-              style={{ transitionDelay: "350ms" }}
-            >
+            {/* Mobile Company */}
+            <div>
               <button 
-                onClick={() => setOpenMenu(openMenu === "clients-mobile" ? null : "clients-mobile")}
+                onClick={() => setOpenMenu(openMenu === "company-mobile" ? null : "company-mobile")}
                 className="hover:text-red-500 flex items-center gap-1 w-full text-left"
               >
-                Clients
-                <Arrow isOpen={openMenu === "clients-mobile"} />
+                Company
+                <Arrow isOpen={openMenu === "company-mobile"} />
               </button>
               <div className={`
                 overflow-hidden transition-all duration-300 pl-4
-                ${openMenu === "clients-mobile" ? "max-h-32 mt-2" : "max-h-0"}
+                ${openMenu === "company-mobile" ? "max-h-60 mt-2" : "max-h-0"}
               `}>
-                <a href="/case-study" className="block py-2 hover:text-red-500">Case Study</a>
+                <a href="/about" className="block py-2">About Us</a>
+                <a href="/careers" className="block py-2">Careers</a>
+                <a href="/case-study" className="block py-2">Case Studies</a>
+                <a href="/blog" className="block py-2">Blog</a>
               </div>
             </div>
 
-            {/* CTA Button */}
-            <button 
-              className={`
-                bg-red-500 px-6 py-3 text-white rounded-full font-semibold hover:bg-red-700
-                transform transition-all duration-500 mt-2
-                ${menuOpen ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"}
-              `}
-              style={{ transitionDelay: "420ms" }}
-            >
-              Speak To An Expert
-            </button>
+            <a href="/contact-us" className="hover:text-red-500">Contact</a>
 
           </div>
         </div>

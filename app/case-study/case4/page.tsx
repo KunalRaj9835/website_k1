@@ -3,8 +3,8 @@
 import ServiceHero from "@/components/ServiceHero";
 import Footer from "@/components/Footer";
 
-export default function CaseStudy4Page() {
-  const title = "Case Study : Innovative Fintech Startup";
+export default function CaseStudyPage() {
+  const title = "Case Study : Industrial Automation";
   const bg = "/services-bg.jpg";
 
   return (
@@ -12,42 +12,39 @@ export default function CaseStudy4Page() {
       <ServiceHero title={title} bg={bg} />
 
       <div className="max-w-6xl mx-auto px-6 py-20">
+
         <p className="text-xl font-semibold text-gray-800 mb-10">
-          Domain : <span className="font-normal">Financial Technology & Digital Payments</span>
+          Domain : <span className="font-normal">IoT, Robotics & Control Systems</span>
         </p>
 
         <div className="bg-gray-100 rounded-xl p-10 mb-10 shadow-sm">
           <h3 className="text-2xl font-semibold text-[#0e355d] mb-4">
             Problem Statement
           </h3>
+
           <p className="text-gray-700 leading-relaxed">
-            A fintech startup disrupting the digital payments space needed to 
-            rapidly build their core technology team while navigating strict 
-            regulatory requirements. They required engineers with expertise in 
-            payment gateways, blockchain technology, and financial compliance. 
-            The challenge was attracting top talent away from established financial 
-            institutions while competing with well-funded competitors in a hot 
-            talent market, all while maintaining confidentiality around their 
-            innovative payment solution.
+            A major industrial automation customer required engineers capable of
+            designing IoT-driven control systems, robotics, PLC programming, and
+            real-time embedded architectures. They struggled to source
+            specialists with deep experience across protocols and automation
+            frameworks.
           </p>
         </div>
 
         <div className="bg-gray-100 rounded-xl p-10 shadow-sm">
           <h3 className="text-2xl font-semibold text-[#0e355d] mb-4">
-            Keptal Global's Approach & Solution
+            Keptel Global's Approach & Solution
           </h3>
+
           <p className="text-gray-700 leading-relaxed">
-            Crafted a compelling narrative around the startup's vision and market 
-            opportunity to attract risk-taking innovators. Targeted professionals 
-            from banking, payment processors, and crypto companies seeking greater 
-            impact. Developed a confidential recruitment process with phased 
-            information disclosure to protect IP. Created technical challenges 
-            that showcased the interesting problems candidates would solve. 
-            Successfully built a 25-member team including blockchain developers, 
-            payment specialists, and compliance experts within four months, enabling 
-            the client to launch their MVP and secure Series A funding.
+            Keptel built a diverse engineering team proficient in industrial IoT,
+            embedded C/C++, RTOS, CAN, SPI, UART, and robotics platforms. The
+            specialists supported end-to-end solutions—covering architecture,
+            integration, and testing. The engagement improved automation
+            efficiency and enabled next-gen manufacturing capabilities.
           </p>
         </div>
+
       </div>
       <Footer />
     </div>

@@ -4,6 +4,14 @@ import { useEffect, useCallback, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Link from "next/link";
 import YellowButton from "./YellowButton";
+import Lottie from "lottie-react";
+
+// IMPORT LOTTIE FILES
+import Recruitment from "./lottie/Recruitment.json";          // Slide 1
+import AI_intelligence from "./lottie/AI_intelligence.json";  // Slide 2
+import Employee_Search from "./lottie/Employee_Search.json";  // Slide 3
+import Globe from "./lottie/Globe.json";                      // Slide 4
+import HR_process from "./lottie/HR_process.json";            // Slide 5
 
 export default function Carousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
@@ -14,35 +22,35 @@ export default function Carousel() {
       id: 1,
       title: "Talent Intelligence",
       text: "Achieving edge with actionable talent insights backed by strong market research by domain & location",
-      img: "/banner/Banner-images-01.svg",
+      animation: AI_intelligence,
       href: "/talent-intelligence",
     },
     {
       id: 2,
       title: "Talent Acquisition",
       text: "Identifying the right talent fit for your organization with Competitive advantages",
-      img: "/banner/Banner-images-02.svg",
+      animation: Employee_Search,
       href: "/talent-acquisition",
     },
     {
       id: 3,
       title: "Executive Search & Board Room Hiring",
       text: "Getting impactful leaders according to business and cultural needs",
-      img: "/banner/Banner-images-03.png",
+      animation: Recruitment,
       href: "/executive-search",
     },
     {
       id: 4,
       title: "Recruitment Process Outsourcing",
       text: "Data backed human approach to deliver exceptional results with cost & time efficiency.",
-      img: "/banner/Banner-images-04.svg",
+      animation: HR_process,
       href: "/rpo",
     },
     {
       id: 5,
       title: "Global PEO Service",
       text: "Building Remote Talent pool in India with all Legal compliances & people processes.",
-      img: "/banner/Banner-images-05.svg",
+      animation: Globe,
       href: "/global-peo-service",
     },
   ];
@@ -55,7 +63,7 @@ export default function Carousel() {
 
   useEffect(() => {
     if (!emblaApi) return;
-    const interval = setInterval(autoplay, 3000);
+    const interval = setInterval(autoplay, 10000);
     return () => clearInterval(interval);
   }, [emblaApi, autoplay]);
 
@@ -76,7 +84,6 @@ export default function Carousel() {
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="flex">
 
-          {/* SLIDES */}
           {SLIDES.map((slide) => (
             <div
               key={slide.id}
@@ -89,9 +96,13 @@ export default function Carousel() {
                 <YellowButton text="Know More" href={slide.href} />
               </div>
 
-              {/* RIGHT IMAGE */}
+              {/* RIGHT LOTTIE */}
               <div className="hidden md:flex justify-center">
-                <img src={slide.img} alt={slide.title} className="w-[480px]" />
+                <Lottie
+                  animationData={slide.animation}
+                  loop
+                  className="w-[300px] md:w-[380px] lg:w-[450px]"
+                />
               </div>
             </div>
           ))}

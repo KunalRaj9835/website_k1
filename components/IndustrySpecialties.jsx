@@ -11,68 +11,61 @@ export default function IndustrySpecialties() {
       </div>
 
       <p className="text-center text-gray-600 mb-10">
-        Mapping is Our DNA and Acquisition is our Expertise
+        Delivering Deep Domain Expertise Across High-Impact Industries
       </p>
 
-      {/* Smaller Cards Grid */}
-      {/* INDUSTRY CARD STYLE CASE STUDIES */}
-<section className="max-w-7xl mx-auto px-6 py-10">
+      {/* Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
+        <IndustryCard
+          title="IT Services & Digital Engineering"
+          description="Cloud, Data Engineering, AI/ML, Application Development, BI, and Enterprise Modernization."
+          icon="/case/case1i.svg"
+          href="/case-study/case1"
+          dark={true}
+        />
 
-  {/* Grid */}
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <IndustryCard
+          title="Automotive Engineering"
+          description="Embedded Systems, AUTOSAR, ECU Testing, ADAS, Functional Safety (ISO 26262), and IVI."
+          icon="/case/case2i.svg"
+          href="/case-study/case2"
+          dark={false}
+        />
 
-    <IndustryCard
-      title="Stealth Mode Bigdata Management Company"
-      description="Data Pipelines, Lakehouse Modernization, Advanced ETL..."
-      icon="/case/case1i.svg"
-      href="/case-study/case1"
-      dark={true}
-    />
+        <IndustryCard
+          title="Aerospace & Defence"
+          description="DO-178 & DO-254 Engineering, Embedded Avionics, Firmware, V&V, and System Certification Support."
+          icon="/case/case3i.svg"
+          href="/case-study/case3"
+          dark={true}
+        />
 
-    <IndustryCard
-      title="Leading E-commerce Platform"
-      description="Customer Analytics, Recommendation Systems, Demand Forecasting..."
-      icon="/case/case2i.svg"
-      href="/case-study/case2"
-      dark={false}
-    />
+        <IndustryCard
+          title="Industrial Automation"
+          description="IoT Engineering, Robotics, RTOS, Control Systems, Protocol Development, and Smart Manufacturing."
+          icon="/case/case4i.svg"
+          href="/case-study/case4"
+          dark={false}
+        />
 
-    <IndustryCard
-      title="Global SaaS Solutions Provider"
-      description="Cloud Migration, Data Warehousing, Billing Analytics..."
-      icon="/case/case3i.svg"
-      href="/case-study/case3"
-      dark={true}
-    />
+        <IndustryCard
+          title="Healthcare Technology"
+          description="Clinical Data Integration, Healthcare Analytics, Device Data Engineering, and Digital Health Solutions."
+          icon="/case/case5i.svg"
+          href="/case-study/case5"
+          dark={true}
+        />
 
-    <IndustryCard
-      title="Innovative Fintech Startup"
-      description="Fraud Detection, Real-Time Scoring, Risk Modeling..."
-      icon="/case/case4i.svg"
-      href="/case-study/case4"
-      dark={false}
-    />
+        <IndustryCard
+          title="IoT & Embedded Systems"
+          description="Firmware, Device Drivers, Hardware Design, Edge Computing, GPS/GIS, and Real-Time Systems."
+          icon="/case/case6i.svg"
+          href="/case-study/case6"
+          dark={false}
+        />
 
-    <IndustryCard
-      title="Healthcare Technology Firm"
-      description="Clinical Data Integration, Patient Data Insights..."
-      icon="/case/case5i.svg"
-      href="/case-study/case5"
-      dark={true}
-    />
-
-    <IndustryCard
-      title="Renewable Energy Company"
-      description="IoT Data Engineering, Predictive Grid Analytics..."
-      icon="/case/case6i.svg"
-      href="/case-study/case6"
-      dark={false}
-    />
-
-  </div>
-</section>
-
+      </div>
     </section>
   );
 }

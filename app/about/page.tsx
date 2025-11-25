@@ -89,15 +89,7 @@ export default function AboutPage() {
             Withstanding the uncertain limitation levied by the year 2020, cohesive efforts made by Keptel Global to remain undeterred and focused on organisational goals yielded astounding outcomes. We added successive CoE (Center of Excellence) year after year to provide customized talent solution that fits every client's talent needs.
           </p>
 
-          <div className="mt-16">
-            <Image
-              src="/jour.svg"
-              alt="Journey Timeline"
-              width={1200}
-              height={400}
-              className="w-full h-auto"
-            />
-          </div>
+          
         </section>
       
       </div>

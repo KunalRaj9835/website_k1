@@ -12,96 +12,62 @@ export default function WhatWeOffer() {
         <div className="h-1 w-20 bg-red-400 mx-auto mt-3 rounded-full"></div>
       </div>
 
-      {/* TECHNOLOGY EXPERTISE GRID */}
+      {/* GRID — ONLY 6 CARDS */}
       <div
         className="
           grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3
           gap-10
         "
       >
+
+        {/* 1. CLOUD (MERGED) */}
         <OfferCard
-          icon="tech/cloud-platforms.svg"
-          title="Cloud Platforms"
-          description="AWS, Azure, Google Cloud—enterprise-grade scalable cloud infrastructure"
-          href="#"
+          icon="tech/cloud.svg"
+          title="Cloud & Analytics"
+          description="AWS, Azure, GCP, BigQuery, Snowflake, Power BI, Tableau, Looker & BI ecosystem."
+          href="/tech/cloud-analytics"
         />
 
+        {/* 2. FRAMEWORKS */}
         <OfferCard
-          icon="tech/cloud-analytics.svg"
-          title="Cloud Analytics & BI"
-          description="Looker, Power BI, Qlik, Tableau, Oracle Analytics for data-driven insights"
-          href="#"
-        />
-
-        <OfferCard
-          icon="tech/frameworks.svg"
+          icon="tech/framework.png"
           title="Frameworks"
-          description="Spring Boot, Kafka, modern backend frameworks for robust engineering"
-          href="#"
+          description="Spring Boot, Kafka, Microservices and high-performance backend architectures."
+          href="/tech/frameworks"
         />
 
+        {/* 3. INFRASTRUCTURE */}
         <OfferCard
-          icon="tech/infrastructure.svg"
+          icon="tech/infrastructure.png"
           title="Infrastructure"
-          description="RedHat, SUSE, Ubuntu Linux—enterprise OS and infrastructure support"
-          href="#"
+          description="RedHat, SUSE, Ubuntu Linux and enterprise-grade infrastructure ecosystems."
+          href="/tech/infrastructure"
         />
 
+        {/* 4. ORCHESTRATION */}
         <OfferCard
-          icon="tech/orchestration.svg"
+          icon="tech/orchestration.png"
           title="Orchestration Platforms"
-          description="Apache Spark, Airflow for automation, data pipelines & scheduling"
-          href="#"
+          description="Apache Spark, Airflow — automation, data pipelines, workflow scheduling."
+          href="/tech/orchestration"
         />
 
+        {/* 5. BACKEND */}
         <OfferCard
-          icon="tech/onprem-analytics.svg"
-          title="On-Premises Analytics"
-          description="Oracle BI, IBM Cognos for private, secured enterprise data analytics"
-          href="#"
+          icon="tech/backend.png"
+          title="Backend Engineering"
+          description="Java, .NET, Python — scalable and reliable application development."
+          href="/tech/backend-engineering"
         />
 
+        {/* 6. STORAGE */}
         <OfferCard
-          icon="tech/backend.svg"
-          title="Backend Layer"
-          description="Java, .NET, Python—high-performance software and service development"
-          href="#"
+          icon="tech/database.svg"
+          title="Storage & Databases"
+          description="Oracle, MySQL, PostgreSQL, SQL Server — secure on-premise & hybrid data storage."
+          href="/tech/storage-databases"
         />
 
-        <OfferCard
-          icon="tech/cloud-storage.svg"
-          title="Cloud Storage"
-          description="BigQuery, Azure Data Lake, Snowflake, Hive—modern cloud data warehousing"
-          href="#"
-        />
-
-        <OfferCard
-          icon="tech/etl.svg"
-          title="ETL Tools"
-          description="ODI, Informatica, Talend, Tableau—data extraction, transformation & loading"
-          href="#"
-        />
-
-        <OfferCard
-          icon="tech/crm.svg"
-          title="CRM Platforms"
-          description="Salesforce, HubSpot, Zoho CRM—customer relationship and engagement solutions"
-          href="#"
-        />
-
-        <OfferCard
-          icon="tech/cloud-integration.svg"
-          title="Cloud Integration Tools"
-          description="Informatica, Talend, Matillion, AWS Glue—enterprise data integration pipelines"
-          href="#"
-        />
-
-        <OfferCard
-          icon="tech/onprem-storage.svg"
-          title="On-Premises Storage"
-          description="SQL Server, PostgreSQL, MySQL, Oracle—secure enterprise data storage"
-          href="#"
-        />
       </div>
     </section>
   );

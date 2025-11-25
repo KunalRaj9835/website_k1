@@ -22,41 +22,38 @@ export default function Page() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
 
           <BlogCard
-                    image="/case/case1.png"
-                    title="Stealth Mode Bigdata Management Company"
-                    href="/case-study/case1"
-                  />
+            image="/case/case1.webp"
+            title="IT Services & Digital Engineering"
+            href="/case-study/case1"
+          />
           <BlogCard
-                    image="/case/case2.jpeg"
-                    title="Leading E-commerce Platform"
-                    href="/case-study/case2"
-                  />
+            image="/case/case2.webp"
+            title="Automotive Engineering"
+            href="/case-study/case2"
+          />
           <BlogCard
-                    image="/case/case3.webp"
-                    title="Global SaaS Solutions Provider"
-                    href="/case-study/case3"
-                  />
+            image="/case/case3.jpg"
+            title="Aerospace & Defence"
+            href="/case-study/case3"
+          />
           <BlogCard
-                    image="/case/case4.jpg"
-                    title="Innovative Fintech Startup"
-                    href="/case-study/case4"
-                  />
+            image="/case/case4.jpg"
+            title="Industrial Automation"
+            href="/case-study/case4"
+          />
           <BlogCard
-                    image="/case/case5.webp"
-                    title="Healthcare Technology Firm"
-                    href="/case-study/case5"
-                  />
+            image="/case/case5.webp"
+            title="Healthcare Technology"
+            href="/case-study/case5"
+          />
           <BlogCard
-                    image="/case/case6.jpg"
-                    title="Renewable Energy Company"
-                    href="/case-study/case6"
-                  />
-                  
+            image="/case/case6.webp"
+            title="IoT & Embedded Systems"
+            href="/case-study/case6"
+          />
 
-          {/* Duplicate more BlogCard entries here */}
         </div>
 
-        {/* Load More / Know More Button */}
       </section>
 
       <Footer />

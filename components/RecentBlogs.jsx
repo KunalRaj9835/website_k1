@@ -23,19 +23,19 @@ export default function RecentBlogs() {
         <BlogCard
           image="/blog/blog1.jpg"
           title="Real-Time Analytics in 2025: Predicting Events Before They Happen"
-          href="/blogs/blog1"
+          href="/blog/blog1"
         />
 
         <BlogCard
           image="/blog/blog2.png"
           title="The Rise of Semantic Analytics: Replacing Dashboards with AI-Driven Insights"
-          href="/blogs/blog2"
+          href="/blog/blog2"
         />
 
         <BlogCard
           image="/blog/blog3.webp"
           title="Data Quality Automation: The Hidden Engine Behind Accurate Analytics"
-          href="/blogs/blog3"
+          href="/blog/blog3"
         />
 
       </div>
