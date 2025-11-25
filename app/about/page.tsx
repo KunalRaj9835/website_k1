@@ -8,7 +8,7 @@ export default function AboutPage() {
       {/* Hero Section with Team Image */}
       <section className="relative w-full h-[400px] md:h-[500px]">
         <Image
-          src="/team.webp"
+          src="/group.jpg"
           alt="Keptel Global Team"
           fill
           className="object-cover"
@@ -86,7 +86,7 @@ export default function AboutPage() {
           </p>
           
           <p className="text-gray-600 text-lg text-center max-w-4xl mx-auto mb-12">
-            Withstanding the uncertain limitation levied by the year 2020, cohesive efforts made by Keptel Global to remain undeterred and focused on organisational goals yielded astounding outcomes. We added successive CoE (Center of Excellence) year after year to provide customized talent solution that fits every client's talent needs.
+            Withstanding the uncertain limitation levied by the year 2025, cohesive efforts made by Keptel Global to remain undeterred and focused on organisational goals yielded astounding outcomes. We added successive CoE (Center of Excellence) year after year to provide customized talent solution that fits every client's talent needs.
           </p>
 
           

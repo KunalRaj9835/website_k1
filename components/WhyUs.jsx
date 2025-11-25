@@ -69,11 +69,11 @@ export default function WhyUs() {
       </div>
 
       {/* KPIs */}
-      <div className="grid md:grid-cols-3 gap-8 text-center mb-24">
+      {/*<div className="grid md:grid-cols-3 gap-8 text-center mb-24">
         <KPI number="150+" label="Global Clients" />
         <KPI number="250+" label="Engineers & Experts" />
         <KPI number="12+" label="Industries Served" />
-      </div>
+      </div> */}
 
       {/* Why Keptel Stands Out */}
       <SectionTitle title="Why Keptel Stands Out" />
