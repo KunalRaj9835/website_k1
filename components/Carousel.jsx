@@ -12,7 +12,7 @@ export default function Carousel() {
     {
   id: 1,
   title: "Industrial Automation",
-  text: "Powering smart manufacturing with robotics, IIoT, and intelligent automation systems.",
+  text: "Powering smart manufacturing with robotics, IoT, and intelligent automation systems.",
   bg: "/carousel/Automation.gif",
   href: "/banner/banner1",
 },
@@ -48,7 +48,7 @@ export default function Carousel() {
 
   useEffect(() => {
     if (!emblaApi) return;
-    const interval = setInterval(autoplay, 50000);
+    const interval = setInterval(autoplay, 3000);
     return () => clearInterval(interval);
   }, [emblaApi, autoplay]);
 
