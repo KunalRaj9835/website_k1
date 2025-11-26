@@ -9,13 +9,16 @@ import Footer from "@/components/Footer";
 export default function Page() {
   // 1) PAGE DATA
   const title = "Global PEO Services";
-  const bg = "/services-bg.jpg";
+  const bg = "/bg4.jpg";
 
-  const introLeft ="Global PEO Service- New definition of International Recruitment.";
+  const introLeft =
+    "Global PEO Services designed to redefine international hiring, onboarding, and workforce management for modern enterprises.";
 
-  const introRight ="Keptel Global constantly looks up for providing innovative services best suited for our client’s needs in an agile business environment. It has helped us in carving futuristic recruitment services of PEO (Professional Employer Organisation) & EOR (Employer of Records) services after a deep industry requirement forecast. Through our Global Professional Employer Organisation (Global PEO), we help our clients to access insights from India’s talent market, which provides advantages in building operations in India. Not just that, but we also act as our client’s India representative, with in-house recruitment, HR, Payroll, and Legal processes that provide assorted benefits. Our Employer of Records or EOR services support our clients to overcome the onus of carrying out complex organisation set up processes, legal compliances & payroll systems, work on the latest payment systems that make employee management activities simple and fully rewarding with efficient working.";
+  const introRight =
+    "Keptel Global delivers agile and innovative workforce solutions tailored to fast-evolving global business environments. Our Professional Employer Organisation (PEO) and Employer of Record (EOR) services are built on deep industry foresight and operational expertise. Through our Global PEO framework, organisations gain seamless access to India’s dynamic talent ecosystem while leveraging our in-house Recruitment, HR, Payroll, and Legal capabilities. Our EOR model eliminates the complexities of entity setup, statutory compliance, payroll administration, and employee lifecycle management across borders. We empower organisations to scale globally with confidence—supported by strong legal governance, efficient payroll systems, and compliant onboarding processes.";
 
-  const bottomText ="Hassle-Free Talent Onboarding, with assured legal compliances and adequate hiring processes without setting up any entity in any country.";
+  const bottomText =
+    "Hassle-free global hiring with assured compliance, seamless onboarding, and complete workforce governance—without setting up an entity in any country.";
 
   // --------------------------------------------------------------------
   //  TAB SET 1
@@ -38,17 +41,20 @@ export default function Page() {
     fulltime: {
       title: "Hiring, Benefits & Payroll",
       image: "/global/g3.webp",
-      text: `Total legitimate and budgetary direction that guarantees compliance with all in-country administration rules. Our devoted investigate and preparing bunch tracks business law, tax collection, bookkeeping overhauls in-country to guarantee we are continuously compliant.`,
+      text:
+        "We manage complete hiring, compensation planning, and payroll administration aligned with local regulations and global best practices. Our compliant payroll systems, structured benefits programs, and transparent processes ensure accuracy, timeliness, and seamless employee experiences—enabling organisations to focus entirely on business growth while we handle end-to-end workforce operations.",
     },
     flexi: {
       title: "Legal & Financial Guidance",
       image: "/global/g4.webp",
-      text: `Total legitimate and budgetary direction that guarantees compliance with all in-country administration rules. Our devoted investigate and preparing bunch tracks business law, tax collection, bookkeeping overhauls in-country to guarantee we are continuously compliant.`,
+      text:
+        "We deliver comprehensive legal and financial governance for all in-country operations. Our specialised compliance teams monitor labour laws, taxation updates, and regulatory changes to ensure full adherence to local requirements. This enables organisations to operate globally without legal exposure, administrative burden, or compliance-related risks.",
     },
     strategic: {
       title: "Human Resources",
       image: "/global/g5.webp",
-      text: `We support your representatives from the point of hire to retirement– covering staffing, work contracts, offer letters, representative handbooks, business law admonitory, recompense and benefits, terminations (when required), and more..`,
+      text:
+        "Our HR support spans the entire employee lifecycle—from hiring and contracts to performance management, benefits, handbooks, advisory on employment law, and managed offboarding when required. We ensure every employee—from onboarding to retirement—receives consistent, compliant, and structured HR support across geographies.",
     },
   };
 
@@ -57,7 +63,7 @@ export default function Page() {
   >("fulltime");
 
   // --------------------------------------------------------------------
-  //  TAB SET 2 (Duplicated)
+  //  TAB SET 2
   // --------------------------------------------------------------------
 
   const tabs2 = [
@@ -73,17 +79,20 @@ export default function Page() {
     alpha: {
       title: "International Expansion",
       image: "/global/g6.webp",
-      text: `When prepared, our worldwide development arrangements move you to your claim legitimate substance whereas we proceed to oversee the compliance, authoritative and operational needs for HR, finance, bookkeeping, charge and more.`,
+      text:
+        "We support organisations as they transition from PEO-led operations to establishing their own legal entities. While clients scale internationally, Keptel continues to manage HR, payroll, compliance, taxation, and operational frameworks—enabling a smooth and compliant expansion journey.",
     },
     beta: {
       title: "International Recruitment",
       image: "/global/g7.webp",
-      text: `You’ll be able to build up your worldwide workforce without having to handle any of the complex worldwide employee and onboarding forms yourself.`,
+      text:
+        "Build global teams without navigating complex international hiring constraints. Keptel manages recruitment, onboarding, local compliance, and employee administration across geographies—allowing organisations to deploy talent anywhere, quickly and efficiently.",
     },
     gamma: {
       title: "EOR",
       image: "/global/g8.webp",
-      text: `The lessening of universal business dangers by taking on your PEO as an Employer of Record (EOR), meaning we are lawfully mindful for the installment of worldwide representatives, their benefits, installment of charges, and/or benefits as the nearby law requires.`,
+      text:
+        "Our Employer of Record (EOR) model reduces global employment risks by assuming legal responsibility for employee contracts, payroll, benefits, taxation, and statutory contributions as per local laws. Keptel becomes the official employer while you retain full control of day-to-day work and performance.",
     },
   };
 
@@ -133,7 +142,7 @@ export default function Page() {
       />
 
       {/* --------------------------------------------------------------- */}
-      {/* TAB SET 2 (DUPLICATED) */}
+      {/* TAB SET 2 */}
       {/* --------------------------------------------------------------- */}
       <div className="mt-20" />
 
@@ -150,7 +159,6 @@ export default function Page() {
         image={sections2[currentTab2].image}
         text={sections2[currentTab2].text}
       />
-
 
       <Footer />
     </div>

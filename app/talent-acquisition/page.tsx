@@ -9,15 +9,16 @@ import Footer from "@/components/Footer";
 export default function Page() {
   // 1) PAGE DATA
   const title = "Talent Acquisition";
-  const bg = "/services-bg.jpg";
+  const bg = "/bg2.webp";
 
   const introLeft =
-    "To hire the best, we ensure your business is able to capitalise on the competency and competitive advantages using Keptel Global Talent Acquisition";
+    "We strengthen your organisation’s capability by enabling you to hire talent that elevates performance, culture, and long-term competitiveness.";
+
   const introRight =
-    "Talent acquisition service is an ideal as well as optimum, formulated to keep our client’s recruitment process simple, quick, and efficient. Qualified professionals at Keptel Global follow the recruitment approach of not only finding the right talent from the domain but also keeping the recruitment function seamless. We deploy various tools to judge the competence of the candidate and help you make an intelligent and quality selection.Our streamlined recruitment approach provides diverse benefits and engages in a proven recruiting process. Keptel Global's team carefully assesses the talent acquisition activities of the client's business and further optimizes it to deliver desired results.";
+    "Keptel Global’s Talent Acquisition solutions are designed to streamline and optimise recruitment workflows for speed, accuracy, and consistency. Our structured methodology ensures that organisations not only discover the right talent but also experience a seamless, efficient hiring journey. With industry-aligned tools, behavioural assessments, and domain-focused screening, we evaluate competence, cultural fit, and potential to deliver long-term value. Our team continually fine-tunes the talent acquisition framework to match evolving business needs, ensuring every hire strengthens operational excellence and organisational growth.";
 
   const bottomText =
-    "Elevate your core competency through our cohesive triple play sourcing, that delivers assured Recruitment Success";
+    "Enhance your hiring success with our integrated sourcing framework that ensures consistency, quality, and measurable recruitment outcomes.";
 
   // 2) TABS
   const tabs = [
@@ -31,60 +32,58 @@ export default function Page() {
   ];
 
   // 3) TAB CONTENT SECTIONS
-  const sections: Record<string, { title: string; image: string; text: string }> = {
+  const sections: Record<
+    string,
+    { title: string; image: string; text: string }
+  > = {
     fulltime: {
       title: "Full-Time Staffing",
       image: "/talent/t1.webp",
-      text: `Businesses can grow if organizations are built with the right people who stand as one unit to achieve the results. The talent need for any business at any stage is always about knowledge, skills, and the right attitude. At Keptel Global, we bridge the gap between potential employer and prospective talent through our full-time or permanent hiring solutions.
-
-Our inhouse talent consultants act as a medium to get instant talent through around the-clock staffing service.`,
+      text:
+        "Building a strong organisation begins with securing high-calibre, domain-ready professionals who contribute meaningfully from day one. Keptel Global bridges the gap between employers and top-tier talent through our dedicated full-time staffing model. Our consultants work round the clock to source, evaluate, and deliver candidates who match the technical, behavioural, and cultural expectations of your business. The result is a reliable, scalable, and quality-driven hiring process aligned with long-term workforce planning.",
     },
     flexi: {
       title: "Flexi Staffing",
       image: "/talent/t2.webp",
-      text: `Keptel Global’s Flexi or Contingent staffing services allow you to get quick recruitment solutions with highly qualified and efficient candidates for Business Contingency on a project basis. Temporary staffing enables clients to have resources on-demand and timelines basis for the projects/ assignments of the short term.`,
+      text:
+        "Our Flexi Staffing model empowers organisations to stay agile during periods of rapid growth, seasonal fluctuations, or project-based requirements. Keptel Global provides skilled, on-demand professionals who support short-term assignments without compromising on efficiency or capability. This approach ensures talent availability, operational flexibility, and optimised workforce costs.",
     },
     strategic: {
       title: "Strategic or Critical Hiring",
       image: "/talent/t3.webp",
-      text: `We believe in being our client’s talent partner by utilizing our expertise and experience to deliver the required talent needs. Keptel Global offers Strategic and Critical Hiring solutions that provide a positive impact on the business & address the client’s unique solutions.
-
-Keptel Global specializes in deploying a framework, which creates business value for talent acquisition and makes the entire process swift and leveraging.
-
-Contact talent acquisition experts at Keptel Global and start a streamlined process of recruitment immediately.`,
+      text:
+        "Strategic hiring demands precision, industry insight, and an in-depth understanding of the role’s long-term business impact. Keptel Global specialises in critical talent acquisition for niche, senior, or highly specialised positions. Our framework focuses on capability mapping, leadership assessment, and value alignment to ensure that each hire contributes strategically to business objectives. With our expertise, organisations accelerate decision-making and secure talent that drives transformation.",
     },
   };
 
   // CURRENT TAB STATE
-  const [currentTab, setCurrentTab] = useState<"fulltime" | "flexi" | "strategic">("fulltime");
+  const [currentTab, setCurrentTab] = useState<
+    "fulltime" | "flexi" | "strategic"
+  >("fulltime");
 
   return (
     <div>
       {/* Hero */}
       <ServiceHero title={title} bg={bg} />
 
-      {/* Intro */}
       {/* Intro Section */}
-<div className="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10">
-  
-  {/* LEFT TEXT (big + bottom small) */}
-  <div>
-    <p className="text-3xl font-semibold leading-snug mb-10">
-      {introLeft}
-    </p>
+      <div className="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10">
+        {/* LEFT TEXT (big + bottom small) */}
+        <div>
+          <p className="text-3xl font-semibold leading-snug mb-10">
+            {introLeft}
+          </p>
 
-    <p className="text-gray-600 text-center md:text-left max-w-sm">
-      {bottomText}
-    </p>
-  </div>
+          <p className="text-gray-600 text-center md:text-left max-w-sm">
+            {bottomText}
+          </p>
+        </div>
 
-  {/* RIGHT LONG PARAGRAPH */}
-  <p className="text-gray-700 leading-relaxed whitespace-pre-line">
-    {introRight}
-  </p>
-
-</div>
-
+        {/* RIGHT LONG PARAGRAPH */}
+        <p className="text-gray-700 leading-relaxed whitespace-pre-line">
+          {introRight}
+        </p>
+      </div>
 
       {/* Tabs */}
       <ServiceTabs
@@ -102,16 +101,7 @@ Contact talent acquisition experts at Keptel Global and start a streamlined proc
         text={sections[currentTab].text}
       />
 
-      {/* Final Diagram */}
-      <div className="py-16 text-center">
-        <h2 className="text-3xl font-bold">Our Unique Triple Play Model Sourcing</h2>
-        <img
-          src="/talent/t4.webp"
-          className="w-[450px] mx-auto mt-4"
-        />
-      </div>
-        <Footer />
+      <Footer />
     </div>
   );
 }
-

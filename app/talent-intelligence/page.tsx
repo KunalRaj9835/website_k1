@@ -9,12 +9,16 @@ import Footer from "@/components/Footer";
 export default function Page() {
   // 1) PAGE DATA
   const title = "Talent Intelligence";
-  const bg = "/services-bg.jpg";
+  const bg = "/bg1.webp";
 
-  const introLeft = "Access the vital industry insights to soar your business to new heights! Our robust talent research/talent intelligence encompasses skills, location, and organisations.";
-  const introRight ="Keptel Global’s professionals delivers on exclusive client’s talent requirements backed by talent intelligence factor. Talent intelligence factor supports in facilitating the identification of the right talent fit after thorough evaluation of comprehensive assessment criteria of industry, skills, location, compensation, career path and experience.";
+  const introLeft =
+    "Access strategic talent insights that empower your organisation to scale with precision. Our intelligence framework evaluates skills, locations, industries, and emerging workforce trends.";
 
-  const bottomText = "Extensive road mapping and rigorous research allow us to locate the right talent for you.";
+  const introRight =
+    "Keptel Global delivers talent intelligence backed by deep research, structured assessment frameworks, and comprehensive market data. Our approach helps organisations identify the right talent fit by evaluating competencies across industry relevance, skills, experience, compensation benchmarks, and career pathways. Talent intelligence accelerates decision-making, supports strategic workforce planning, and ensures alignment between business goals and talent availability. With every engagement, we enable our clients to forecast talent needs, reduce recruitment risks, and build stronger, insight-backed hiring strategies.";
+
+  const bottomText =
+    "A research-driven blueprint that identifies, evaluates, and delivers the right talent through structured market intelligence.";
 
   // 2) TABS
   const tabs = [
@@ -28,59 +32,58 @@ export default function Page() {
   ];
 
   // 3) TAB CONTENT SECTIONS
-  const sections: Record<string, { title: string; image: string; text: string }> = {
+  const sections: Record<
+    string,
+    { title: string; image: string; text: string }
+  > = {
     fulltime: {
       title: "Role Mapping",
       image: "/intelligence/a1.webp",
-      text: `Keptel Global is engaged in working on defining the competitive talent landscape from the business domain and prospecting the candidate’s profile proactively to turn passive job seekers active. Role mapping ensures to gather the market data of the potential candidates and companies with their skills, knowledge and expertise from the identified market specification. This facilitates a confident restructure of Talent with informed decisions.`,
+      text:
+        "Keptel Global defines competitive talent landscapes by proactively identifying and profiling potential candidates across targeted markets. Through exhaustive role mapping, we analyse technical expertise, behavioural competencies, industry exposure, and organisational alignment. This enables businesses to understand market availability, talent readiness, and the most strategic sourcing pathways—leading to informed hiring decisions and structured workforce planning.",
     },
     flexi: {
       title: "Talent Advisory",
       image: "/intelligence/a2.webp",
-      text: `Keptel Global’s talent advisory solutions support our clients with JUST in TIME approach to optimize the process & cost through the talent strategy and recruitment process. Our professionals empower the clients with data driven talent inputs that acts as a catalyst for taking quick and effective hire decision.
-
-As talent experts, our approach stands in providing recent trends, strategies, insights & inputs for rare talent in scaling the hiring ambitions. Our subject matter experts interact with the client’s Hiring Manager will insights on the skill, expertise, experience, knowledge and trait along with other Industry trends for better alignment. Our integrated approach helps in diversity hiring to meet the organisational diversity goals.`,
+      text:
+        "Our Talent Advisory solutions bring timely, intelligence-led insights to optimise recruitment efficiency and cost. As specialists, we deliver market trends, skill insights, and evaluations of rare and niche talent pools, enabling clients to accelerate hiring decisions. Our experts collaborate with client hiring managers to share data on experience, expertise, knowledge depth, and behavioural traits—ensuring hires are aligned to evolving industry standards. The advisory framework also strengthens diversity hiring and supports organisations in meeting their inclusivity goals.",
     },
     strategic: {
       title: "Compensation Benchmarking Services",
       image: "/intelligence/a3.webp",
-      text: `Service of actionable insights from industry compensation benchmarking helps in aligning with the market to attract the talent and Retain the Talent.
-With changing market dynamic and gap in demand and supply of qualified talent pool availability, the need for talent compensation insights has become a key business driver for attracting and retaining Talent.
-Keptel Global provides compensation benchmarking services as a strategic initiative in providing insightful data for each critical role from the required domains and Industries aligning to detailed analysis of Job descriptions. The designed consulting approach enables strategic and operational inputs for designing and enhancing the current compensation policy with uniformity of structure at the organisational level.
-The transparent analytical data ensures a rational approach in designing compensation policy for attracting and retaining the Talent in the organisation with Talent Intelligence.`,
+      text:
+        "Compensation benchmarking provides actionable insights that align organisational pay structures with market realities—critical for attracting and retaining high-value talent. With rising demand-supply gaps in skilled talent pools, accurate compensation intelligence has become a strategic differentiator. Keptel Global analyses role-specific compensation trends across industries and domains, delivering data-backed recommendations for salary structures, benefits, and performance-based components. Our transparent and analytical approach supports rational, competitive, and uniform compensation policies across the organisation.",
     },
   };
 
   // CURRENT TAB STATE
-  const [currentTab, setCurrentTab] = useState<"fulltime" | "flexi" | "strategic">("fulltime");
+  const [currentTab, setCurrentTab] = useState<
+    "fulltime" | "flexi" | "strategic"
+  >("fulltime");
 
   return (
     <div>
       {/* Hero */}
       <ServiceHero title={title} bg={bg} />
 
-      {/* Intro */}
       {/* Intro Section */}
-<div className="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10">
-  
-  {/* LEFT TEXT (big + bottom small) */}
-  <div>
-    <p className="text-3xl font-semibold leading-snug mb-10">
-      {introLeft}
-    </p>
+      <div className="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10">
+        {/* LEFT TEXT */}
+        <div>
+          <p className="text-3xl font-semibold leading-snug mb-10">
+            {introLeft}
+          </p>
 
-    <p className="text-gray-600 text-center md:text-left max-w-sm">
-      {bottomText}
-    </p>
-  </div>
+          <p className="text-gray-600 text-center md:text-left max-w-sm">
+            {bottomText}
+          </p>
+        </div>
 
-  {/* RIGHT LONG PARAGRAPH */}
-  <p className="text-gray-700 leading-relaxed whitespace-pre-line">
-    {introRight}
-  </p>
-
-</div>
-
+        {/* RIGHT PARAGRAPH */}
+        <p className="text-gray-700 leading-relaxed whitespace-pre-line">
+          {introRight}
+        </p>
+      </div>
 
       {/* Tabs */}
       <ServiceTabs
@@ -90,7 +93,7 @@ The transparent analytical data ensures a rational approach in designing compens
         }
       />
 
-      {/* Active section */}
+      {/* Active Section */}
       <ServiceSection
         index={0}
         title={sections[currentTab].title}
@@ -106,8 +109,8 @@ The transparent analytical data ensures a rational approach in designing compens
           className="w-[980px] mx-auto mt-4"
         />
       </div>
-        <Footer />
+
+      <Footer />
     </div>
   );
 }
-

@@ -2,164 +2,464 @@ import Footer from "@/components/Footer";
 
 export default function BlogPage() {
   return (
-    <div>
-      <main className="max-w-3xl mx-auto px-6 py-16 prose prose-lg">
-        <h1 className="text-4xl font-bold">
-          IT Services & Digital Engineering: Accelerating Enterprise Transformation
-        </h1>
+    <div className="w-full bg-white text-gray-900">
 
-        <h2 className="py-4 w-full text-2xl font-semibold">The Digital Engineering Services Revolution</h2>
-        <p className="text-lg">
-          Global enterprises face an existential imperative: transform digitally or face irrelevance. The engineering
-          services market is projected to grow from $2.34 trillion in 2025 to $4.65 trillion by 2032. Digital product
-          engineering alone is expanding from $216 billion to $354 billion by 2028 at 10.4% annually.
-        </p>
-        <p className="text-lg">
-          This growth is driven by the universal shift toward software-defined products, cloud-native infrastructure,
-          and data-driven decision-making. Organizations across industries are reimagining offerings through digital
-          transformation. Achieving this requires specialized engineering talent—capabilities Keptel delivers.
-        </p>
+      {/* HERO */}
+      <section className="w-full bg-[#1F2937] text-white py-24">
+        <div className="max-w-5xl mx-auto px-6">
+          
+          {/* IMAGE PLACEHOLDER */}
+          <div className="w-full h-64 bg-gray-700 flex items-center justify-center mb-10 rounded-lg">
+            HERO IMAGE
+          </div>
 
-        <h2 className="py-4 w-full text-2xl font-semibold">
-          Key Market Drivers Fueling Digital Transformation
-        </h2>
+          <p className="uppercase tracking-widest text-red-500 font-semibold">
+            2025 DIGITAL ENGINEERING INSIGHTS
+          </p>
+          <h1 className="text-4xl md:text-5xl font-bold leading-tight mt-4">
+            IT Services & Digital Engineering: Accelerating Enterprise Transformation
+          </h1>
+        </div>
+      </section>
 
-        <h3>Cloud-Native Application Development Surge</h3>
-        <p className="text-lg">
-          Cloud-native architectures dominate modern enterprise strategy. The cloud market is projected to reach
-          $2.97 trillion by 2033 as organizations migrate from monolithic systems to microservices, serverless, and
-          containerized environments. Banking alone is allocating over 40% of IT budgets to digital transformation, with
-          cloud-native development a key priority.
-        </p>
+      {/* INTRO */}
+      <section className="w-full bg-white py-20">
+        <div className="max-w-5xl mx-auto px-6">
 
-        <h3>Artificial Intelligence and Machine Learning Integration</h3>
-        <p className="text-lg">
-          AI adoption is accelerating, with 63% of organizations planning implementation within three years. The global
-          AI market is growing at 37.3% annually. Integrating AI into enterprise ecosystems demands expertise in MLOps,
-          lifecycle management, responsible AI, and scalable deployment. Keptel provides talent capable of delivering
-          AI/ML integration across healthcare, manufacturing, finance, and more.
-        </p>
+          <div className="border-l-4 border-red-500 pl-4 mb-10">
+            <h2 className="text-2xl font-bold">
+              The Digital Engineering Services Revolution
+            </h2>
+          </div>
 
-        <h3>Internet of Things and Edge Computing Proliferation</h3>
-        <p className="text-lg">
-          IoT adoption reached 1.2 billion devices in 2024, driving engineering needs from embedded firmware to edge
-          computing and cloud integration. Smart city initiatives increased 18% globally, requiring complex multi-layer
-          engineering skillsets. Keptel delivers teams versed in embedded systems, cloud, analytics, and domain-specific
-          requirements.
-        </p>
+          {/* IMAGE PLACEHOLDER */}
+          <div className="w-full h-64 bg-gray-200 flex items-center justify-center mb-10 rounded-lg">
+            INTRO IMAGE
+          </div>
 
-        <h3>Digital Twin Technology and Simulation</h3>
-        <p className="text-lg">
-          Digital twins are transforming aerospace, automotive, manufacturing, and energy. The low-code/no-code market
-          will reach $86.9 billion by 2027, enabling rapid digital twin development. Implementing these systems requires
-          expertise in 3D modeling, physics simulation, IoT integration, and data engineering—capabilities supported by
-          Keptel’s specialist talent pool.
-        </p>
+          <p className="text-lg leading-relaxed mb-6">
+            Global enterprises face an existential imperative: transform
+            digitally or face irrelevance. The engineering services market is
+            projected to grow from $2.34 trillion in 2025 to $4.65 trillion by
+            2032. Digital product engineering alone is expanding from $216
+            billion to $354 billion by 2028 at 10.4% annually.
+          </p>
 
-        <h2 className="py-4 w-full text-2xl font-semibold">How Keptel Enables Digital Engineering Success</h2>
+          <p className="text-lg leading-relaxed mb-6">
+            This growth is driven by the universal shift toward software-defined
+            products, cloud-native infrastructure, and data-driven
+            decision-making. Organizations across industries are reimagining
+            offerings through digital transformation. Achieving this requires
+            specialized engineering talent—capabilities Keptel delivers.
+          </p>
 
-        <h3>Comprehensive Technology Stack Expertise</h3>
-        <p className="text-lg">
-          Keptel supports cloud platforms (AWS, Azure, GCP, Microsoft Fabric), data engineering, microservices,
-          serverless architectures, integration systems, and analytics tooling. This breadth ensures clients receive
-          complete engineering coverage across the digital stack.
-        </p>
+          {/* TABLE 1 */}
+          <table className="w-full border border-gray-300 mt-10">
+            <thead className="bg-gray-100">
+              <tr>
+                <th className="border px-4 py-2">Segment</th>
+                <th className="border px-4 py-2">2025 Value</th>
+                <th className="border px-4 py-2">2032 Value</th>
+                <th className="border px-4 py-2">Growth Rate</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border px-4 py-2">Engineering Services Market</td>
+                <td className="border px-4 py-2">$2.34T</td>
+                <td className="border px-4 py-2">$4.65T</td>
+                <td className="border px-4 py-2">~8.3% CAGR</td>
+              </tr>
+              <tr>
+                <td className="border px-4 py-2">Digital Product Engineering</td>
+                <td className="border px-4 py-2">$216B</td>
+                <td className="border px-4 py-2">$354B (2028)</td>
+                <td className="border px-4 py-2">10.4% CAGR</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
 
-        <h3>Flexible Engagement Models</h3>
-        <p className="text-lg">
-          Keptel provides staffing, contract teams, managed services, build-operate-transfer (BOT), and consulting.
-          These models ensure clients can scale talent precisely to project needs, optimize cost, and accelerate delivery.
-        </p>
+      {/* MARKET DRIVERS */}
+      <section className="w-full bg-[#F3F4F6] py-20">
+        <div className="max-w-5xl mx-auto px-6">
 
-        <h3>Domain-Specific Engineering Expertise</h3>
-        <p className="text-lg">
-          Keptel specializes in aerospace, automotive, industrial automation, healthcare, and IT services—industries
-          requiring deep regulatory and technical knowledge. Teams bring experience in DO-178C, ADAS, telemedicine,
-          IoT, SCADA, predictive maintenance, and regulated software development.
-        </p>
+          <div className="border-l-4 border-red-500 pl-4 mb-10">
+            <h2 className="text-2xl font-bold">
+              Key Market Drivers Fueling Digital Transformation
+            </h2>
+          </div>
 
-        <h3>Quality Excellence and Compliance</h3>
-        <p className="text-lg">
-          Keptel follows ISO 9001:2015-certified processes including verification and validation, automated coverage
-          analysis, and full requirements traceability—critical for safety-critical engineering.
-        </p>
+          {/* IMAGE PLACEHOLDER */}
+          <div className="w-full h-64 bg-gray-300 flex items-center justify-center mb-10 rounded-lg">
+            MARKET DRIVERS IMAGE
+          </div>
 
-        <h2 className="py-4 w-full text-2xl font-semibold">Regional Market Dynamics and Opportunities</h2>
+          <div className="space-y-12">
+            <div>
+              <h3 className="text-xl font-semibold">
+                Cloud-Native Application Development Surge
+              </h3>
+              <p className="text-lg mt-2">
+                Cloud-native architectures dominate modern enterprise strategy.
+                The cloud market is projected to reach $2.97 trillion by 2033
+                as organizations migrate from monolithic systems to
+                microservices, serverless, and containerized environments.
+                Banking alone is allocating over 40% of IT budgets to digital
+                transformation, with cloud-native development a key priority.
+              </p>
+            </div>
 
-        <h3>Asia Pacific</h3>
-        <p className="text-lg">
-          Asia Pacific leads with 36.74% market share, driven by strong manufacturing bases, aggressive digital
-          adoption, abundant talent, and government-led digital initiatives.
-        </p>
+            <div>
+              <h3 className="text-xl font-semibold">
+                Artificial Intelligence and Machine Learning Integration
+              </h3>
+              <p className="text-lg mt-2">
+                AI adoption is accelerating, with 63% of organizations planning
+                implementation within three years. The global AI market is
+                growing at 37.3% annually. Integrating AI into enterprise
+                ecosystems demands expertise in MLOps, lifecycle management,
+                responsible AI, and scalable deployment. Keptel provides talent
+                capable of delivering AI/ML integration across healthcare,
+                manufacturing, finance, and more.
+              </p>
+            </div>
 
-        <h3>North America</h3>
-        <p className="text-lg">
-          North America’s $520 billion market is fueled by advanced technology adoption, aerospace and defense, fintech
-          innovation, and renewable energy engineering.
-        </p>
+            <div>
+              <h3 className="text-xl font-semibold">
+                Internet of Things and Edge Computing Proliferation
+              </h3>
+              <p className="text-lg mt-2">
+                IoT adoption reached 1.2 billion devices in 2024, driving
+                engineering needs from embedded firmware to edge computing and
+                cloud integration. Smart city initiatives increased 18% globally,
+                requiring complex multi-layer engineering skillsets. Keptel
+                delivers teams versed in embedded systems, cloud, analytics, and
+                domain-specific requirements.
+              </p>
+            </div>
 
-        <h3>Europe</h3>
-        <p className="text-lg">
-          Europe emphasizes regulatory compliance, sustainability, and EV transformation—driving demand for automotive,
-          green engineering, and compliance-focused engineering services.
-        </p>
+            <div>
+              <h3 className="text-xl font-semibold">
+                Digital Twin Technology and Simulation
+              </h3>
+              <p className="text-lg mt-2">
+                Digital twins are transforming aerospace, automotive,
+                manufacturing, and energy. The low-code/no-code market will
+                reach $86.9 billion by 2027, enabling rapid digital twin
+                development. Implementing these systems requires expertise in 3D
+                modeling, physics simulation, IoT integration, and data
+                engineering—capabilities supported by Keptel’s specialist talent
+                pool.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <h2 className="py-4 w-full text-2xl font-semibold">Addressing Digital Engineering Challenges</h2>
+      {/* CAPABILITIES */}
+      <section className="w-full bg-white py-20">
+        <div className="max-w-5xl mx-auto px-6">
 
-        <h3>Skills Gap and Talent Scarcity</h3>
-        <p className="text-lg">
-          Digital engineering talent shortages represent a major barrier. Keptel addresses this through extensive talent
-          networks, multi-step screening processes, and continuous upskilling initiatives.
-        </p>
+          <div className="border-l-4 border-red-500 pl-4 mb-10">
+            <h2 className="text-2xl font-bold">
+              How Keptel Enables Digital Engineering Success
+            </h2>
+          </div>
 
-        <h3>Legacy System Integration</h3>
-        <p className="text-lg">
-          Legacy systems complicate transformation. Keptel provides engineers experienced with both modern and legacy
-          technologies, ensuring safe incremental modernization.
-        </p>
+          {/* IMAGE PLACEHOLDER */}
+          <div className="w-full h-64 bg-gray-200 flex items-center justify-center mb-10 rounded-lg">
+            CAPABILITIES IMAGE
+          </div>
 
-        <h3>Cost and Timeline Pressures</h3>
-        <p className="text-lg">
-          Rapid team assembly, variable cost structures, and proven methodologies enable Keptel to deliver reliable,
-          predictable project execution.
-        </p>
+          <div className="grid md:grid-cols-2 gap-8">
 
-        <h3>Security and Compliance</h3>
-        <p className="text-lg">
-          Keptel integrates secure development, compliance expertise, and DevSecOps practices to ensure security without
-          slowing delivery.
-        </p>
+            <div className="bg-[#F9FAFB] p-8 rounded-lg shadow-sm border">
+              <h3 className="text-xl font-semibold mb-3">
+                Comprehensive Technology Stack Expertise
+              </h3>
+              <p className="text-lg">
+                Keptel supports cloud platforms (AWS, Azure, GCP, Microsoft
+                Fabric), data engineering, microservices, serverless
+                architectures, integration systems, and analytics tooling. This
+                breadth ensures clients receive complete engineering coverage
+                across the digital stack.
+              </p>
+            </div>
 
-        <h2 className="py-4 w-full text-2xl font-semibold">
-          Emerging Trends Shaping Digital Engineering's Future
-        </h2>
+            <div className="bg-[#F9FAFB] p-8 rounded-lg shadow-sm border">
+              <h3 className="text-xl font-semibold mb-3">
+                Flexible Engagement Models
+              </h3>
+              <p className="text-lg">
+                Keptel provides staffing, contract teams, managed services,
+                build-operate-transfer (BOT), and consulting. These models
+                ensure clients can scale talent precisely to project needs,
+                optimize cost, and accelerate delivery.
+              </p>
+            </div>
 
-        <h3>Generative AI and Code Synthesis</h3>
-        <p className="text-lg">
-          Generative AI is transforming engineering productivity. Keptel trains teams on AI-driven development tools and
-          incorporates them into delivery workflows.
-        </p>
+            <div className="bg-[#F9FAFB] p-8 rounded-lg shadow-sm border">
+              <h3 className="text-xl font-semibold mb-3">
+                Domain-Specific Engineering Expertise
+              </h3>
+              <p className="text-lg">
+                Keptel specializes in aerospace, automotive, industrial
+                automation, healthcare, and IT services—industries requiring
+                deep regulatory and technical knowledge. Teams bring experience
+                in DO-178C, ADAS, telemedicine, IoT, SCADA, predictive
+                maintenance, and regulated software development.
+              </p>
+            </div>
 
-        <h3>Platform Engineering and Developer Experience</h3>
-        <p className="text-lg">
-          Internal platforms accelerate engineering velocity. Keptel provides platform engineers who build self-service
-          environments enabling faster, safer development.
-        </p>
+            <div className="bg-[#F9FAFB] p-8 rounded-lg shadow-sm border">
+              <h3 className="text-xl font-semibold mb-3">
+                Quality Excellence and Compliance
+              </h3>
+              <p className="text-lg">
+                Keptel follows ISO 9001:2015-certified processes including
+                verification and validation, automated coverage analysis, and
+                full requirements traceability—critical for safety-critical
+                engineering.
+              </p>
+            </div>
+          </div>
 
-        <h3>Sustainable Software Engineering</h3>
-        <p className="text-lg">
-          Keptel supports energy-efficient architectures and sustainability-aware design practices balancing performance
-          and environmental impact.
-        </p>
+          {/* TABLE 2 */}
+          <table className="w-full border border-gray-300 mt-12">
+            <thead className="bg-gray-100">
+              <tr>
+                <th className="border px-4 py-2">Capability</th>
+                <th className="border px-4 py-2">Details</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border px-4 py-2">Tech Stack</td>
+                <td className="border px-4 py-2">
+                  Cloud, data engineering, microservices, serverless
+                </td>
+              </tr>
+              <tr>
+                <td className="border px-4 py-2">Domains</td>
+                <td className="border px-4 py-2">
+                  Aerospace, Automotive, Healthcare, Automation
+                </td>
+              </tr>
+              <tr>
+                <td className="border px-4 py-2">Compliance</td>
+                <td className="border px-4 py-2">
+                  ISO-certified, V&V, traceability
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
 
-        <h2 className="py-4 w-full text-2xl font-semibold">Conclusion</h2>
-        <p className="text-lg">
-          Digital transformation demands specialized talent, domain expertise, and proven execution. Keptel’s digital
-          engineering capabilities—spanning cloud, AI/ML, embedded systems, automation, and enterprise software—position
-          the company as a trusted partner for organizations modernizing their products and operations. With Keptel,
-          enterprises accelerate innovation while reducing risk.
-        </p>
-      </main>
+      {/* REGIONAL MARKETS */}
+      <section className="w-full bg-[#F3F4F6] py-20">
+        <div className="max-w-5xl mx-auto px-6">
+
+          <div className="border-l-4 border-red-500 pl-4 mb-10">
+            <h2 className="text-2xl font-bold">
+              Regional Market Dynamics and Opportunities
+            </h2>
+          </div>
+
+          {/* IMAGE PLACEHOLDER */}
+          <div className="w-full h-64 bg-gray-300 flex items-center justify-center mb-10 rounded-lg">
+            REGIONAL MARKET MAP IMAGE
+          </div>
+
+          <div className="space-y-12">
+            <div>
+              <h3 className="text-xl font-semibold">Asia Pacific</h3>
+              <p className="text-lg">
+                Asia Pacific leads with 36.74% market share, driven by strong
+                manufacturing bases, aggressive digital adoption, abundant
+                talent, and government-led digital initiatives.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold">North America</h3>
+              <p className="text-lg">
+                North America’s $520 billion market is fueled by advanced
+                technology adoption, aerospace and defense, fintech innovation,
+                and renewable energy engineering.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold">Europe</h3>
+              <p className="text-lg">
+                Europe emphasizes regulatory compliance, sustainability, and EV
+                transformation—driving demand for automotive, green engineering,
+                and compliance-focused engineering services.
+              </p>
+            </div>
+          </div>
+
+          {/* TABLE 3 */}
+          <table className="w-full border border-gray-300 mt-12">
+            <thead className="bg-gray-100">
+              <tr>
+                <th className="border px-4 py-2">Region</th>
+                <th className="border px-4 py-2">Market Share</th>
+                <th className="border px-4 py-2">Key Drivers</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border px-4 py-2">Asia Pacific</td>
+                <td className="border px-4 py-2">36.74%</td>
+                <td className="border px-4 py-2">Manufacturing, digital adoption</td>
+              </tr>
+              <tr>
+                <td className="border px-4 py-2">North America</td>
+                <td className="border px-4 py-2">$520B</td>
+                <td className="border px-4 py-2">Aerospace, defense, fintech</td>
+              </tr>
+              <tr>
+                <td className="border px-4 py-2">Europe</td>
+                <td className="border px-4 py-2">Growing</td>
+                <td className="border px-4 py-2">EV, regulatory engineering</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      {/* CHALLENGES */}
+      <section className="w-full bg-white py-20">
+        <div className="max-w-5xl mx-auto px-6">
+
+          <div className="border-l-4 border-red-500 pl-4 mb-10">
+            <h2 className="text-2xl font-bold">Addressing Digital Engineering Challenges</h2>
+          </div>
+
+          {/* IMAGE PLACEHOLDER */}
+          <div className="w-full h-64 bg-gray-200 flex items-center justify-center mb-10 rounded-lg">
+            CHALLENGES IMAGE
+          </div>
+
+          <div className="space-y-12">
+            <div>
+              <h3 className="text-xl font-semibold">Skills Gap and Talent Scarcity</h3>
+              <p className="text-lg">
+                Digital engineering talent shortages represent a major barrier.
+                Keptel addresses this through extensive talent networks,
+                multi-step screening processes, and continuous upskilling
+                initiatives.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold">Legacy System Integration</h3>
+              <p className="text-lg">
+                Legacy systems complicate transformation. Keptel provides
+                engineers experienced with both modern and legacy technologies,
+                ensuring safe incremental modernization.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold">Cost and Timeline Pressures</h3>
+              <p className="text-lg">
+                Rapid team assembly, variable cost structures, and proven
+                methodologies enable Keptel to deliver reliable, predictable
+                project execution.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold">Security and Compliance</h3>
+              <p className="text-lg">
+                Keptel integrates secure development, compliance expertise, and
+                DevSecOps practices to ensure security without slowing delivery.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FUTURE TRENDS */}
+      <section className="w-full bg-[#F3F4F6] py-20">
+        <div className="max-w-5xl mx-auto px-6">
+
+          <div className="border-l-4 border-red-500 pl-4 mb-10">
+            <h2 className="text-2xl font-bold">
+              Emerging Trends Shaping Digital Engineering's Future
+            </h2>
+          </div>
+
+          {/* IMAGE PLACEHOLDER */}
+          <div className="w-full h-64 bg-gray-300 flex items-center justify-center mb-10 rounded-lg">
+            FUTURE TRENDS IMAGE
+          </div>
+
+          <div className="space-y-12">
+            <div>
+              <h3 className="text-xl font-semibold">
+                Generative AI and Code Synthesis
+              </h3>
+              <p className="text-lg">
+                Generative AI is transforming engineering productivity. Keptel
+                trains teams on AI-driven development tools and incorporates
+                them into delivery workflows.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold">
+                Platform Engineering and Developer Experience
+              </h3>
+              <p className="text-lg">
+                Internal platforms accelerate engineering velocity. Keptel
+                provides platform engineers who build self-service environments
+                enabling faster, safer development.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold">
+                Sustainable Software Engineering
+              </h3>
+              <p className="text-lg">
+                Keptel supports energy-efficient architectures and
+                sustainability-aware design practices balancing performance and
+                environmental impact.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CONCLUSION */}
+      <section className="w-full bg-white py-20">
+        <div className="max-w-5xl mx-auto px-6">
+
+          <div className="border-l-4 border-red-500 pl-4 mb-10">
+            <h2 className="text-2xl font-bold">Conclusion</h2>
+          </div>
+
+          {/* IMAGE PLACEHOLDER */}
+          <div className="w-full h-64 bg-gray-200 flex items-center justify-center mb-10 rounded-lg">
+            CONCLUSION IMAGE
+          </div>
+
+          <p className="text-lg leading-relaxed">
+            Digital transformation demands specialized talent, domain expertise,
+            and proven execution. Keptel’s digital engineering
+            capabilities—spanning cloud, AI/ML, embedded systems, automation,
+            and enterprise software—position the company as a trusted partner
+            for organizations modernizing their products and operations. With
+            Keptel, enterprises accelerate innovation while reducing risk.
+          </p>
+        </div>
+      </section>
 
       <Footer />
     </div>

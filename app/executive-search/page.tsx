@@ -9,12 +9,16 @@ import Footer from "@/components/Footer";
 export default function Page() {
   // 1) PAGE DATA
   const title = "Executive Search & Board Room Hiring";
-  const bg = "/services-bg.jpg";
+  const bg = "/bg5.jpg";
 
-  const introLeft = "We solve the puzzle of complex leadership building both at the level of executive management as well as the Board.";
-  const introRight ="The existence of a qualified and effective board is critical for the success of an organisation, varying sizes and types including Start-Ups, Midsize, and MNCs. On the other hand, the need for exceptional as well as high-performing executives to lead the organisation remains constant and pressing. Our experience, research, and deep industry functional expertise have helped us in garnering valuable insights. Our network of Executive Search professionals is qualified experts from different domains, who assist us identifying the most suitable executives and board members with the right talent, expertise, and capabilities to address the unique requirements of clients through our executive search and board room hiring services.";
+  const introLeft =
+    "We enable organizations to build high-impact leadership by identifying, evaluating, and placing exceptional executives and board members who shape long-term success.";
 
-  const bottomText = "Our sector-specific Talent Insights, allows us to identify Talent that fits like a glove in the cultural, intellectual, and hierarchical environment";
+  const introRight =
+    "A strong and future-ready Board and Executive team determines the strategic direction and stability of every organisation—across Start-Ups, Mid-Size enterprises, and global corporations. Keptel’s deep functional expertise, industry insights, and global leadership network empower us to identify high-performing executives with the right skill sets, governance mindset, and cultural alignment. Our specialised Executive Search experts assess leadership behaviours, strategic thinking, and boardroom capabilities to match organisations with leaders who accelerate transformation, innovation, and sustainable performance.";
+
+  const bottomText =
+    "Our sector-specific leadership intelligence enables us to identify executives who align seamlessly with organisational culture, strategic priorities, and growth vision.";
 
   // 2) TABS
   const tabs = [
@@ -28,26 +32,34 @@ export default function Page() {
   ];
 
   // 3) TAB CONTENT SECTIONS
-  const sections: Record<string, { title: string; image: string; text: string }> = {
+  const sections: Record<
+    string,
+    { title: string; image: string; text: string }
+  > = {
     fulltime: {
       title: "Executive Search",
       image: "/executive/e1.webp",
-      text: "Keptel Global aligns with the leadership team or founder members of the client’s organisation to understand the business problem and vision of the organisation. This helps us integrate ourselves into their recruitment process and find executives with the right leadership qualities and approaches to contribute to the success of the company. The methodology involves a robust assessment of the leadership role through Role & Skill mapping for correct recruitment.",
+      text:
+        "Keptel partners closely with Founders, CXOs, and Leadership Teams to understand organisational vision, strategic goals, and role expectations. Our structured leadership assessment framework—covering Role Mapping, Competency Scoring, and Behavioural Evaluation—enables us to identify executives who bring strategic clarity, innovation, and execution excellence. We ensure organisations gain leaders who not only fit the position but elevate long-term business performance.",
     },
     flexi: {
       title: "CXO Mapping",
       image: "/executive/e2.webp",
-      text: `To make your business appealing in front of your customers which will clients and take your organisation through a process of transformation to achieve growth. Our services include CXO mapping that enables us to determine the experience & role management aspect of the candidates for internal restructuring and building the CXO role in the organisation.`,
+      text:
+        "We support organisations in evaluating, benchmarking, and restructuring their leadership through comprehensive CXO Mapping. Our approach assesses experience depth, competency maturity, decision-making style, and transformation readiness for CXO-level roles. This enables companies to build strong leadership pipelines, restructure existing hierarchies, and identify future-ready executives capable of driving business expansion and operational excellence.",
     },
     strategic: {
       title: "Director/ Board Member Hiring",
       image: "/executive/e3.webp",
-      text: `Board members perform the crucial business function of turning an organisation’s vision into reality. Our experts at Keptel Global responsibly research executives engaged in contributing, advising, and mentoring members along with diversity inclusion at the board level. This ensures that our client’s Top management have the right leaders to leads`,
+      text:
+        "Board members play a pivotal role in governance, strategic oversight, innovation enablement, and organisational stewardship. Keptel’s Board Search practice identifies leaders with proven expertise in advisory leadership, mentoring, compliance, corporate governance, and inclusive decision-making. We ensure our clients build diverse, dynamic, and strategically aligned boardrooms capable of guiding long-term vision and enterprise transformation.",
     },
   };
 
   // CURRENT TAB STATE
-  const [currentTab, setCurrentTab] = useState<"fulltime" | "flexi" | "strategic">("fulltime");
+  const [currentTab, setCurrentTab] = useState<
+    "fulltime" | "flexi" | "strategic"
+  >("fulltime");
 
   return (
     <div>
@@ -55,27 +67,23 @@ export default function Page() {
       <ServiceHero title={title} bg={bg} />
 
       {/* Intro */}
-      {/* Intro Section */}
-<div className="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10">
-  
-  {/* LEFT TEXT (big + bottom small) */}
-  <div>
-    <p className="text-3xl font-semibold leading-snug mb-10">
-      {introLeft}
-    </p>
+      <div className="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10">
+        {/* LEFT TEXT */}
+        <div>
+          <p className="text-3xl font-semibold leading-snug mb-10">
+            {introLeft}
+          </p>
 
-    <p className="text-gray-600 text-center md:text-left max-w-sm">
-      {bottomText}
-    </p>
-  </div>
+          <p className="text-gray-600 text-center md:text-left max-w-sm">
+            {bottomText}
+          </p>
+        </div>
 
-  {/* RIGHT LONG PARAGRAPH */}
-  <p className="text-gray-700 leading-relaxed whitespace-pre-line">
-    {introRight}
-  </p>
-
-</div>
-
+        {/* RIGHT LONG PARAGRAPH */}
+        <p className="text-gray-700 leading-relaxed whitespace-pre-line">
+          {introRight}
+        </p>
+      </div>
 
       {/* Tabs */}
       <ServiceTabs
@@ -93,9 +101,7 @@ export default function Page() {
         text={sections[currentTab].text}
       />
 
-      {/* Final Diagram */}
-        <Footer />
+      <Footer />
     </div>
   );
 }
-
