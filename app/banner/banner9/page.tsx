@@ -167,7 +167,15 @@ export default function KeptelAILeadershipPage() {
    Matches EXL style
 ========================================================== */
 
-function FindingCard({ number, title, body }) {
+function FindingCard({
+  number,
+  title,
+  body,
+}: {
+  number: string | number;
+  title: string;
+  body: string;
+}) {
   return (
     <div className="flex bg-[#F8FAFC] text-gray-900 rounded-xl overflow-hidden border border-gray-300">
       <div className="w-20 flex items-center justify-center bg-white border-r border-gray-300">

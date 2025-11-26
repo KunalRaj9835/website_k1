@@ -2,12 +2,13 @@
 
 import Footer from "@/components/Footer";
 
-const Box = ({ title, text }) => (
+const Box = ({ title, text }: { title: string; text: string }) => (
   <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
     <h3 className="text-xl font-semibold text-[#D60000] leading-snug">{title}</h3>
     <p className="text-gray-700 mt-3 text-sm leading-relaxed">{text}</p>
   </div>
 );
+
 
 export default function KeptelAIPage() {
   return (
@@ -115,8 +116,9 @@ export default function KeptelAIPage() {
     </div>
   );
 }
-
-function ImpactCard({ metric, text }) {
+function ImpactCard(
+  { metric, text }: { metric: string | number; text: string }
+) {
   return (
     <div className="bg-white text-gray-900 rounded-xl p-6 shadow-md border border-gray-200">
       <h3 className="text-4xl font-bold text-[#D60000]">{metric}</h3>
