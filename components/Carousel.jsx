@@ -3,7 +3,7 @@
 import { useEffect, useCallback, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import YellowButton from "./YellowButton";
-// YellowButton Component
+
 
 export default function Carousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
@@ -13,46 +13,33 @@ export default function Carousel() {
   const SLIDES = [
     {
       id: 1,
-      title: "Industrial Automation",
+      title: "Keptal :  Make your data AI-ready",
       text: "Powering smart manufacturing with robotics, IoT, and intelligent automation systems.",
-      bg: "/carousel/Automation.gif",
-      href: "/banner/banner4",
+      bg: "/carousel/liquid.mp4",
+      href: "/banner/banner7",
     },
     {
       id: 2,
-      title: "Healthcare Digital Transformation",
-      text: "Enabling patient-centric, data-driven care with AI, telemedicine, and cloud technologies.",
-      bg: "/carousel/healthcare.gif",
-      href: "/banner/banner3",
+      title: "Making your data AI-ready, from edge to enterprise.",
+      text: "Keptel combines deep engineering, cloud, and analytics expertise to turn fragmented data into AI-ready, governed, and actionable intelligence across your business.",
+      bg: "/carousel/ai.avif",
+      href: "/banner/banner8"
     },
     {
       id: 3,
-      title: "IT Services & Digital Engineering",
-      text: "Accelerating enterprise transformation through cloud, AI/ML, and scalable digital platforms.",
-      bg: "/carousel/server.gif",
-      href: "/banner/banner1",
+      title: "A proven leader in AI innovation and data modernization",
+      text: "Keptel recognized for its excellence in AI engineering, scalable data platforms, and enterprise-wide modernization solutions across industries.",
+      bg: "/carousel/wave.gif",
+      href: "/banner/banner9",
     },
     {
       id: 4,
-      title: "IoT & Embedded Systems",
-      text: "Driving renewable energy, smart infrastructure, and edge intelligence through embedded innovation.",
-      bg: "/carousel/windmill.gif",
-      href: "/banner/banner2",
+      title: "Why Keptel ?",
+      text: "Keptel orchestrates AI models, engineering expertise, and analytics to drive measurable transformation across industries. Unlike traditional solutions",
+      bg: "/carousel/light.webp",
+      href: "/banner/banner10",
     },
-    {
-      id: 5,
-      title: "Aerospace & Defence",
-      text: "Engineering mission-critical avionics, autonomous systems, and next-generation defense technologies.",
-      bg: "/carousel/aerospace.gif",
-      href: "/banner/banner6",
-    },
-    {
-      id: 6,
-      title: "Automotive Engineering",
-      text: "Shaping electric, autonomous, and software-defined vehicles with advanced automotive innovation.",
-      bg: "/carousel/car.gif",
-      href: "/banner/banner5",
-    },
+    
   ];
 
   const autoplay = useCallback(() => {
@@ -68,7 +55,7 @@ export default function Carousel() {
     const progressInterval = setInterval(() => {
       setProgress((prev) => {
         if (prev >= 100) return 0;
-        return prev + (100 / 50); // 30 steps over 3 seconds
+        return prev + (100 / 50);
       });
     }, 100);
     return () => {
@@ -87,33 +74,70 @@ export default function Carousel() {
   const scrollPrev = () => emblaApi && emblaApi.scrollPrev();
   const scrollNext = () => emblaApi && emblaApi.scrollNext();
 
+  const isVideo = (url) => url.toLowerCase().endsWith('.mp4');
+
   return (
-    <div className="relative overflow-hidden h-[81vh]">
+    <div className="relative overflow-hidden h-[95vh]">
       <div className="overflow-hidden h-full" ref={emblaRef}>
         <div className="flex h-full">
-          {SLIDES.map((slide) => (
-            <div
-              key={slide.id}
-              className="min-w-full h-full relative flex items-center justify-start"
-            >
-              {/* BACKGROUND GIF */}
-              <img
-                src={slide.bg}
-                alt={slide.title}
-                className="absolute inset-0 w-full h-full object-cover"
-              />
+          {SLIDES.map((slide) => {
+            const isMP4 = isVideo(slide.bg);
 
-              {/* DARK OVERLAY */}
-              <div className="absolute inset-0 bg-black/40"></div>
+            return (
+              <div
+                key={slide.id}
+                className={`min-w-full h-full relative flex items-center ${
+                  isMP4 ? 'bg-black' : 'justify-start'
+                }`}
+              >
+                {isMP4 ? (
+                  // MP4 Layout: Video on left, content on right
+                  <>
+                    {/* Video on Left Side */}
+                    <div className="w-1/2 h-full flex items-center justify-center p-10">
+                      <video
+                        src={slide.bg}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="max-w-full max-h-full object-contain"
+                      />
+                    </div>
 
-              {/* TEXT CONTENT */}
-              <div className="relative z-10 text-white max-w-2xl px-10 md:px-20 mt-45">
-                <h2 className="text-5xl font-bold mb-4">{slide.title}</h2>
-                <p className="text-xl leading-relaxed mb-8">{slide.text}</p>
-                <YellowButton text="Know More" href={slide.href} />
+                    {/* Text Content on Right Side */}
+                    <div className="w-1/2 h-full flex items-center px-10 md:px-20">
+                      <div className="text-white max-w-2xl">
+                        <h2 className="text-5xl font-bold mb-4">{slide.title}</h2>
+                        <p className="text-xl leading-relaxed mb-8">{slide.text}</p>
+                        <YellowButton text="Know More" href={slide.href} />
+                      </div>
+                    </div>
+                  </>
+                ) : (
+                  // GIF/Image Layout: Full background with overlay
+                  <>
+                    {/* BACKGROUND IMAGE */}
+                    <img
+                      src={slide.bg}
+                      alt={slide.title}
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
+
+                    {/* DARK OVERLAY */}
+                    <div className="absolute inset-0 bg-black/40"></div>
+
+                    {/* TEXT CONTENT */}
+                    <div className="relative z-10 text-white max-w-2xl px-10 md:px-20">
+                      <h2 className="text-5xl font-bold mb-4">{slide.title}</h2>
+                      <p className="text-xl leading-relaxed mb-8">{slide.text}</p>
+                      <YellowButton text="Know More" href={slide.href} />
+                    </div>
+                  </>
+                )}
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
 
@@ -135,30 +159,29 @@ export default function Carousel() {
 
       {/* PROGRESS BAR INDICATORS */}
       <div className="absolute bottom-6 w-full flex justify-start gap-1.5 z-20 px-10 pl-22">
-  {SLIDES.map((_, index) => (
-    <div
-      key={index}
-      onClick={() => {
-        emblaApi && emblaApi.scrollTo(index);
-        setProgress(0);
-      }}
-      className="cursor-pointer flex-1 max-w-[120px] h-3 bg-white/30 rounded-none overflow-hidden"
-    >
-      <div
-        className="h-full bg-red-500 rounded-none transition-all duration-100 ease-linear"
-        style={{
-          width:
-            selectedIndex === index
-              ? `${progress}%`
-              : selectedIndex > index
-              ? "100%"
-              : "0%",
-        }}
-      ></div>
-    </div>
-  ))}
-</div>
-
+        {SLIDES.map((_, index) => (
+          <div
+            key={index}
+            onClick={() => {
+              emblaApi && emblaApi.scrollTo(index);
+              setProgress(0);
+            }}
+            className="cursor-pointer flex-1 max-w-[120px] h-3 bg-white/30 rounded-none overflow-hidden"
+          >
+            <div
+              className="h-full bg-red-500 rounded-none transition-all duration-100 ease-linear"
+              style={{
+                width:
+                  selectedIndex === index
+                    ? `${progress}%`
+                    : selectedIndex > index
+                    ? "100%"
+                    : "0%",
+              }}
+            ></div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

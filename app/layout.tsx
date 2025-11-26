@@ -31,7 +31,7 @@ export default function RootLayout({
         <AOSInit />
         <RouteLoader />
         <Header />
-        <div className="pt-[140px]">{children}</div>
+        <div className="pt-[60px]">{children}</div>
       </body>
     </html>
   );
