@@ -20,15 +20,14 @@ export default function KeptelAIPage() {
 
           {/* LEFT TEXT */}
           <div>
-            <h1 className="text-5xl font-bold mb-4">Why Keptel ?</h1>
+            <h1 className="text-5xl font-bold mb-4">Unlock the power of AI with Keptal.AI</h1>
 
             <div className="h-[3px] w-16 bg-[#D60000] mb-6"></div>
 
             <p className="text-gray-700 leading-relaxed max-w-md">
-              Keptel orchestrates AI models, engineering expertise, and analytics  
-              to drive measurable transformation across industries.  
-              Unlike traditional solutions, Keptel.AI integrates seamlessly into  
-              enterprise workflows for real, scalable outcomes.
+              Keptal.AI unifies data, automation, and intelligence into a single seamless ecosystem.
+From raw, fragmented data to enterprise-grade AI deployment, Keptal accelerates every step of the journey.
+Built for scale, speed, and real-world impact, it empowers organizations to operate smarter, faster, and more efficiently.
             </p>
           </div>
 
@@ -38,6 +37,9 @@ export default function KeptelAIPage() {
             <Box title="AI agents tailored by industry" text="built for automotive, aerospace, IT, and automation." />
             <Box title="Open cloud architecture" text="smooth integration with AWS, Azure, GCP, and Fabric." />
             <Box title="Full observability dashboards" text="track cost, model drift, compliance, and performance." />
+            <Box title="5+ years of AI expertise" text="delivering scalable, production-grade AI systems across global industries." />
+<Box title="Unified data-to-AI pipeline" text="from ingestion to deployment, ensuring your data becomes AI-ready with zero friction." />
+
           </div>
 
         </div>

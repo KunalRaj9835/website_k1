@@ -11,7 +11,7 @@ export default function KeptelAILeadershipPage() {
       <section className="w-full bg-[#E7EEF3] py-20 md:py-28 relative overflow-hidden">
         {/* Background mountain graphic */}
         <img
-          src="/carousel/wave.gif"   // replace with your image
+          src="/m.webp"   // replace with your image
           className="absolute inset-0 w-full h-full object-cover opacity-60"
           alt="Background"
         />
@@ -38,53 +38,58 @@ export default function KeptelAILeadershipPage() {
       <section className="w-full py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-4 gap-12">
 
-        {/* LEFT TITLE SECTION */}
-        <div className="col-span-1 flex flex-col justify-start">
-          <p className="text-lg font-medium text-[#e5170f]">
-            Our solutions
-          </p>
+  {/* LEFT TITLE SECTION */}
+  <div className="col-span-1 flex flex-col justify-start">
+    <p className="text-lg font-medium text-[#e5170f]">
+      Our solutions
+    </p>
 
-          <h2 className="mt-6 text-4xl font-bold leading-tight">
-            Orchestrating data, AI <br /> and human expertise <br /> in enterprise workflows
-          </h2>
-        </div>
+    <h2 className="mt-6 text-4xl font-bold leading-tight">
+  Unifying data, AI, and human expertise <br /> to power enterprise workflows
+</h2>
 
-        {/* RIGHT CONTENT GRID */}
-        <div className="col-span-3 space-y-14">
+  </div>
 
-          {/* TOP ROW — 3 CARDS */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-            <ExlTallCard
-              title="Data modernization"
-              desc="Drive enterprise transformation with an AI-ready data foundation"
-              image="/demo/data.jpg"
-              href="/data-modernization"
-            />
+  {/* RIGHT CONTENT GRID */}
+  <div className="col-span-3 space-y-14">
 
-            <ExlTallCard
-              title="Artificial intelligence"
-              desc="Sharpen your competitive edge with AI and real-time analytics"
-              image="/demo/Air.jpg"
-              href="/ai"
-            />
+    {/* TOP ROW — 3 CARDS */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
 
-            <ExlTallCard
-              title="AI-powered operations"
-              desc="Deliver results at speed and scale with AI in the workflow"
-              image="/demo/Aip.avif"
-              href="/ai-ops"
-            />
-          </div>
+      {/* 01 — Data Cleaning */}
+      <ExlTallCard
+        title="Data Cleaning & Quality Engineering"
+        desc="Automated validation, deduplication, standardization, and quality scoring for trusted data."
+        image="/demo/cleaning.png"
+        href="/data/data-cleaning"
+      />
 
+      {/* 02 — Data Monetization */}
+      <ExlTallCard
+        title="Data Monetization"
+        desc="Transform enterprise data into analytics products, APIs, and revenue-generating insights."
+        image="/demo/data.jpg"
+        href="/data/data-monetization"
+      />
 
-          
-        </div>
+      {/* 03 — AI-Ready Pipelines */}
+      <ExlTallCard
+        title="AI-Ready Pipelines"
+        desc="End-to-end pipelines that convert raw data into AI-optimized, real-time decision systems."
+        image="/demo/ai.jpg"
+        href="/data/ai-ready-pipelines"
+      />
 
-      </div>
+    </div>
+
+  </div>
+
+</div>
+
     </section>
 
       {/* ================= ABOUT THE REPORT ================= */}
-      <section className="w-full bg-white py-20">
+      <section className="w-full bg-[#f6f7fb] py-20">
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-start">
 
           {/* LEFT CONTENT */}

@@ -4,8 +4,8 @@ import ServiceHero from "@/components/ServiceHero";
 import Footer from "@/components/Footer";
 
 export default function CaseStudyPage() {
-  const title = "Case Study : Automotive Engineering";
-  const bg = "/services-bg.jpg";
+  const title = "Automotive Engineering";
+  const bg = "/case/case2.webp";
 
   return (
     <div>
@@ -33,7 +33,7 @@ export default function CaseStudyPage() {
 
         <div className="bg-gray-100 rounded-xl p-10 shadow-sm">
           <h3 className="text-2xl font-semibold text-[#0e355d] mb-4">
-            Keptel Global's Approach & Solution
+            Keptal's Approach & Solution
           </h3>
 
           <p className="text-gray-700 leading-relaxed">

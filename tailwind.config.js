@@ -6,7 +6,11 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        lunea: ["var(--font-lunea)"],
+      },
+    },
   },
   plugins: [],
-}
+};

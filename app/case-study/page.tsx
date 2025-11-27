@@ -32,7 +32,7 @@ export default function Page() {
             href="/case-study/case2"
           />
           <BlogCard
-            image="/case/case3.jpg"
+            image="/case/case3.png"
             title="Aerospace & Defence"
             href="/case-study/case3"
           />

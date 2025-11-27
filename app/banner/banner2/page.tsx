@@ -8,10 +8,7 @@ export default function BlogPage() {
       <section className="w-full bg-[#1F2937] text-white py-24">
         <div className="max-w-5xl mx-auto px-6">
 
-          {/* IMAGE PLACEHOLDER */}
-          <div className="w-full h-64 bg-gray-700 flex items-center justify-center mb-10 rounded-lg">
-            HERO IMAGE
-          </div>
+          
 
           <p className="uppercase tracking-widest text-red-500 font-semibold">
             2025 DIGITAL ENERGY INSIGHTS
@@ -33,10 +30,7 @@ export default function BlogPage() {
             </h2>
           </div>
 
-          {/* IMAGE PLACEHOLDER */}
-          <div className="w-full h-64 bg-gray-200 flex items-center justify-center mb-10 rounded-lg">
-            INTRO IMAGE
-          </div>
+          
 
           <p className="text-lg leading-relaxed mb-6">
             The convergence of IoT technology and embedded systems is transforming how the world generates,
@@ -92,10 +86,7 @@ export default function BlogPage() {
             </h2>
           </div>
 
-          {/* IMAGE PLACEHOLDER */}
-          <div className="w-full h-64 bg-gray-300 flex items-center justify-center mb-10 rounded-lg">
-            GRID STABILITY IMAGE
-          </div>
+          
 
           <div className="space-y-12">
 
@@ -134,10 +125,7 @@ export default function BlogPage() {
             </h2>
           </div>
 
-          {/* IMAGE PLACEHOLDER */}
-          <div className="w-full h-64 bg-gray-200 flex items-center justify-center mb-10 rounded-lg">
-            WIND ENERGY IMAGE
-          </div>
+          
 
           <div className="space-y-12">
 
@@ -177,10 +165,7 @@ export default function BlogPage() {
             </h2>
           </div>
 
-          {/* IMAGE PLACEHOLDER */}
-          <div className="w-full h-64 bg-gray-300 flex items-center justify-center mb-10 rounded-lg">
-            SOLAR ENERGY IMAGE
-          </div>
+          
 
           <div className="space-y-12">
 
@@ -219,10 +204,7 @@ export default function BlogPage() {
             </h2>
           </div>
 
-          {/* IMAGE PLACEHOLDER */}
-          <div className="w-full h-64 bg-gray-200 flex items-center justify-center mb-10 rounded-lg">
-            SMART GRID IMAGE
-          </div>
+         
 
           <div className="space-y-12">
 
@@ -255,10 +237,7 @@ export default function BlogPage() {
             </h2>
           </div>
 
-          {/* IMAGE PLACEHOLDER */}
-          <div className="w-full h-64 bg-gray-300 flex items-center justify-center mb-10 rounded-lg">
-            KEPTEL EMBEDDED IMAGE
-          </div>
+          
 
           <div className="space-y-12">
 
@@ -302,10 +281,7 @@ export default function BlogPage() {
             </h2>
           </div>
 
-          {/* IMAGE PLACEHOLDER */}
-          <div className="w-full h-64 bg-gray-200 flex items-center justify-center mb-10 rounded-lg">
-            FUTURE TECH IMAGE
-          </div>
+          
 
           <div className="space-y-12">
 
@@ -340,10 +316,7 @@ export default function BlogPage() {
             <h2 className="text-2xl font-bold">Regional Growth Opportunities</h2>
           </div>
 
-          {/* IMAGE PLACEHOLDER */}
-          <div className="w-full h-64 bg-gray-300 flex items-center justify-center mb-10 rounded-lg">
-            REGIONAL MAP IMAGE
-          </div>
+          
 
           <div className="space-y-12">
 
@@ -378,10 +351,7 @@ export default function BlogPage() {
             <h2 className="text-2xl font-bold">Overcoming Implementation Challenges</h2>
           </div>
 
-          {/* IMAGE PLACEHOLDER */}
-          <div className="w-full h-64 bg-gray-200 flex items-center justify-center mb-10 rounded-lg">
-            CHALLENGES IMAGE
-          </div>
+          
 
           <div className="space-y-12">
 
@@ -416,10 +386,6 @@ export default function BlogPage() {
             <h2 className="text-2xl font-bold">Conclusion</h2>
           </div>
 
-          {/* IMAGE PLACEHOLDER */}
-          <div className="w-full h-64 bg-gray-300 flex items-center justify-center mb-10 rounded-lg">
-            CONCLUSION IMAGE
-          </div>
 
           <p className="text-lg leading-relaxed">
             IoT and embedded systems are powering the global transition to renewable, distributed,

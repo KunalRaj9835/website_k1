@@ -71,21 +71,24 @@ export default function DataAIPage() {
           
           {/* LEFT IMAGE */}
           <div>
-            <img
-              src="/carousel/aiready.png"
-              alt="AI Ready"
-              className="rounded-xl w-full object-cover"
+            <video
+              src="/carousel/liquid.mp4"
+              className="w-full h-full object-cover"
+              autoPlay
+              loop
+              muted
+              playsInline
             />
           </div>
 
           {/* RIGHT TEXT */}
           <div>
             <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-             Keptal :  Make your data AI-ready
+             INTRODUCTION TO KEPTAL
             </h1>
 
             <p className="text-lg mt-6 opacity-80">
-              Unify complex data ecosystems and accelerate AI adoption with an agentic data foundation.
+             Unify fragmented data ecosystems and accelerate AI adoption with an intelligent, agent-driven data foundation.
             </p>
 
             <button className="mt-8 px-6 py-3 border border-red-500 text-red-500 rounded-md hover:bg-red-500 hover:text-black transition">
@@ -104,8 +107,7 @@ export default function DataAIPage() {
               Unlock the true potential of your enterprise data
             </h2>
             <p className="text-gray-600 leading-relaxed">
-              Organizations struggle with silos, unstructured data, and slow pipelines.
-              A modern AI data foundation unlocks enterprise-wide insights and automation.
+              Most organizations face silos, unstructured information, and slow data workflows. A modern AI-native foundation enables seamless insights, automation, and faster decision-making across the enterprise.
             </p>
           </div>
           

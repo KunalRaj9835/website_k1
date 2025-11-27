@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import SlideUp from "@/components/SlideUp";
 
 export default function IndustryCard({ 
   title, 
@@ -36,36 +39,43 @@ export default function IndustryCard({
       </div>
 
       {/* Title */}
-      <h3
-        className={`
-          text-lg font-bold mt-4 
-          ${dark ? "text-white" : "text-[#0e355d]"}
-        `}
-      >
-        {title}
-      </h3>
+      <SlideUp>
+        <h3
+          className={`
+            text-lg font-bold mt-4
+            ${dark ? "text-white" : "text-[#0e355d]"}
+          `}
+        >
+          {title}
+        </h3>
+      </SlideUp>
 
       {/* Description */}
-      <p
-        className={`
-          mt-2 text-sm leading-relaxed 
-          ${dark ? "text-gray-200" : "text-gray-700"}
-        `}
-      >
-        {description}
-      </p>
+      <SlideUp>
+        <p
+          className={`
+            mt-2 text-sm leading-relaxed 
+            ${dark ? "text-gray-200" : "text-gray-700"}
+          `}
+        >
+          {description}
+        </p>
+      </SlideUp>
 
       {/* Know More */}
-      <Link href={href}>
-        <div
-          className="
-            mt-4 text-sm font-semibold underline
-            transition-all duration-200
-          "
-        >
-          Know More
-        </div>
-      </Link>
+      <SlideUp>
+        <Link href={href}>
+          <div
+            className="
+              mt-4 text-sm font-semibold underline
+              transition-all duration-200
+            "
+          >
+            Know More
+          </div>
+        </Link>
+      </SlideUp>
+
     </div>
   );
 }

@@ -15,7 +15,7 @@ export default function Page() {
     "We strengthen your organisation’s capability by enabling you to hire talent that elevates performance, culture, and long-term competitiveness.";
 
   const introRight =
-    "Keptel Global’s Talent Acquisition solutions are designed to streamline and optimise recruitment workflows for speed, accuracy, and consistency. Our structured methodology ensures that organisations not only discover the right talent but also experience a seamless, efficient hiring journey. With industry-aligned tools, behavioural assessments, and domain-focused screening, we evaluate competence, cultural fit, and potential to deliver long-term value. Our team continually fine-tunes the talent acquisition framework to match evolving business needs, ensuring every hire strengthens operational excellence and organisational growth.";
+    "Keptal’s Talent Acquisition solutions are designed to streamline and optimise recruitment workflows for speed, accuracy, and consistency. Our structured methodology ensures that organisations not only discover the right talent but also experience a seamless, efficient hiring journey. With industry-aligned tools, behavioural assessments, and domain-focused screening, we evaluate competence, cultural fit, and potential to deliver long-term value. Our team continually fine-tunes the talent acquisition framework to match evolving business needs, ensuring every hire strengthens operational excellence and organisational growth.";
 
   const bottomText =
     "Enhance your hiring success with our integrated sourcing framework that ensures consistency, quality, and measurable recruitment outcomes.";
@@ -40,19 +40,19 @@ export default function Page() {
       title: "Full-Time Staffing",
       image: "/talent/t1.webp",
       text:
-        "Building a strong organisation begins with securing high-calibre, domain-ready professionals who contribute meaningfully from day one. Keptel Global bridges the gap between employers and top-tier talent through our dedicated full-time staffing model. Our consultants work round the clock to source, evaluate, and deliver candidates who match the technical, behavioural, and cultural expectations of your business. The result is a reliable, scalable, and quality-driven hiring process aligned with long-term workforce planning.",
+        "Building a strong organisation begins with securing high-calibre, domain-ready professionals who contribute meaningfully from day one. Keptal bridges the gap between employers and top-tier talent through our dedicated full-time staffing model. Our consultants work round the clock to source, evaluate, and deliver candidates who match the technical, behavioural, and cultural expectations of your business. The result is a reliable, scalable, and quality-driven hiring process aligned with long-term workforce planning.",
     },
     flexi: {
       title: "Flexi Staffing",
       image: "/talent/t2.webp",
       text:
-        "Our Flexi Staffing model empowers organisations to stay agile during periods of rapid growth, seasonal fluctuations, or project-based requirements. Keptel Global provides skilled, on-demand professionals who support short-term assignments without compromising on efficiency or capability. This approach ensures talent availability, operational flexibility, and optimised workforce costs.",
+        "Our Flexi Staffing model empowers organisations to stay agile during periods of rapid growth, seasonal fluctuations, or project-based requirements. Keptal provides skilled, on-demand professionals who support short-term assignments without compromising on efficiency or capability. This approach ensures talent availability, operational flexibility, and optimised workforce costs.",
     },
     strategic: {
       title: "Strategic or Critical Hiring",
       image: "/talent/t3.webp",
       text:
-        "Strategic hiring demands precision, industry insight, and an in-depth understanding of the role’s long-term business impact. Keptel Global specialises in critical talent acquisition for niche, senior, or highly specialised positions. Our framework focuses on capability mapping, leadership assessment, and value alignment to ensure that each hire contributes strategically to business objectives. With our expertise, organisations accelerate decision-making and secure talent that drives transformation.",
+        "Strategic hiring demands precision, industry insight, and an in-depth understanding of the role’s long-term business impact. Keptal specialises in critical talent acquisition for niche, senior, or highly specialised positions. Our framework focuses on capability mapping, leadership assessment, and value alignment to ensure that each hire contributes strategically to business objectives. With our expertise, organisations accelerate decision-making and secure talent that drives transformation.",
     },
   };
 

@@ -1,4 +1,7 @@
+"use client";
+
 import OfferCard from "./OfferCard";
+import SlideUp from "@/components/SlideUp";
 
 export default function WhatWeOffer() {
   return (
@@ -6,10 +9,15 @@ export default function WhatWeOffer() {
 
       {/* Heading */}
       <div className="text-center mb-14">
-        <h2 className="text-3xl font-bold text-[#0e355d]">
-          Technology Expertise
-        </h2>
-        <div className="h-1 w-20 bg-red-400 mx-auto mt-3 rounded-full"></div>
+        <SlideUp>
+          <h2 className="text-3xl font-bold text-[#0e355d]">
+            Technology Expertise
+          </h2>
+        </SlideUp>
+
+        <SlideUp>
+          <div className="h-1 w-20 bg-red-400 mx-auto mt-3 rounded-full"></div>
+        </SlideUp>
       </div>
 
       {/* GRID — ONLY 6 CARDS */}
@@ -20,53 +28,59 @@ export default function WhatWeOffer() {
         "
       >
 
-        {/* 1. CLOUD (MERGED) */}
-        <OfferCard
-          icon="tech/cloud.svg"
-          title="Cloud & Analytics"
-          description="AWS, Azure, GCP, BigQuery, Snowflake, Power BI, Tableau, Looker & BI ecosystem."
-          href="/tech/cloud-analytics"
-        />
+        <SlideUp>
+          <OfferCard
+            icon="tech/cloud.svg"
+            title="Cloud & Analytics"
+            description="AWS, Azure, GCP, BigQuery, Snowflake, Power BI, Tableau, Looker & BI ecosystem."
+            href="/tech/cloud-analytics"
+          />
+        </SlideUp>
 
-        {/* 2. FRAMEWORKS */}
-        <OfferCard
-          icon="tech/framework.png"
-          title="Frameworks"
-          description="Spring Boot, Kafka, Microservices and high-performance backend architectures."
-          href="/tech/frameworks"
-        />
+        <SlideUp>
+          <OfferCard
+            icon="tech/framework.png"
+            title="Frameworks"
+            description="Spring Boot, Kafka, Microservices and high-performance backend architectures."
+            href="/tech/frameworks"
+          />
+        </SlideUp>
 
-        {/* 3. INFRASTRUCTURE */}
-        <OfferCard
-          icon="tech/infrastructure.png"
-          title="Infrastructure"
-          description="RedHat, SUSE, Ubuntu Linux and enterprise-grade infrastructure ecosystems."
-          href="/tech/infrastructure"
-        />
+        <SlideUp>
+          <OfferCard
+            icon="tech/infrastructure.png"
+            title="Infrastructure"
+            description="RedHat, SUSE, Ubuntu Linux and enterprise-grade infrastructure ecosystems."
+            href="/tech/infrastructure"
+          />
+        </SlideUp>
 
-        {/* 4. ORCHESTRATION */}
-        <OfferCard
-          icon="tech/orchestration.png"
-          title="Orchestration Platforms"
-          description="Apache Spark, Airflow — automation, data pipelines, workflow scheduling."
-          href="/tech/orchestration"
-        />
+        <SlideUp>
+          <OfferCard
+            icon="tech/orchestration.png"
+            title="Orchestration Platforms"
+            description="Apache Spark, Airflow — automation, data pipelines, workflow scheduling."
+            href="/tech/orchestration"
+          />
+        </SlideUp>
 
-        {/* 5. BACKEND */}
-        <OfferCard
-          icon="tech/backend.png"
-          title="Backend Engineering"
-          description="Java, .NET, Python — scalable and reliable application development."
-          href="/tech/backend-engineering"
-        />
+        <SlideUp>
+          <OfferCard
+            icon="tech/backend.png"
+            title="Backend Engineering"
+            description="Java, .NET, Python — scalable and reliable application development."
+            href="/tech/backend-engineering"
+          />
+        </SlideUp>
 
-        {/* 6. STORAGE */}
-        <OfferCard
-          icon="tech/database.svg"
-          title="Storage & Databases"
-          description="Oracle, MySQL, PostgreSQL, SQL Server — secure on-premise & hybrid data storage."
-          href="/tech/storage-databases"
-        />
+        <SlideUp>
+          <OfferCard
+            icon="tech/database.svg"
+            title="Storage & Databases"
+            description="Oracle, MySQL, PostgreSQL, SQL Server — secure on-premise & hybrid data storage."
+            href="/tech/storage-databases"
+          />
+        </SlideUp>
 
       </div>
     </section>

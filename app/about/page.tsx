@@ -9,7 +9,7 @@ export default function AboutPage() {
       <section className="relative w-full h-[400px] md:h-[500px]">
         <Image
           src="/group.jpg"
-          alt="Keptel Global Team"
+          alt="Keptal Team"
           fill
           className="object-cover"
           priority
@@ -28,10 +28,10 @@ export default function AboutPage() {
                 "We Blend Innovation with Intelligence to Transform Recruitment in Your Organisation"
               </h1>
               <p className="text-gray-600 text-lg mb-6">
-                Keptel Global was conceptualized with indigenous and unparalleled thought of redefining the human resource industry and addressing talent enigma with the Tech & Touch initiative.
+                Keptal was conceptualized with indigenous and unparalleled thought of redefining the human resource industry and addressing talent enigma with the Tech & Touch initiative.
               </p>
               <p className="text-gray-600 text-lg">
-                Keptel Global has set a new benchmark in the competitive world of talent acquisition through its assiduously conceptualized talent services. We examine macro to micro aspect of your business to perform precise research in order to create a sustainable inflow of suitable talents in your organisation.
+                Keptal has set a new benchmark in the competitive world of talent acquisition through its assiduously conceptualized talent services. We examine macro to micro aspect of your business to perform precise research in order to create a sustainable inflow of suitable talents in your organisation.
               </p>
             </div>
             <div className="order-1 md:order-2">
@@ -82,11 +82,11 @@ export default function AboutPage() {
           </h2>
           
           <p className="text-gray-600 text-lg text-center max-w-4xl mx-auto mb-6">
-            At Keptel Global, our journey has gradually allowed us to provide an entire range of talent services that thoroughly supports our client's talent requirements.
+            At Keptal, our journey has gradually allowed us to provide an entire range of talent services that thoroughly supports our client's talent requirements.
           </p>
           
           <p className="text-gray-600 text-lg text-center max-w-4xl mx-auto mb-12">
-            Withstanding the uncertain limitation levied by the year 2025, cohesive efforts made by Keptel Global to remain undeterred and focused on organisational goals yielded astounding outcomes. We added successive CoE (Center of Excellence) year after year to provide customized talent solution that fits every client's talent needs.
+            Withstanding the uncertain limitation levied by the year 2025, cohesive efforts made by Keptal to remain undeterred and focused on organisational goals yielded astounding outcomes. We added successive CoE (Center of Excellence) year after year to provide customized talent solution that fits every client's talent needs.
           </p>
 
           

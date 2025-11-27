@@ -8,10 +8,7 @@ export default function BlogPage() {
       <section className="w-full bg-[#1F2937] text-white py-24">
         <div className="max-w-5xl mx-auto px-6">
           
-          {/* IMAGE PLACEHOLDER */}
-          <div className="w-full h-64 bg-gray-700 flex items-center justify-center mb-10 rounded-lg">
-            HERO IMAGE
-          </div>
+          
 
           <p className="uppercase tracking-widest text-red-500 font-semibold">
             2025 DIGITAL ENGINEERING INSIGHTS
@@ -32,10 +29,7 @@ export default function BlogPage() {
             </h2>
           </div>
 
-          {/* IMAGE PLACEHOLDER */}
-          <div className="w-full h-64 bg-gray-200 flex items-center justify-center mb-10 rounded-lg">
-            INTRO IMAGE
-          </div>
+          
 
           <p className="text-lg leading-relaxed mb-6">
             Global enterprises face an existential imperative: transform
@@ -91,10 +85,7 @@ export default function BlogPage() {
             </h2>
           </div>
 
-          {/* IMAGE PLACEHOLDER */}
-          <div className="w-full h-64 bg-gray-300 flex items-center justify-center mb-10 rounded-lg">
-            MARKET DRIVERS IMAGE
-          </div>
+          
 
           <div className="space-y-12">
             <div>
@@ -168,10 +159,7 @@ export default function BlogPage() {
             </h2>
           </div>
 
-          {/* IMAGE PLACEHOLDER */}
-          <div className="w-full h-64 bg-gray-200 flex items-center justify-center mb-10 rounded-lg">
-            CAPABILITIES IMAGE
-          </div>
+         
 
           <div className="grid md:grid-cols-2 gap-8">
 
@@ -268,10 +256,7 @@ export default function BlogPage() {
             </h2>
           </div>
 
-          {/* IMAGE PLACEHOLDER */}
-          <div className="w-full h-64 bg-gray-300 flex items-center justify-center mb-10 rounded-lg">
-            REGIONAL MARKET MAP IMAGE
-          </div>
+          
 
           <div className="space-y-12">
             <div>
@@ -340,10 +325,6 @@ export default function BlogPage() {
             <h2 className="text-2xl font-bold">Addressing Digital Engineering Challenges</h2>
           </div>
 
-          {/* IMAGE PLACEHOLDER */}
-          <div className="w-full h-64 bg-gray-200 flex items-center justify-center mb-10 rounded-lg">
-            CHALLENGES IMAGE
-          </div>
 
           <div className="space-y-12">
             <div>
@@ -395,10 +376,7 @@ export default function BlogPage() {
             </h2>
           </div>
 
-          {/* IMAGE PLACEHOLDER */}
-          <div className="w-full h-64 bg-gray-300 flex items-center justify-center mb-10 rounded-lg">
-            FUTURE TRENDS IMAGE
-          </div>
+        
 
           <div className="space-y-12">
             <div>
@@ -445,10 +423,7 @@ export default function BlogPage() {
             <h2 className="text-2xl font-bold">Conclusion</h2>
           </div>
 
-          {/* IMAGE PLACEHOLDER */}
-          <div className="w-full h-64 bg-gray-200 flex items-center justify-center mb-10 rounded-lg">
-            CONCLUSION IMAGE
-          </div>
+  
 
           <p className="text-lg leading-relaxed">
             Digital transformation demands specialized talent, domain expertise,
