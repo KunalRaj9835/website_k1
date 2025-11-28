@@ -1,6 +1,6 @@
 "use client";
 
-import ServiceHero from "@/components/ServiceHero";
+import FullHero from "@/components/FullHero";
 import ServiceTabs from "@/components/ServiceTabs";
 import ServiceSection from "@/components/ServiceSection";
 import { useState } from "react";
@@ -15,7 +15,7 @@ export default function Page() {
     "Global PEO Services designed to redefine international hiring, onboarding, and workforce management for modern enterprises.";
 
   const introRight =
-    "Keptal delivers agile and innovative workforce solutions tailored to fast-evolving global business environments. Our Professional Employer Organisation (PEO) and Employer of Record (EOR) services are built on deep industry foresight and operational expertise. Through our Global PEO framework, organisations gain seamless access to India’s dynamic talent ecosystem while leveraging our in-house Recruitment, HR, Payroll, and Legal capabilities. Our EOR model eliminates the complexities of entity setup, statutory compliance, payroll administration, and employee lifecycle management across borders. We empower organisations to scale globally with confidence—supported by strong legal governance, efficient payroll systems, and compliant onboarding processes.";
+    "Keptel delivers agile and innovative workforce solutions tailored to fast-evolving global business environments. Our Professional Employer Organisation (PEO) and Employer of Record (EOR) services are built on deep industry foresight and operational expertise. Through our Global PEO framework, organisations gain seamless access to India’s dynamic talent ecosystem while leveraging our in-house Recruitment, HR, Payroll, and Legal capabilities. Our EOR model eliminates the complexities of entity setup, statutory compliance, payroll administration, and employee lifecycle management across borders. We empower organisations to scale globally with confidence—supported by strong legal governance, efficient payroll systems, and compliant onboarding processes.";
 
   const bottomText =
     "Hassle-free global hiring with assured compliance, seamless onboarding, and complete workforce governance—without setting up an entity in any country.";
@@ -27,17 +27,10 @@ export default function Page() {
   const tabs1 = [
     { id: "fulltime", label: "Hiring, Benefits & Payroll", icon: "/icon/shield.svg" },
     { id: "flexi", label: "Legal & Financial Guidance", icon: "/icon/laptop.svg" },
-    {
-      id: "strategic",
-      label: "Human Resources",
-      icon: "/icon/server.svg",
-    },
+    { id: "strategic", label: "Human Resources", icon: "/icon/server.svg" },
   ];
 
-  const sections1: Record<
-    string,
-    { title: string; image: string; text: string }
-  > = {
+  const sections1: Record<string, { title: string; image: string; text: string }> = {
     fulltime: {
       title: "Hiring, Benefits & Payroll",
       image: "/global/g3.webp",
@@ -72,10 +65,7 @@ export default function Page() {
     { id: "gamma", label: "EOR", icon: "/icon/server.svg" },
   ];
 
-  const sections2: Record<
-    string,
-    { title: string; image: string; text: string }
-  > = {
+  const sections2: Record<string, { title: string; image: string; text: string }> = {
     alpha: {
       title: "International Expansion",
       image: "/global/g6.webp",
@@ -96,30 +86,30 @@ export default function Page() {
     },
   };
 
-  const [currentTab2, setCurrentTab2] = useState<
-    "alpha" | "beta" | "gamma"
-  >("alpha");
+  const [currentTab2, setCurrentTab2] = useState<"alpha" | "beta" | "gamma">(
+    "alpha"
+  );
 
   // --------------------------------------------------------------------
 
   return (
     <div>
       {/* Hero */}
-      <ServiceHero title={title} bg={bg} />
+      <FullHero title={title} bg={bg} />
 
       {/* Intro Section */}
       <div className="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10">
         <div>
-          <p className="text-3xl font-semibold leading-snug mb-10">
+          <p className="text-3xl font-semibold leading-snug mb-10 text-left text-justify">
             {introLeft}
           </p>
 
-          <p className="text-gray-600 text-center md:text-left max-w-sm">
+          <p className="text-gray-600 text-left text-justify max-w-sm">
             {bottomText}
           </p>
         </div>
 
-        <p className="text-gray-700 leading-relaxed whitespace-pre-line">
+        <p className="text-gray-700 leading-relaxed whitespace-pre-line text-left text-justify">
           {introRight}
         </p>
       </div>
@@ -148,9 +138,7 @@ export default function Page() {
 
       <ServiceTabs
         tabs={tabs2}
-        onSelect={(id: string) =>
-          setCurrentTab2(id as "alpha" | "beta" | "gamma")
-        }
+        onSelect={(id: string) => setCurrentTab2(id as "alpha" | "beta" | "gamma")}
       />
 
       <ServiceSection

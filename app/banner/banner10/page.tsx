@@ -20,13 +20,13 @@ export default function KeptelAIPage() {
 
           {/* LEFT TEXT */}
           <div>
-            <h1 className="text-5xl font-bold mb-4">Unlock the power of AI with Keptal.AI</h1>
+            <h1 className="text-5xl font-bold mb-4">Unlock the power of AI with Keptel.AI</h1>
 
             <div className="h-[3px] w-16 bg-[#D60000] mb-6"></div>
 
             <p className="text-gray-700 leading-relaxed max-w-md">
-              Keptal.AI unifies data, automation, and intelligence into a single seamless ecosystem.
-From raw, fragmented data to enterprise-grade AI deployment, Keptal accelerates every step of the journey.
+              Keptel.AI unifies data, automation, and intelligence into a single seamless ecosystem.
+From raw, fragmented data to enterprise-grade AI deployment, Keptel accelerates every step of the journey.
 Built for scale, speed, and real-world impact, it empowers organizations to operate smarter, faster, and more efficiently.
             </p>
           </div>

@@ -1,50 +1,121 @@
 "use client";
 
-import ServiceHero from "@/components/ServiceHero";
 import Footer from "@/components/Footer";
 
 export default function CaseStudyPage() {
   const title = "Healthcare Technology";
-  const bg = "/case/case5.webp";
+  const bg = "/case/health.jpeg";
 
   return (
     <div>
-      <ServiceHero title={title} bg={bg} />
 
-      <div className="max-w-6xl mx-auto px-6 py-20">
+      {/* HERO */}
+      <div className="relative w-full h-[450px] md:h-[550px] lg:h-[650px]">
+        <img
+          src={bg}
+          alt="Case Study Hero"
+          className="w-full h-full object-cover brightness-75"
+        />
 
-        <p className="text-xl font-semibold text-gray-800 mb-10">
-          Domain : <span className="font-normal">Clinical Data & Health Analytics</span>
-        </p>
-
-        <div className="bg-gray-100 rounded-xl p-10 mb-10 shadow-sm">
-          <h3 className="text-2xl font-semibold text-[#0e355d] mb-4">
-            Problem Statement
-          </h3>
-
-          <p className="text-gray-700 leading-relaxed">
-            A fast-growing healthcare company required experts in clinical data
-            engineering, healthcare analytics, patient data integration, and
-            compliance-driven architecture. Finding engineers experienced with
-            healthcare data standards was a major challenge.
-          </p>
+        <div className="absolute inset-0 flex items-end md:items-center justify-center pb-16 md:pb-0">
+          <h1
+            className="text-[#e5170f] text-3xl md:text-5xl font-bold tracking-wide text-center"
+            style={{
+              WebkitTextStroke: "2px black",
+              WebkitTextFillColor: "#ffffffff",
+            }}
+          >
+            {title}
+          </h1>
         </div>
-
-        <div className="bg-gray-100 rounded-xl p-10 shadow-sm">
-          <h3 className="text-2xl font-semibold text-[#0e355d] mb-4">
-            Keptal's Approach & Solution
-          </h3>
-
-          <p className="text-gray-700 leading-relaxed">
-            Keptel sourced engineers with strong experience across HL7, FHIR,
-            healthcare ETL, and advanced analytics. The deployed team built
-            unified data pipelines, improved patient-data interoperability, and
-            enhanced regulatory compliance. The project significantly improved
-            data accuracy and reporting efficiency.
-          </p>
-        </div>
-
       </div>
+
+      {/* MAIN SECTION */}
+      <div className="min-h-screen bg-[#E7EEF3] text-black pt-20 pb-32">
+        <div className="max-w-5xl mx-auto px-6">
+
+          {/* Domain */}
+          <h1 className="text-4xl font-bold mb-4">
+            Clinical Data & Health Analytics
+          </h1>
+
+          <p className="text-black leading-relaxed max-w-3xl">
+            An overview of how Keptel strengthened a healthcare company's
+            engineering capabilities across clinical data integration,
+            analytics-driven workflows, and compliance-focused architectures.
+          </p>
+
+          {/* Feature Block 1 — Gradient */}
+          <div className="mt-12 p-6 rounded-3xl bg-gradient-to-br from-slate-900 via-slate-950 to-black border border-slate-700 shadow-xl">
+            <h2 className="text-2xl text-red-500 font-semibold mb-4">
+              Problem Statement
+            </h2>
+
+            <p className="text-gray-300 text-sm leading-relaxed">
+              The healthcare company needed specialists in clinical data
+              engineering, patient-data interoperability, analytics pipelines,
+              and regulatory-compliant architectures. Recruiting engineers with
+              deep knowledge of healthcare data standards and secure data
+              integration frameworks proved difficult.
+            </p>
+          </div>
+
+          {/* Feature Block 2 — White Card */}
+          <div className="mt-10 p-6 rounded-3xl bg-white border border-slate-300 shadow-sm">
+            <h3 className="text-xl font-semibold mb-3">
+              Keptel's Approach & Solution
+            </h3>
+
+            <p className="text-gray-700 text-sm leading-relaxed">
+              Keptel deployed engineers skilled in HL7, FHIR, HIPAA-compliant
+              architecture, and healthcare ETL. The team built unified clinical
+              data pipelines, improved interoperability between systems, and
+              strengthened compliance and reporting accuracy. These enhancements
+              enabled more reliable analytics and streamlined patient-data
+              workflows.
+            </p>
+          </div>
+
+          {/* Feature Block 3 — White Card */}
+          <div className="mt-10 p-6 rounded-3xl bg-white border border-slate-300 shadow-sm">
+            <h3 className="text-xl font-semibold mb-3">Business Outcomes</h3>
+
+            <p className="text-gray-700 text-sm leading-relaxed">
+              The engagement improved data quality, enhanced regulatory
+              alignment, enabled faster analytics turnaround, and strengthened
+              patient-data interoperability. Reporting accuracy and operational
+              visibility improved significantly across healthcare workflows.
+            </p>
+          </div>
+
+          {/* Use Cases Grid */}
+          <div className="mt-10 grid md:grid-cols-2 gap-6">
+
+            <div className="p-6 rounded-3xl bg-white border border-slate-300 shadow-sm">
+              <h4 className="font-semibold mb-2">Key Engineering Contributions</h4>
+              <ul className="text-sm text-gray-700 space-y-2">
+                <li>• Healthcare ETL & analytics engineering</li>
+                <li>• HL7 & FHIR interoperability solutions</li>
+                <li>• Secure patient-data integration</li>
+                <li>• HIPAA-compliant architecture design</li>
+                <li>• Clinical data transformation workflows</li>
+              </ul>
+            </div>
+
+            <div className="p-6 rounded-3xl bg-white border border-slate-300 shadow-sm">
+              <h4 className="font-semibold mb-2">Ideal For</h4>
+              <ul className="text-sm text-gray-700 space-y-2">
+                <li>• Healthcare providers & hospital networks</li>
+                <li>• Health-tech product companies</li>
+                <li>• Organizations requiring secure clinical analytics</li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
       <Footer />
     </div>
   );

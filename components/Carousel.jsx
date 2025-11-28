@@ -5,6 +5,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import SlideUp from "@/components/SlideUp";
 import ChargingButton from "./ChargingButton";
 
+
 export default function Carousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -13,7 +14,7 @@ export default function Carousel() {
   const SLIDES = [
     {
       id: 1,
-      title: "INTRODUCTION TO KEPTAL",
+      title: "INTRODUCE TO KEPTEL",
       text: "Powering smart manufacturing with robotics, IoT, and intelligent automation systems.",
       bg: "ball.gif",
       href: "/banner/banner7",
@@ -30,13 +31,13 @@ export default function Carousel() {
       id: 3,
       title: "A PROVEN LEADER IN AI INNOVATION AND DATA MODERNIZATION",
       text: "Keptel recognized for its excellence in AI engineering, scalable data platforms, and enterprise-wide modernization solutions across industries.",
-      bg: "m.webp",
+      bg: "Sound.jpg",
       href: "/banner/banner9",
     },
     {
       id: 4,
-      title: "UNLOCK THE POWER OF AI WITH KEPTAL.AI",
-      text: "Keptal.AI unifies data, automation, and intelligence into a single seamless ecosystem. From raw, fragmented data to enterprise-grade AI deployment, Keptal accelerates every step of the journey.",
+      title: "UNLOCK THE POWER OF AI WITH Keptel.AI",
+      text: "KEPTEL.AI unifies data, automation, and intelligence into a single seamless ecosystem. From raw, fragmented data to enterprise-grade AI deployment, Keptel accelerates every step of the journey.",
       bg: "lightr.jpeg",
       href: "/banner/banner10",
     },
@@ -53,10 +54,7 @@ export default function Carousel() {
     setProgress(0);
     const interval = setInterval(autoplay, 5000);
     const progressInterval = setInterval(() => {
-      setProgress((prev) => {
-        if (prev >= 100) return 0;
-        return prev + 2;
-      });
+      setProgress((prev) => (prev >= 100 ? 0 : prev + 2));
     }, 100);
 
     return () => {
@@ -75,7 +73,7 @@ export default function Carousel() {
   const isGif = (url) => url.toLowerCase().endsWith(".gif");
 
   return (
-    <div className="relative overflow-hidden h-[95vh] font-lunea">
+    <div className={` relative overflow-hidden h-[95vh]`}>
       <div className="overflow-hidden h-full" ref={emblaRef}>
         <div className="flex h-full">
           {SLIDES.map((slide) => {
@@ -99,7 +97,7 @@ export default function Carousel() {
                 {slide.id === 2 ? (
                   <>
                     <img
-                      src={slide.bg}
+                      src={`/${slide.bg}`}
                       alt={slide.title}
                       className="absolute inset-0 w-full h-full object-cover z-0"
                     />
@@ -107,15 +105,14 @@ export default function Carousel() {
                     <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent z-[1]" />
 
                     <div className="relative z-10 text-white max-w-3xl px-10 md:px-20">
-
                       <SlideUp>
-                        <h2 className="font-lunea text-[2rem] font-bold leading-tight mb-4">
+                        <h2 className="text-[3rem] font-thin leading-tight mb-4">
                           {slide.title}
                         </h2>
                       </SlideUp>
 
                       <SlideUp>
-                        <p className="font-lunea text-xl leading-relaxed mb-8">
+                        <p className="text-xl leading-relaxed mb-8">
                           {slide.text}
                         </p>
                       </SlideUp>
@@ -123,7 +120,6 @@ export default function Carousel() {
                       <SlideUp>
                         <ChargingButton text="Know More" href={slide.href} />
                       </SlideUp>
-
                     </div>
                   </>
                 ) : isGifSlide ? (
@@ -138,15 +134,14 @@ export default function Carousel() {
 
                     <div className="w-1/2 h-full flex items-center px-10 md:px-20 relative z-10">
                       <div className="text-white max-w-2xl">
-
                         <SlideUp>
-                          <h2 className="font-lunea text-[2rem] font-bold leading-tight mb-4">
+                          <h2 className="text-[3rem] font-thin leading-tight mb-4">
                             {slide.title}
                           </h2>
                         </SlideUp>
 
                         <SlideUp>
-                          <p className="font-lunea text-xl leading-relaxed mb-8">
+                          <p className="text-xl leading-relaxed mb-8">
                             {slide.text}
                           </p>
                         </SlideUp>
@@ -154,13 +149,12 @@ export default function Carousel() {
                         <SlideUp>
                           <ChargingButton text="Know More" href={slide.href} />
                         </SlideUp>
-
                       </div>
                     </div>
 
                     <div className="w-1/2 h-full flex items-center justify-center p-10 relative z-10">
                       <img
-                        src={slide.bg}
+                        src={`/${slide.bg}`}
                         alt={slide.title}
                         className="max-w-full max-h-full object-contain"
                       />
@@ -169,22 +163,22 @@ export default function Carousel() {
                 ) : (
                   <>
                     <img
-                      src={slide.bg}
+                      src={`/${slide.bg}`}
                       alt={slide.title}
                       className="absolute inset-0 w-full h-full object-cover z-0"
                     />
+
                     <div className="absolute inset-0 bg-black/40 z-[1]" />
 
                     <div className="relative z-10 text-white max-w-2xl px-10 md:px-20">
-
                       <SlideUp>
-                        <h2 className="font-lunea text-[2rem] font-bold leading-tight mb-4">
+                        <h2 className="text-[3rem] font-thin leading-tight mb-4">
                           {slide.title}
                         </h2>
                       </SlideUp>
 
                       <SlideUp>
-                        <p className="font-lunea text-xl leading-relaxed mb-8">
+                        <p className="text-xl leading-relaxed mb-8">
                           {slide.text}
                         </p>
                       </SlideUp>
@@ -192,7 +186,6 @@ export default function Carousel() {
                       <SlideUp>
                         <ChargingButton text="Know More" href={slide.href} />
                       </SlideUp>
-
                     </div>
                   </>
                 )}

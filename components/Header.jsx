@@ -70,10 +70,10 @@ export default function Header() {
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-10 font-medium text-[#0e355d]">
 
+            {/* 1. WHY US */}
             <a href="/#whyus" className="hover:text-red-500">Why Us</a>
-            <a href="/#industries" className="hover:text-red-500">Industry</a>
 
-            {/* TECHNOLOGY EXPERTISE */}
+            {/* 2. TECHNOLOGY EXPERTISE */}
             <div 
               className="relative"
               onMouseEnter={() => handleEnter("tech")}
@@ -100,14 +100,14 @@ export default function Header() {
               </div>
             </div>
 
-            {/* DOMAIN EXPERTISE */}
+            {/* 3. DOMAIN */}
             <div 
               className="relative"
               onMouseEnter={() => handleEnter("domain")}
               onMouseLeave={handleLeave}
             >
               <button className="hover:text-red-500 flex items-center gap-1">
-                Domain Expertise
+                Domain
                 <Arrow isOpen={openMenu === "domain"} />
               </button>
 
@@ -127,7 +127,33 @@ export default function Header() {
               </div>
             </div>
 
-            {/* COMPANY */}
+            {/* 4. SERVICES */}
+            <div 
+              className="relative"
+              onMouseEnter={() => handleEnter("services")}
+              onMouseLeave={handleLeave}
+            >
+              <button className="hover:text-red-500 flex items-center gap-1">
+                Services
+                <Arrow isOpen={openMenu === "services"} />
+              </button>
+
+              <div className={`absolute left-0 mt-2 bg-white shadow-lg rounded p-4 w-80
+                transition-all duration-300 origin-top
+                ${openMenu === "services"
+                  ? "opacity-100 translate-y-0 max-h-96"
+                  : "opacity-0 -translate-y-2 max-h-0 pointer-events-none"}
+              `}
+              >
+                <a href="/talent-intelligence" className="block py-2 hover:text-red-500">Talent Intelligence</a>
+                <a href="/talent-acquisition" className="block py-2 hover:text-red-500">Talent Acquisition</a>
+                <a href="/global-peo-service" className="block py-2 hover:text-red-500">Global PEO Service</a>
+                <a href="/rpo" className="block py-2 hover:text-red-500">Recruitment Process Outsourcing</a>
+                <a href="/executive-search" className="block py-2 hover:text-red-500">Executive Search</a>
+              </div>
+            </div>
+
+            {/* 5. COMPANY (contact moved here) */}
             <div 
               className="relative"
               onMouseEnter={() => handleEnter("company")}
@@ -148,10 +174,10 @@ export default function Header() {
                 <a href="/about" className="block py-2 hover:text-red-500">About Us</a>
                 <a href="/careers" className="block py-2 hover:text-red-500">Careers</a>
                 <a href="/blog" className="block py-2 hover:text-red-500">Blog</a>
+                <a href="/contact-us" className="block py-2 hover:text-red-500">Contact</a>
               </div>
             </div>
 
-            <a href="/contact-us" className="hover:text-red-500">Contact</a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -173,10 +199,10 @@ export default function Header() {
         >
           <div className="flex flex-col px-6 gap-4 font-medium text-[#0e355d]">
 
+            {/* 1. WHY US */}
             <a href="/#whyus" className="hover:text-red-500">Why Us</a>
-            <a href="/#industries" className="hover:text-red-500">Industry</a>
 
-            {/* Mobile Tech Expertise */}
+            {/* 2. TECH */}
             <div>
               <button 
                 onClick={() => setOpenMenu(openMenu === "tech-mobile" ? null : "tech-mobile")}
@@ -199,13 +225,13 @@ export default function Header() {
               </div>
             </div>
 
-            {/* Mobile Domain Expertise */}
+            {/* 3. DOMAIN */}
             <div>
               <button 
                 onClick={() => setOpenMenu(openMenu === "domain-mobile" ? null : "domain-mobile")}
                 className="hover:text-red-500 flex items-center gap-1 w-full text-left"
               >
-                Domain Expertise
+                Domain
                 <Arrow isOpen={openMenu === "domain-mobile"} />
               </button>
 
@@ -222,7 +248,29 @@ export default function Header() {
               </div>
             </div>
 
-            {/* Mobile Company */}
+            {/* 4. SERVICES */}
+            <div>
+              <button 
+                onClick={() => setOpenMenu(openMenu === "services-mobile" ? null : "services-mobile")}
+                className="hover:text-red-500 flex items-center gap-1 w-full text-left"
+              >
+                Services
+                <Arrow isOpen={openMenu === "services-mobile"} />
+              </button>
+
+              <div className={`
+                overflow-hidden transition-all duration-300 pl-4
+                ${openMenu === "services-mobile" ? "max-h-96 mt-2" : "max-h-0"}
+              `}>
+                <a href="/talent-intelligence" className="block py-2">Talent Intelligence</a>
+                <a href="/talent-acquisition" className="block py-2">Talent Acquisition</a>
+                <a href="/global-peo-service" className="block py-2">Global PEO Service</a>
+                <a href="/rpo" className="block py-2">Recruitment Process Outsourcing</a>
+                <a href="/executive-search" className="block py-2">Executive Search</a>
+              </div>
+            </div>
+
+            {/* 5. COMPANY */}
             <div>
               <button 
                 onClick={() => setOpenMenu(openMenu === "company-mobile" ? null : "company-mobile")}
@@ -239,10 +287,9 @@ export default function Header() {
                 <a href="/about" className="block py-2">About Us</a>
                 <a href="/careers" className="block py-2">Careers</a>
                 <a href="/blog" className="block py-2">Blog</a>
+                <a href="/contact-us" className="block py-2">Contact</a>
               </div>
             </div>
-
-            <a href="/contact-us" className="hover:text-red-500">Contact</a>
 
           </div>
         </div>

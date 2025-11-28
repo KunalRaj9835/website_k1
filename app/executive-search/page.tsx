@@ -1,6 +1,6 @@
 "use client";
 
-import ServiceHero from "@/components/ServiceHero";
+import FullHero from "@/components/FullHero";
 import ServiceTabs from "@/components/ServiceTabs";
 import ServiceSection from "@/components/ServiceSection";
 import { useState } from "react";
@@ -32,19 +32,16 @@ export default function Page() {
   ];
 
   // 3) TAB CONTENT SECTIONS
-  const sections: Record<
-    string,
-    { title: string; image: string; text: string }
-  > = {
+  const sections: Record<string, { title: string; image: string; text: string }> = {
     fulltime: {
       title: "Executive Search",
-      image: "/executive/e1.webp",
+      image: "/executive/e1f.jpeg",
       text:
         "Keptel partners closely with Founders, CXOs, and Leadership Teams to understand organisational vision, strategic goals, and role expectations. Our structured leadership assessment framework—covering Role Mapping, Competency Scoring, and Behavioural Evaluation—enables us to identify executives who bring strategic clarity, innovation, and execution excellence. We ensure organisations gain leaders who not only fit the position but elevate long-term business performance.",
     },
     flexi: {
       title: "CXO Mapping",
-      image: "/executive/e2.webp",
+      image: "/executive/e2f.jpeg",
       text:
         "We support organisations in evaluating, benchmarking, and restructuring their leadership through comprehensive CXO Mapping. Our approach assesses experience depth, competency maturity, decision-making style, and transformation readiness for CXO-level roles. This enables companies to build strong leadership pipelines, restructure existing hierarchies, and identify future-ready executives capable of driving business expansion and operational excellence.",
     },
@@ -56,7 +53,6 @@ export default function Page() {
     },
   };
 
-  // CURRENT TAB STATE
   const [currentTab, setCurrentTab] = useState<
     "fulltime" | "flexi" | "strategic"
   >("fulltime");
@@ -64,23 +60,24 @@ export default function Page() {
   return (
     <div>
       {/* Hero */}
-      <ServiceHero title={title} bg={bg} />
+      <FullHero title={title} bg={bg} />
 
       {/* Intro */}
       <div className="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10">
+        
         {/* LEFT TEXT */}
         <div>
-          <p className="text-3xl font-semibold leading-snug mb-10">
+          <p className="text-3xl font-semibold leading-snug mb-10 text-left text-justify">
             {introLeft}
           </p>
 
-          <p className="text-gray-600 text-center md:text-left max-w-sm">
+          <p className="text-gray-600 text-left text-justify max-w-sm">
             {bottomText}
           </p>
         </div>
 
         {/* RIGHT LONG PARAGRAPH */}
-        <p className="text-gray-700 leading-relaxed whitespace-pre-line">
+        <p className="text-gray-700 leading-relaxed whitespace-pre-line text-left text-justify">
           {introRight}
         </p>
       </div>

@@ -7,21 +7,19 @@ import CallToAction from "@/components/CallToAction";
 import RecentBlogs from "@/components/RecentBlogs";
 import FooterNewsletter from "@/components/FooterNewsletter";
 import Footer from "@/components/Footer";
-
+import OurSolutions from "@/components/OurSolutions";
 export default function Home() {
   return (
     <main>
   <Carousel />
   <AboutUs />
+  
+  <OurSolutions />
   <WhatWeOffer />
-
   <div id="whyus">
     <WhyUs />
   </div>
 
-  <div id="industries">
-    <IndustrySpecialties />
-  </div>
 
   <CallToAction />
   <RecentBlogs />

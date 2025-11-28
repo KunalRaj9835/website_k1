@@ -84,7 +84,7 @@ export default function DataAIPage() {
           {/* RIGHT TEXT */}
           <div>
             <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-             INTRODUCTION TO KEPTAL
+             INTRODUCTION TO Keptel
             </h1>
 
             <p className="text-lg mt-6 opacity-80">

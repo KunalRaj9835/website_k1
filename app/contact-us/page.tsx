@@ -109,11 +109,11 @@ export default function ContactPage() {
             {/* Left Side - Info */}
             <div className="text-Black">
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Get in Touch with<br />Keptal Solutions
+                Get in Touch with<br />Keptel Tech
               </h1>
               
               <p className="text-lg mb-6 text-Black">
-                At Keptal Solutions, we specialize in providing end-to-end recruitment solutions tailored to meet your unique needs.
+                At Keptel Tech, we specialize in providing end-to-end recruitment solutions tailored to meet your unique needs.
               </p>
               
               <p className="text-lg mb-6 text-Black">
@@ -270,7 +270,7 @@ export default function ContactPage() {
         allowFullScreen
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
-        title="Keptal Location"
+        title="Keptel Location"
       />
     </div>
   </div>
