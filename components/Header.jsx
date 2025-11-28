@@ -91,12 +91,9 @@ export default function Header() {
                   : "opacity-0 -translate-y-2 max-h-0 pointer-events-none"}
               `}
               >
-                <a href="/tech/cloud-analytics" className="block py-2 hover:text-red-500">Cloud & Analytics Engineering</a>
-                <a href="/tech/frameworks" className="block py-2 hover:text-red-500">Frameworks Engineering</a>
-                <a href="/tech/infrastructure" className="block py-2 hover:text-red-500">Infrastructure Engineering</a>
-                <a href="/tech/orchestration" className="block py-2 hover:text-red-500">Orchestration Engineering</a>
-                <a href="/tech/backend-engineering" className="block py-2 hover:text-red-500">Backend Engineering</a>
-                <a href="/tech/storage-databases" className="block py-2 hover:text-red-500">Databases Engineering</a>
+                <a href="/data/data-modernization" className="block py-2 hover:text-red-500">Data Modernization</a>
+                <a href="/data/aritifical-intelligence" className="block py-2 hover:text-red-500">Aritifical Intelligence</a>
+                <a href="/data/ai-powered-operations" className="block py-2 hover:text-red-500">AI powerd opertaion</a>
               </div>
             </div>
 
@@ -216,12 +213,9 @@ export default function Header() {
                 overflow-hidden transition-all duration-300 pl-4
                 ${openMenu === "tech-mobile" ? "max-h-80 mt-2" : "max-h-0"}
               `}>
-                <a href="/tech/cloud-analytics" className="block py-2 hover:text-red-500">Cloud & Analytics Engineering</a>
-                <a href="/tech/frameworks" className="block py-2 hover:text-red-500">Frameworks Engineering</a>
-                <a href="/tech/infrastructure" className="block py-2 hover:text-red-500">Infrastructure Engineering</a>
-                <a href="/tech/orchestration" className="block py-2 hover:text-red-500">Orchestration Engineering</a>
-                <a href="/tech/backend-engineering" className="block py-2 hover:text-red-500">Backend Engineering</a>
-                <a href="/tech/storage-databases" className="block py-2 hover:text-red-500">Databases Engineering</a>
+                <a href="/data/data-modernization" className="block py-2 hover:text-red-500">Data Modernization</a>
+                <a href="/data/aritifical-intelligence" className="block py-2 hover:text-red-500">Aritifical Intelligence</a>
+                <a href="/data/ai-powered-operations" className="block py-2 hover:text-red-500">AI powerd opertaion</a>
               </div>
             </div>
 

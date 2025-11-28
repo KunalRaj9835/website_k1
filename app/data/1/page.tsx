@@ -82,7 +82,6 @@ export default function Page() {
           text="Produce actionable insights and enable confident, data-driven decisions across your enterprise with advanced analytics, machine learning, and AI engineering."
           image="/photo/5.jpg"
           color="#ffffff"
-          href="/data/aritifical-intelligence/1"
         />
 
         <SideBySideCard
@@ -90,7 +89,6 @@ export default function Page() {
           text="Make sense of data—wherever it lives—with modern data architecture, governance frameworks, and end-to-end enterprise data management."
           image="/photo/6.jpg"
           color="#f9f9f9"
-          href="/data/aritifical-intelligence/2"
         />
 
         <SideBySideCard
@@ -98,7 +96,6 @@ export default function Page() {
           text="Identify, target, and convert high-value customers using analytics-powered marketing solutions designed to drive measurable business growth."
           image="/photo/7.jpg"
           color="#eaeaea"
-          href="/data/aritifical-intelligence/3"
         />
 
         <SideBySideCard
@@ -106,7 +103,6 @@ export default function Page() {
           text="Deploy customised generative AI applications that streamline operations, enhance customer experiences, and enable rapid innovation across your business."
           image="/photo/8.jpg"
           color="#d6d7d9"
-          href="/data/aritifical-intelligence/4"
         />
 
       </div>

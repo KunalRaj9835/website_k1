@@ -1,94 +1,114 @@
 "use client";
-import Footer from "@/components/Footer";
 
-export default function DataModernizationPage() {
+import Image from "next/image";
+import Footer from "@/components/Footer";
+import SideBySideCard from "@/components/SideBySideCard";
+
+export default function Page() {
+  // PAGE DATA
+  const title = "Data Modernization";
+  const bg = "/photo/main.jpg";
+
+  const introHeading =
+    "Outdated data systems stall growth — Keptel builds for the future";
+
+  const introPara =
+    "Legacy systems, fragmented data sources, and slow pipelines directly limit your organisation’s ability to innovate. As AI adoption accelerates, outdated architectures create bottlenecks that delay insights and inflate operational costs. Keptel modernises your ecosystem end-to-end—transforming scattered data into a trusted, governed, and highly scalable enterprise asset. With automation-first design, enriched metadata, and cloud-native flexibility, your data foundation evolves from reactive maintenance to proactive innovation.";
+
+  const midTitle = "A future-ready platform for AI, speed, and scale";
+
+  const midPara =
+    "Modern businesses must deliver insights at the pace of customer expectation. Teams need immediate access to accurate data to drive decisions, power AI models, and accelerate digital initiatives. Keptel enables this with robust cloud-native accelerators, pre-built frameworks, and consistent operational governance. We automate critical data operations, identify issues early, and ensure pipeline reliability across the ecosystem—helping you ship new models faster, reduce downstream failures, and maintain a continuously high-performing data platform.";
+
   return (
     <div>
-      <div className="min-h-screen bg-[#E7EEF3] text-black pt-24 pb-32">
-        <div className="max-w-5xl mx-auto px-6">
+      {/* -------------------------------------------------- */}
+      {/* HERO SECTION */}
+      {/* -------------------------------------------------- */}
+      <div className="relative h-[650px] w-full overflow-hidden">
+        <Image src={bg} alt={title} fill className="object-cover opacity-70" />
 
-          {/* Title */}
-          <h1 className="text-4xl font-bold mb-4">Data Modernization</h1>
-
-          {/* Intro */}
-          <p className="text-black leading-relaxed max-w-3xl">
-            Modernize legacy environments, simplify complex data ecosystems,
-            and rebuild your enterprise data foundation for scale. Our modernization
-            approach enables seamless migration to cloud-native platforms, unified
-            access layers, real-time data availability, and AI-ready architectures.
-          </p>
-
-          {/* Feature Block 1 */}
-          <div className="mt-12 p-6 rounded-3xl bg-gradient-to-br from-slate-900 via-slate-950 to-black border border-slate-700 shadow-xl">
-
-            <h2 className="text-2xl text-red-500 font-semibold mb-4">Core Modernization Capabilities</h2>
-
-            <ul className="space-y-3 text-gray-400 text-sm">
-              <li>• Legacy warehouse re-engineering and schema redesign</li>
-              <li>• Migration from on-prem to cloud-native data platforms</li>
-              <li>• Data lake / lakehouse architecture implementation</li>
-              <li>• ETL-to-ELT transformation using modern engines</li>
-              <li>• API-first data access and service layers</li>
-              <li>• Data quality, lineage, governance and cataloging automation</li>
-              <li>• Real-time ingestion frameworks and change-data-capture (CDC)</li>
-              <li>• Enterprise semantic layers for unified analytics</li>
-              <li>• Metadata enrichment and automated classification</li>
-            </ul>
-          </div>
-
-          {/* Feature Block 2 */}
-          <div className="mt-10 p-6 rounded-3xl bg-white border border-slate-300 shadow-sm">
-
-            <h3 className="text-xl font-semibold mb-3">Modern Architecture Patterns</h3>
-
-            <ul className="space-y-2 text-sm text-gray-700">
-              <li>• Data mesh for distributed domain ownership</li>
-              <li>• Lakehouse for unified BI and ML workflows</li>
-              <li>• Serverless pipelines for elastic scaling</li>
-              <li>• Zero-copy analytics across compute engines</li>
-              <li>• Hybrid and multi-cloud data fabrics</li>
-            </ul>
-          </div>
-
-          {/* Outcomes */}
-          <div className="mt-10 p-6 rounded-3xl bg-white border border-slate-300 shadow-sm">
-
-            <h3 className="text-xl font-semibold mb-3">Business Outcomes</h3>
-
-            <p className="text-gray-700 text-sm leading-relaxed">
-              A modernized data environment unlocks agility, reduces operational cost,
-              improves reliability, and enables enterprises to adopt generative AI,
-              automation, and advanced analytics without architectural barriers.
+        <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/70 to-transparent flex items-center px-6 md:px-20">
+          <div>
+            <h1 className="text-4xl md:text-6xl font-semibold">{title}</h1>
+            <p className="mt-4 text-gray-700 text-lg max-w-xl">
+              Transform legacy architectures into scalable, AI-ready data ecosystems.
             </p>
           </div>
-
-          {/* Use Cases */}
-          <div className="mt-10 grid md:grid-cols-2 gap-6">
-
-            <div className="p-6 rounded-3xl bg-white border border-slate-300 shadow-sm">
-              <h4 className="font-semibold mb-2">Modernization Use Cases</h4>
-              <ul className="text-sm text-gray-700 space-y-2">
-                <li>• Legacy BI platform replacement</li>
-                <li>• Cloud-first data strategy transformation</li>
-                <li>• Warehouse-to-lakehouse migrations</li>
-                <li>• Removal of redundant data systems</li>
-                <li>• Enterprise data consolidation programs</li>
-              </ul>
-            </div>
-
-            <div className="p-6 rounded-3xl bg-white border border-slate-300 shadow-sm">
-              <h4 className="font-semibold mb-2">Ideal For</h4>
-              <ul className="text-sm text-gray-700 space-y-2">
-                <li>• Enterprises with fragmented legacy systems</li>
-                <li>• Organizations requiring real-time access layers</li>
-                <li>• Teams building AI and analytics modernization roadmaps</li>
-              </ul>
-            </div>
-
-          </div>
-
         </div>
       </div>
+
+      {/* -------------------------------------------------- */}
+      {/* INTRO */}
+      {/* -------------------------------------------------- */}
+      <div className="max-w-7xl mx-auto px-6 py-20">
+        <h2 className="text-4xl font-semibold leading-snug">{introHeading}</h2>
+
+        <div className="w-16 h-1 bg-red-600 mt-4"></div>
+
+        <p className="mt-8 text-gray-700 leading-relaxed">{introPara}</p>
+      </div>
+
+      {/* -------------------------------------------------- */}
+      {/* MID BLOCK */}
+      {/* -------------------------------------------------- */}
+      <div className="py-20" style={{ backgroundColor: "#e6edf4" }}>
+        <div className="max-w-7xl mx-auto px-6">
+          <h3 className="text-4xl font-semibold leading-snug text-red-600">
+            {midTitle}
+          </h3>
+
+          <div className="w-16 h-1 bg-red-600 mt-4"></div>
+
+          <p className="mt-8 text-gray-700 leading-relaxed">{midPara}</p>
+        </div>
+      </div>
+
+
+      <div className="max-w-7xl mx-auto px-6 py-16 bg-white">
+        <h3 className="text-3xl font-semibold">What we do</h3>
+        <div className="w-16 h-[3px] bg-red-500 mt-3"></div>
+      </div>
+
+      {/* -------------------------------------------------- */}
+      {/* CARD GRID */}
+      {/* -------------------------------------------------- */}
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0">
+
+        <SideBySideCard
+          title="Enterprise data strategy"
+          text="Assess your data maturity and create a strategic roadmap that connects business outcomes with governance, AI integration, and long-term platform scalability."
+          image="/photo/1.jpeg"
+          color="#ffffff"
+          href="/data/data-modernization/1"
+        />
+
+        <SideBySideCard
+          title="Data platform modernization"
+          text="Upgrade legacy environments or modernize cloud platforms using automated code conversion, governed lakehouse architecture, and AI-driven orchestration across AWS, Azure, GCP, Databricks, or Snowflake."
+          image="/photo/2.jpeg"
+          color="#f9f9f9"
+          href="/data/data-modernization/2"
+        />
+
+        <SideBySideCard
+          title="Data management"
+          text="Implement automated governance, quality controls, security safeguards, and privacy-first pipelines. Strengthen AI readiness with reliable, high-performance data management."
+          image="/photo/3.avif"
+          color="#eaeaea"
+          href="/data/data-modernization/3"
+        />
+
+        <SideBySideCard
+          title="Managed services and data operations"
+          text="From cloud setup to ongoing operations, we monitor, maintain, and optimize your data pipelines—so teams focus on insights, not incidents."
+          image="/photo/4.avif"
+          color="#d6d7d9"
+          href="/data/data-modernization/4"
+        />
+
+      </div>
+
       <Footer />
     </div>
   );
