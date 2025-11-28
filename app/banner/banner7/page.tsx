@@ -69,26 +69,23 @@ export default function DataAIPage() {
       <section className="w-full bg-black text-white py-28">
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
           
-          {/* LEFT IMAGE */}
           <div>
-            <video
-              src="/carousel/liquid.mp4"
-              className="w-full h-full object-cover"
-              autoPlay
-              loop
-              muted
-              playsInline
-            />
-          </div>
+  <img
+    src="/ball.gif"
+    className="w-full h-full object-cover"
+    alt="Ball animation"
+  />
+</div>
 
-          {/* RIGHT TEXT */}
+
+
           <div>
             <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-             INTRODUCTION TO Keptel
+             Introduce to Keptel
             </h1>
 
             <p className="text-lg mt-6 opacity-80">
-             Unify fragmented data ecosystems and accelerate AI adoption with an intelligent, agent-driven data foundation.
+             Transforming enterprises through AI-driven insights, advanced data engineering, and intelligent automation powered by unified, high-quality data.
             </p>
 
             <button className="mt-8 px-6 py-3 border border-red-500 text-red-500 rounded-md hover:bg-red-500 hover:text-black transition">

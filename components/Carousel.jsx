@@ -11,37 +11,38 @@ export default function Carousel() {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [progress, setProgress] = useState(0);
 
-  const SLIDES = [
-    {
-      id: 1,
-      title: "INTRODUCE TO KEPTEL",
-      text: "Powering smart manufacturing with robotics, IoT, and intelligent automation systems.",
-      bg: "ball.gif",
-      href: "/banner/banner7",
-      gifPosition: "right",
-    },
-    {
-      id: 2,
-      title: "CLEAN, MONETIZE, AND POWER AI WITH YOUR DATA",
-      text: "ensure data quality through cleaning, generate revenue through monetization, and enable intelligent automation with AI-ready pipelines.",
-      bg: "ai.gif",
-      href: "/banner/banner11",
-    },
-    {
-      id: 3,
-      title: "A PROVEN LEADER IN AI INNOVATION AND DATA MODERNIZATION",
-      text: "Keptel recognized for its excellence in AI engineering, scalable data platforms, and enterprise-wide modernization solutions across industries.",
-      bg: "Sound.jpg",
-      href: "/banner/banner9",
-    },
-    {
-      id: 4,
-      title: "UNLOCK THE POWER OF AI WITH Keptel.AI",
-      text: "KEPTEL.AI unifies data, automation, and intelligence into a single seamless ecosystem. From raw, fragmented data to enterprise-grade AI deployment, Keptel accelerates every step of the journey.",
-      bg: "lightr.jpeg",
-      href: "/banner/banner10",
-    },
-  ];
+ const SLIDES = [
+  {
+    id: 1,
+    title: "Introduce to Keptel",
+    text: "Transforming enterprises through AI-driven insights, advanced data engineering, and intelligent automation powered by unified, high-quality data.",
+    bg: "ball.gif",
+    href: "/banner/banner7",
+    gifPosition: "right",
+  },
+  {
+    id: 2,
+    title: "Clean, monetize, and power AI with your data",
+    text: "ensure data quality through cleaning, generate revenue through monetization, and enable intelligent automation with AI-ready pipelines.",
+    bg: "ai.gif",
+    href: "/banner/banner11",
+  },
+  {
+    id: 3,
+    title: "A proven leader in AI innovation and data modernization",
+    text: "Keptel recognized for its excellence in AI engineering, scalable data platforms, and enterprise-wide modernization solutions across industries.",
+    bg: "s.jpeg",
+    href: "/banner/banner9",
+  },
+  {
+    id: 4,
+    title: "Unlock the power of AI with Keptel.AI",
+    text: "KEPTEL.AI unifies data, automation, and intelligence into a single seamless ecosystem. From raw, fragmented data to enterprise-grade AI deployment, Keptel accelerates every step of the journey.",
+    bg: "lightr.jpeg",
+    href: "/banner/banner10",
+  },
+];
+
 
   const autoplay = useCallback(() => {
     if (!emblaApi) return;
