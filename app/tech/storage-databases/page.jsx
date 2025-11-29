@@ -11,10 +11,10 @@ export default function StorageDatabases() {
         <div className="max-w-5xl mx-auto px-6">
 
           {/* Title */}
-          <h1 className="text-4xl font-bold mb-6">Storage & Databases</h1>
+          <h1 className="text-4xl font-extralight mb-6">Storage & Databases</h1>
 
           {/* Intro */}
-          <p className="text-black leading-relaxed max-w-3xl">
+          <p className="text-black leading-relaxed max-w-3xl font-light">
             Keptel designs, deploys, and manages enterprise-grade storage and 
             database systems optimized for performance, analytics, scalability, 
             and secure data operations.
@@ -22,9 +22,9 @@ export default function StorageDatabases() {
 
           {/* Feature Block — What We Do */}
           <div className="mt-12 p-6 rounded-3xl bg-white border border-slate-300 shadow-sm">
-            <h2 className="text-2xl font-semibold mb-4">What We Do</h2>
+            <h2 className="text-2xl font-medium mb-4">What We Do</h2>
 
-            <ul className="text-sm text-gray-700 space-y-2">
+            <ul className="text-sm text-gray-700 space-y-2 font-light">
               <li>• Database design & architecture</li>
               <li>• High availability & disaster recovery</li>
               <li>• Metadata management & governance</li>
@@ -35,9 +35,9 @@ export default function StorageDatabases() {
 
           {/* Feature Block — Technologies */}
           <div className="mt-10 p-6 rounded-3xl bg-white border border-slate-300 shadow-sm">
-            <h2 className="text-2xl font-semibold mb-4">Technologies</h2>
+            <h2 className="text-2xl font-medium mb-4">Technologies</h2>
 
-            <p className="text-sm text-gray-700 leading-relaxed">
+            <p className="text-sm text-gray-700 leading-relaxed font-light">
               Oracle, PostgreSQL, MySQL, SQL Server, Snowflake, BigQuery.
             </p>
           </div>

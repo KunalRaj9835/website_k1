@@ -31,18 +31,18 @@ export default function SideBySideCard({
         className="p-10 flex flex-col flex-1"
         style={{ backgroundColor: color }}
       >
-        <h3 className="text-2xl font-semibold mb-4 text-[#e5170f] mt-4">
+        <h3 className="text-2xl font-light mb-4 text-[#e5170f] mt-4">
           {title}
         </h3>
 
-        <p className="text-base leading-relaxed flex-1 mt-4">
+        <p className="text-base text-light leading-relaxed flex-1 mt-4 text-justify">
           {text}
         </p>
 
         {href && (
           <a
             href={href}
-            className="mt-8 inline-flex items-center font-medium mt-4"
+            className="mt-8 inline-flex items-center font-medium mt-4 text-[#3478e6]"
           >
             Read more →
           </a>

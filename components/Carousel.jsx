@@ -37,7 +37,7 @@ export default function Carousel() {
   {
     id: 4,
     title: "Unlock the power of AI with Keptel.AI",
-    text: "KEPTEL.AI unifies data, automation, and intelligence into a single seamless ecosystem. From raw, fragmented data to enterprise-grade AI deployment, Keptel accelerates every step of the journey.",
+    text: "Keptel.AI unifies data, automation, and intelligence into a single seamless ecosystem. From raw, fragmented data to enterprise-grade AI deployment, Keptel accelerates every step of the journey.",
     bg: "lightr.jpeg",
     href: "/banner/banner10",
   },
@@ -113,7 +113,7 @@ export default function Carousel() {
                       </SlideUp>
 
                       <SlideUp>
-                        <p className="text-xl leading-relaxed mb-8">
+                        <p className="text-xl leading-relaxed mb-8 font-light">
                           {slide.text}
                         </p>
                       </SlideUp>
@@ -142,7 +142,7 @@ export default function Carousel() {
                         </SlideUp>
 
                         <SlideUp>
-                          <p className="text-xl leading-relaxed mb-8">
+                          <p className="text-xl leading-relaxed mb-8 font-light">
                             {slide.text}
                           </p>
                         </SlideUp>
@@ -179,7 +179,7 @@ export default function Carousel() {
                       </SlideUp>
 
                       <SlideUp>
-                        <p className="text-xl leading-relaxed mb-8">
+                        <p className="text-xl leading-relaxed mb-8 font-light ">
                           {slide.text}
                         </p>
                       </SlideUp>

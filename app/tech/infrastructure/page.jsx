@@ -11,10 +11,10 @@ export default function Infrastructure() {
         <div className="max-w-5xl mx-auto px-6">
 
           {/* Title */}
-          <h1 className="text-4xl font-bold mb-6">Infrastructure</h1>
+          <h1 className="text-4xl font-extralight mb-6">Infrastructure</h1>
 
           {/* Intro */}
-          <p className="text-black leading-relaxed max-w-3xl">
+          <p className="text-black leading-relaxed max-w-3xl font-light">
             Keptel engineers secure, scalable enterprise infrastructure using 
             industry-leading Linux platforms and hybrid cloud environments. Our 
             infrastructure services ensure reliability, performance, and compliance.
@@ -22,9 +22,9 @@ export default function Infrastructure() {
 
           {/* Feature Block — What We Do */}
           <div className="mt-12 p-6 rounded-3xl bg-white border border-slate-300 shadow-sm">
-            <h2 className="text-2xl font-semibold mb-4">What We Do</h2>
+            <h2 className="text-2xl font-medium mb-4">What We Do</h2>
 
-            <ul className="text-sm text-gray-700 space-y-2">
+            <ul className="text-sm text-gray-700 space-y-2 font-light">
               <li>• Linux server provisioning & configuration</li>
               <li>• Infrastructure automation (IaC)</li>
               <li>• Enterprise-grade security & OS-hardening</li>
@@ -35,9 +35,9 @@ export default function Infrastructure() {
 
           {/* Feature Block — Technologies */}
           <div className="mt-10 p-6 rounded-3xl bg-white border border-slate-300 shadow-sm">
-            <h2 className="text-2xl font-semibold mb-4">Technologies</h2>
+            <h2 className="text-2xl font-medium mb-4">Technologies</h2>
 
-            <p className="text-sm text-gray-700 leading-relaxed">
+            <p className="text-sm text-gray-700 leading-relaxed font-light">
               RedHat, SUSE, Ubuntu, VMware, Hyper-V, Terraform, Ansible, CI/CD Tooling.
             </p>
           </div>

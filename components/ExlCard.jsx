@@ -23,25 +23,23 @@ export default function ExlTallCard({ title, desc, image, href }) {
       {/* TEXT */}
       <div className="px-8 pt-10">
 
-        <SlideUp>
-          <h3 className="text-2xl font-semibold text-[#e5170f] leading-snug">
+          <h3 className="text-2xl font-extralight text-[#e5170f] leading-snug">
             {title}
           </h3>
-        </SlideUp>
 
-        <SlideUp>
-          <p className="mt-5 text-gray-700 text-[17px] leading-relaxed">
+
+          <p className="mt-5 text-gray-700 text-[17px] font-light leading-relaxed">
             {desc}
           </p>
-        </SlideUp>
+
 
         {isLink && (
-          <SlideUp>
+
             <div className="mt-10 text-[#e5170f] font-medium flex items-center gap-2">
               <span>Explore more</span>
               <span className="text-xl">→</span>
             </div>
-          </SlideUp>
+
         )}
       </div>
     </Wrapper>

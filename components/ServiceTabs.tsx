@@ -27,8 +27,8 @@ export default function ServiceTabs({ tabs, onSelect }: Props) {
         <button
           key={t.id}
           onClick={() => handle(t.id)}
-          className={`flex items-center gap-2 text-lg transition ${
-            active === t.id ? "font-bold" : "opacity-60"
+          className={`flex items-center gap-2 text-lg font-light transition ${
+            active === t.id ? "font-medium opacity-100" : "opacity-50"
           }`}
         >
           <img src={t.icon} className="w-6" />

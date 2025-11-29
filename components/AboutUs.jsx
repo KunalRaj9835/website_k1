@@ -11,7 +11,7 @@ export default function AboutUs() {
 
       <div className="text-center mb-12">
         <SlideUp>
-          <h2 className="text-3xl font-bold text-[#0e355d]">About Us</h2>
+          <h2 className="text-[2.5rem] font-extralight text-[#0e355d]">About Us</h2>
         </SlideUp>
 
         <SlideUp>
@@ -31,7 +31,7 @@ export default function AboutUs() {
 
         <div>
           <SlideUp>
-            <p className="text-gray-500 leading-relaxed mb-6">
+            <p className="text-gray-500 font-light leading-relaxed mb-6 text-justify">
               Keptel was established with a clear purpose: to understand diverse
               organizational needs and connect them with the right talent
               through precise, insight-driven mapping. With strong domain
@@ -46,7 +46,7 @@ export default function AboutUs() {
           </SlideUp>
 
           <SlideUp>
-            <p className="text-gray-500 leading-relaxed mb-6">
+            <p className="text-gray-500 font-light leading-relaxed mb-6 text-justify">
               Backed by extensive research on skill availability, talent
               landscapes, and technology trends, Keptel consistently delivers
               human capital solutions that accelerate business outcomes. Our

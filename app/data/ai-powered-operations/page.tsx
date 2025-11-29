@@ -3,11 +3,11 @@
 import Image from "next/image";
 import Footer from "@/components/Footer";
 import SideBySideCard from "@/components/SideBySideCard";
+import SlideUp from "@/components/SlideUp";
 
 export default function Page() {
-  // PAGE DATA
   const title = "AI-Powered Operations";
-  const bg = "/photo/pre.jpg"; // replace with your hero image
+  const bg = "/pic/AI-Powered Operations.png";
 
   const introHeading =
     "Lay the foundation for operational excellence – improving outcomes and sustainability";
@@ -25,16 +25,18 @@ export default function Page() {
       {/* -------------------------------------------------- */}
       {/* HERO */}
       {/* -------------------------------------------------- */}
-      <div className="relative h-[650px] w-full overflow-hidden">
+      <div className="relative h-[480px] w-full overflow-hidden">
         <Image src={bg} alt={title} fill className="object-cover opacity-70" />
 
         <div className="absolute inset-0 bg-gradient-to-r from-white/90 via-white/70 to-transparent flex items-center px-6 md:px-20">
-          <div>
-            <h1 className="text-4xl md:text-6xl font-semibold">{title}</h1>
-            <p className="mt-4 text-gray-700 text-lg max-w-xl">
-              Operational intelligence that sharpens workflows and elevates value.
-            </p>
-          </div>
+          <SlideUp>
+            <div>
+              <h1 className="text-5xl font-extralight">{title}</h1>
+              <p className="mt-4 text-gray-700 text-lg max-w-xl font-light">
+                Operational intelligence that sharpens workflows and elevates value.
+              </p>
+            </div>
+          </SlideUp>
         </div>
       </div>
 
@@ -42,11 +44,21 @@ export default function Page() {
       {/* INTRO */}
       {/* -------------------------------------------------- */}
       <div className="max-w-7xl mx-auto px-6 py-20">
-        <h2 className="text-4xl font-semibold leading-snug">{introHeading}</h2>
+        <SlideUp>
+          <h2 className="text-3xl font-light text-red-600 leading-snug">
+            {introHeading}
+          </h2>
+        </SlideUp>
 
-        <div className="w-16 h-1 bg-red-600 mt-4"></div>
+        <SlideUp>
+          <div className="w-16 h-1 bg-red-600 mt-4"></div>
+        </SlideUp>
 
-        <p className="mt-8 text-gray-700 leading-relaxed">{introPara}</p>
+        <SlideUp>
+          <p className="mt-8 text-gray-700 leading-relaxed font-light text-justify">
+            {introPara}
+          </p>
+        </SlideUp>
       </div>
 
       {/* -------------------------------------------------- */}
@@ -54,60 +66,75 @@ export default function Page() {
       {/* -------------------------------------------------- */}
       <div className="py-20" style={{ backgroundColor: "#e6edf4" }}>
         <div className="max-w-7xl mx-auto px-6">
-          <h3 className="text-4xl font-semibold leading-snug text-red-600">
-            {midTitle}
-          </h3>
+          <SlideUp>
+            <h3 className="text-3xl font-light leading-snug text-red-600">
+              {midTitle}
+            </h3>
+          </SlideUp>
 
-          <div className="w-16 h-1 bg-red-600 mt-4"></div>
+          <SlideUp>
+            <div className="w-16 h-1 bg-red-600 mt-4"></div>
+          </SlideUp>
 
-          <p className="mt-8 text-gray-700 leading-relaxed">{midPara}</p>
+          <SlideUp>
+            <p className="mt-8 text-gray-700 leading-relaxed font-light text-justify">
+              {midPara}
+            </p>
+          </SlideUp>
         </div>
       </div>
 
       {/* -------------------------------------------------- */}
-      {/* WHAT WE DO SECTION (RED VERSION) */}
+      {/* WHAT WE DO */}
       {/* -------------------------------------------------- */}
       <div className="max-w-7xl mx-auto px-6 py-16 bg-white">
-        <h3 className="text-3xl font-semibold">What we do</h3>
-        <div className="w-16 h-[3px] bg-red-500 mt-3"></div>
+        <SlideUp>
+          <h3 className="text-3xl font-light text-red-600 leading-snug">
+            What we do
+          </h3>
+        </SlideUp>
+
+        <SlideUp>
+          <div className="w-16 h-[3px] bg-red-500 mt-3"></div>
+        </SlideUp>
       </div>
 
       {/* -------------------------------------------------- */}
-      {/* 4-CARD GRID */}
+      {/* CARDS — NO SLIDEUP HERE */}
       {/* -------------------------------------------------- */}
       <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0">
 
         <SideBySideCard
-          title="Business Operations"
-          text="Break down silos and embed real-time intelligence into your workflows as you reimagine, automate, and optimize operations across the enterprise."
-          image="/photo/9.jpg"
-          color="#ffffff"
-          href="/data/ai-powered-operations/1"
-        />
+  title="Business Operations"
+  text="Unify processes and enable real-time, data-driven decisioning by redesigning workflows with automation, intelligence, and end-to-end operational visibility."
+  image="/pic/Business Operations.png"
+  color="#ffffff"
+  href="/data/ai-powered-operations/1"
+/>
 
-        <SideBySideCard
-          title="Customer operations"
-          text="Adapt quickly to evolving customer needs with AI-powered insights that deliver fast, relevant, and personalized interactions at scale."
-          image="/photo/10.avif"
-          color="#f9f9f9"
-          href="/data/ai-powered-operations/2"
-        />
+<SideBySideCard
+  title="Customer operations"
+  text="Respond to shifting customer expectations with AI-enhanced insights that deliver faster, context-aware, and deeply personalized experiences across every touchpoint."
+  image="/pic/Customer operations.png"
+  color="#f9f9f9"
+  href="/data/ai-powered-operations/2"
+/>
 
-        <SideBySideCard
-          title="Finance and accounting"
-          text="Improve profitability by modernizing financial workflows, automating decision paths, and integrating digital tools that strengthen accuracy and control."
-          image="/photo/11.webp"
-          color="#eaeaea"
-          href="/data/ai-powered-operations/3"
-        />
+<SideBySideCard
+  title="Finance and accounting"
+  text="Enhance financial performance by digitizing core activities, streamlining approvals, and applying intelligent automation for greater accuracy, speed, and control."
+  image="/pic/Finance and accounting.png"
+  color="#eaeaea"
+  href="/data/ai-powered-operations/3"
+/>
 
-        <SideBySideCard
-          title="Risk and compliance"
-          text="Use data and AI to strengthen resilience, reduce risk exposure, and ensure global compliance while streamlining complex regulatory processes."
-          image="/photo/12.jpeg"
-          color="#d6d7d9"
-          href="/data/ai-powered-operations/4"
-        />
+<SideBySideCard
+  title="Risk and compliance"
+  text="Strengthen enterprise protection by leveraging data and AI to anticipate threats, minimize gaps, and simplify compliance across evolving regulatory environments."
+  image="/pic/Risk and compliance.png"
+  color="#d6d7d9"
+  href="/data/ai-powered-operations/4"
+/>
 
       </div>
 

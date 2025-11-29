@@ -13,9 +13,11 @@ export default function Home() {
     <main>
   <Carousel />
   <AboutUs />
-  
+  {/*
+  <div id = "oursolution">
   <OurSolutions />
-  <WhatWeOffer />
+  </div>
+   */}
   <div id="whyus">
     <WhyUs />
   </div>

@@ -48,61 +48,54 @@ export default function AIPipelineFlow() {
   );
 
   return (
-    <section className="w-full bg-[#101827] text-white py-16">
-      <div className="max-w-5xl mx-auto px-6">
+    <section className="w-full bg-[#101827] text-white py-6">
+  <div className="max-w-md mx-auto px-2">
 
-        <SlideUp>
-          <p className="uppercase tracking-[0.25em] text-[10px] text-red-400 mb-3">
-            AI Pipeline Flow
-          </p>
-        </SlideUp>
+    <p className="uppercase tracking-[0.25em] text-[10px] text-red-400 mb-2">
+      AI Pipeline Flow
+    </p>
 
-        <SlideUp>
-          <h2 className="text-2xl font-bold mb-10">
-            End-to-End Data to AI Workflow
-          </h2>
-        </SlideUp>
+    <h2 className="text-xl font-bold mb-4">
+      End-to-End Data to AI Workflow
+    </h2>
 
-        <div className="w-full flex justify-center">
-          <div className="flex flex-col items-center gap-3">
-            {/* ========== ROW 1: 1 -> 2 ========== */}
-            <div className="flex items-center gap-3">
-              <Box step={steps[0]} />
-              <ArrowRight />
-              <Box step={steps[1]} />
-            </div>
+    <div className="w-full flex justify-center">
+      <div className="flex flex-col items-center gap-2">
 
-            {/* 2 -> 3 (DOWN) */}
-            <div className="w-full max-w-[26rem] relative mt-1 mb-1 h-8">
-              <div className="absolute top-0 left-[75%] -translate-x-1/2">
-                <ArrowDown />
-              </div>
-            </div>
+        <div className="flex items-center gap-2">
+          <Box step={steps[0]} />
+          <ArrowRight />
+          <Box step={steps[1]} />
+        </div>
 
-            {/* ========== ROW 2: 4 <- 3 ========== */}
-            <div className="flex items-center gap-3">
-              <Box step={steps[3]} /> {/* 4 */}
-              <ArrowLeft />
-              <Box step={steps[2]} /> {/* 3 */}
-            </div>
-
-            {/* 4 -> 5 (DOWN) */}
-            <div className="w-full max-w-[26rem] relative mt-1 mb-1 h-8">
-              <div className="absolute top-0 left-[25%] -translate-x-1/2">
-                <ArrowDown />
-              </div>
-            </div>
-
-            {/* ========== ROW 3: 5 -> 6 ========== */}
-            <div className="flex items-center gap-3">
-              <Box step={steps[4]} />
-              <ArrowRight />
-              <Box step={steps[5]} />
-            </div>
+        <div className="w-full max-w-[20rem] relative mt-1 mb-1 h-4">
+          <div className="absolute top-0 left-[75%] -translate-x-1/2">
+            <ArrowDown />
           </div>
         </div>
 
+        <div className="flex items-center gap-2">
+          <Box step={steps[3]} />
+          <ArrowLeft />
+          <Box step={steps[2]} />
+        </div>
+
+        <div className="w-full max-w-[20rem] relative mt-1 mb-1 h-4">
+          <div className="absolute top-0 left-[25%] -translate-x-1/2">
+            <ArrowDown />
+          </div>
+        </div>
+
+        <div className="flex items-center gap-2">
+          <Box step={steps[4]} />
+          <ArrowRight />
+          <Box step={steps[5]} />
+        </div>
+
       </div>
-    </section>
+    </div>
+  </div>
+</section>
+
   );
 }

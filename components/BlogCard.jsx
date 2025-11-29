@@ -1,5 +1,5 @@
 import Link from "next/link";
-import SlideUp from "@/components/SlideUp";
+
 
 export default function BlogCard({ image, title, href }) {
   return (
@@ -13,20 +13,20 @@ export default function BlogCard({ image, title, href }) {
       />
 
       {/* Title */}
-      <SlideUp>
+
         <h3 className="mt-4 text-lg font-semibold text-[#0e355d] leading-relaxed">
           {title}
         </h3>
-      </SlideUp>
+
 
       {/* Read more link */}
-      <SlideUp>
+
         <Link href={href}>
-          <div className="mt-3 text-sm font-semibold text-[#0e355d] underline flex items-center gap-1">
+          <div className="mt-3 text-sm font-light text-[#3173ea] underline flex items-center gap-1">
             Read more →
           </div>
         </Link>
-      </SlideUp>
+
     </div>
   );
 }

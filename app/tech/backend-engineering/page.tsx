@@ -11,10 +11,10 @@ export default function BackendEngineering() {
         <div className="max-w-5xl mx-auto px-6">
 
           {/* Title */}
-          <h1 className="text-4xl font-bold mb-6">Backend Engineering</h1>
+          <h1 className="text-4xl font-extralight mb-6">Backend Engineering</h1>
 
           {/* Intro */}
-          <p className="text-black leading-relaxed max-w-3xl">
+          <p className="text-black leading-relaxed max-w-3xl font-light">
             Keptel builds stable, scalable, and secure backend systems that power 
             enterprise applications. Our backend engineering focuses on high 
             performance, robust integration, and clean architecture.
@@ -22,9 +22,9 @@ export default function BackendEngineering() {
 
           {/* Feature Block — What We Do */}
           <div className="mt-12 p-6 rounded-3xl bg-white border border-slate-300 shadow-sm">
-            <h2 className="text-2xl font-semibold mb-4">What We Do</h2>
+            <h2 className="text-2xl font-medium mb-4">What We Do</h2>
 
-            <ul className="text-sm text-gray-700 space-y-2">
+            <ul className="text-sm text-gray-700 space-y-2 font-light">
               <li>• Enterprise backend development</li>
               <li>• REST & GraphQL API development</li>
               <li>• Integration with ERP, CRM, and Cloud services</li>
@@ -35,9 +35,9 @@ export default function BackendEngineering() {
 
           {/* Feature Block — Technologies */}
           <div className="mt-10 p-6 rounded-3xl bg-white border border-slate-300 shadow-sm">
-            <h2 className="text-2xl font-semibold mb-4">Technologies</h2>
+            <h2 className="text-2xl font-medium mb-4">Technologies</h2>
 
-            <p className="text-sm text-gray-700 leading-relaxed">
+            <p className="text-sm text-gray-700 leading-relaxed font-light">
               Java, .NET, Python, Microservices, Docker, Kubernetes, API Gateways.
             </p>
           </div>

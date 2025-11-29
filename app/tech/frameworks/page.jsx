@@ -11,10 +11,10 @@ export default function Frameworks() {
         <div className="max-w-5xl mx-auto px-6">
 
           {/* Title */}
-          <h1 className="text-4xl font-bold mb-6">Frameworks</h1>
+          <h1 className="text-4xl font-extralight mb-6">Frameworks</h1>
 
           {/* Intro */}
-          <p className="text-black leading-relaxed max-w-3xl">
+          <p className="text-black leading-relaxed max-w-3xl font-light">
             Keptel builds scalable, high-performance enterprise applications using 
             modern backend frameworks such as Spring Boot, Kafka, and microservices. 
             These frameworks power mission-critical workloads and distributed systems.
@@ -22,9 +22,9 @@ export default function Frameworks() {
 
           {/* Feature Block — What We Do */}
           <div className="mt-12 p-6 rounded-3xl bg-white border border-slate-300 shadow-sm">
-            <h2 className="text-2xl font-semibold mb-4">What We Do</h2>
+            <h2 className="text-2xl font-medium mb-4">What We Do</h2>
 
-            <ul className="text-sm text-gray-700 space-y-2">
+            <ul className="text-sm text-gray-700 space-y-2 font-light">
               <li>• Microservices architecture design</li>
               <li>• Event-driven backend development</li>
               <li>• Building REST / GraphQL APIs</li>
@@ -35,9 +35,9 @@ export default function Frameworks() {
 
           {/* Feature Block — Technologies */}
           <div className="mt-10 p-6 rounded-3xl bg-white border border-slate-300 shadow-sm">
-            <h2 className="text-2xl font-semibold mb-4">Technologies</h2>
+            <h2 className="text-2xl font-medium mb-4">Technologies</h2>
 
-            <p className="text-sm text-gray-700 leading-relaxed">
+            <p className="text-sm text-gray-700 leading-relaxed font-light">
               Spring Boot, Kafka, Java, .NET, Python, Event Streaming, 
               API Gateways, Kubernetes-based runtime environments.
             </p>

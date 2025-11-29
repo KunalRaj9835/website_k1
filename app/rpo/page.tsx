@@ -5,6 +5,7 @@ import ServiceTabs from "@/components/ServiceTabs";
 import ServiceSection from "@/components/ServiceSection";
 import { useState } from "react";
 import Footer from "@/components/Footer";
+import SlideUp from "@/components/SlideUp";
 
 export default function Page() {
   // 1) PAGE DATA
@@ -64,19 +65,25 @@ export default function Page() {
         
         {/* LEFT TEXT */}
         <div>
-          <p className="text-3xl font-semibold leading-snug mb-10 text-left text-justify">
-            {introLeft}
-          </p>
+          <SlideUp>
+            <p className="text-3xl font-extralight leading-snug mb-10 text-left text-justify">
+              {introLeft}
+            </p>
+          </SlideUp>
 
-          <p className="text-gray-600 text-left text-justify max-w-sm">
-            {bottomText}
-          </p>
+          <SlideUp>
+            <p className="text-gray-600 font-light text-left text-justify max-w-sm">
+              {bottomText}
+            </p>
+          </SlideUp>
         </div>
 
         {/* RIGHT PARAGRAPH */}
-        <p className="text-gray-700 leading-relaxed whitespace-pre-line text-left text-justify">
-          {introRight}
-        </p>
+        <SlideUp>
+          <p className="text-gray-700 font-light leading-relaxed whitespace-pre-line text-left text-justify">
+            {introRight}
+          </p>
+        </SlideUp>
       </div>
 
       {/* Tabs */}

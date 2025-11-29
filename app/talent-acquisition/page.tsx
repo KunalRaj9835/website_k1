@@ -5,6 +5,7 @@ import ServiceTabs from "@/components/ServiceTabs";
 import ServiceSection from "@/components/ServiceSection";
 import { useState } from "react";
 import Footer from "@/components/Footer";
+import SlideUp from "@/components/SlideUp";
 
 export default function Page() {
   // 1) PAGE DATA
@@ -31,7 +32,7 @@ export default function Page() {
     },
   ];
 
-  // 3) TAB CONTENT SECTIONS
+  // 3) TAB CONTENT
   const sections: Record<
     string,
     { title: string; image: string; text: string }
@@ -62,30 +63,36 @@ export default function Page() {
 
   return (
     <div>
-      {/* Hero */}
+      {/* HERO */}
       <FullHero title={title} bg={bg} />
 
-      {/* Intro Section */}
+      {/* INTRO SECTION */}
       <div className="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10">
         
         {/* LEFT TEXT */}
         <div>
-          <p className="text-3xl font-semibold leading-snug mb-10 text-left text-justify">
-            {introLeft}
-          </p>
+          <SlideUp>
+            <p className="text-3xl font-extralight leading-snug mb-10 text-left text-justify">
+              {introLeft}
+            </p>
+          </SlideUp>
 
-          <p className="text-gray-600 text-left text-justify max-w-sm">
-            {bottomText}
-          </p>
+          <SlideUp>
+            <p className="text-gray-600 font-light text-left text-justify max-w-sm">
+              {bottomText}
+            </p>
+          </SlideUp>
         </div>
 
-        {/* RIGHT LONG PARAGRAPH */}
-        <p className="text-gray-700 leading-relaxed whitespace-pre-line text-left text-justify">
-          {introRight}
-        </p>
+        {/* RIGHT PARAGRAPH */}
+        <SlideUp>
+          <p className="text-gray-700 font-light leading-relaxed whitespace-pre-line text-left text-justify">
+            {introRight}
+          </p>
+        </SlideUp>
       </div>
 
-      {/* Tabs */}
+      {/* TABS */}
       <ServiceTabs
         tabs={tabs}
         onSelect={(id: string) =>
@@ -93,7 +100,7 @@ export default function Page() {
         }
       />
 
-      {/* Active Section */}
+      {/* ACTIVE SECTION */}
       <ServiceSection
         index={0}
         title={sections[currentTab].title}

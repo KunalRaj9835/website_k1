@@ -38,7 +38,7 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 shadow bg-white font-lunea">
+    <header className="fixed top-0 left-0 w-full z-50 shadow bg-white font-medium text-sm">
 
       {/* Top Bar */}
       <div
@@ -60,15 +60,15 @@ export default function Header() {
 
       {/* Navigation */}
       <nav className="bg-white ">
-        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
 
           {/* Logo */}
           <a href="/" className="flex items-center">
-            <img src="/logo.svg" alt="Logo" className="h-36 w-auto" />
+            <img src="/logo.svg" alt="Logo" className="h-28 w-auto" />
           </a>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center gap-10 font-medium text-[#0e355d]">
+          <div className="hidden md:flex items-center gap-6 font-medium text-[#0e355d] text-sm">
 
             {/* 1. WHY US */}
             <a href="/#whyus" className="hover:text-red-500">Why Us</a>
@@ -194,7 +194,7 @@ export default function Header() {
             ${menuOpen ? "max-h-[900px] py-6" : "max-h-0 py-0"}
           `}
         >
-          <div className="flex flex-col px-6 gap-4 font-medium text-[#0e355d]">
+          <div className="flex flex-col px-6 gap-4 font-medium text-[#0e355d] text-sm">
 
             {/* 1. WHY US */}
             <a href="/#whyus" className="hover:text-red-500">Why Us</a>

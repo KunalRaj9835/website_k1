@@ -5,6 +5,7 @@ import ServiceTabs from "@/components/ServiceTabs";
 import ServiceSection from "@/components/ServiceSection";
 import { useState } from "react";
 import Footer from "@/components/Footer";
+import SlideUp from "@/components/SlideUp"; // ADDED
 
 export default function Page() {
   // 1) PAGE DATA
@@ -70,19 +71,25 @@ export default function Page() {
         
         {/* LEFT TEXT */}
         <div>
-          <p className="text-3xl font-semibold leading-snug mb-10 text-left text-justify">
-            {introLeft}
-          </p>
+          <SlideUp>
+            <p className="text-3xl font-extralight leading-snug mb-10 text-left text-justify">
+              {introLeft}
+            </p>
+          </SlideUp>
 
-          <p className="text-gray-600 text-left text-justify max-w-sm">
-            {bottomText}
-          </p>
+          <SlideUp>
+            <p className="text-gray-600 font-light text-left text-justify max-w-sm">
+              {bottomText}
+            </p>
+          </SlideUp>
         </div>
 
         {/* RIGHT PARAGRAPH */}
-        <p className="text-gray-700 leading-relaxed text-left text-justify whitespace-pre-line">
-          {introRight}
-        </p>
+        <SlideUp>
+          <p className="text-gray-700 font-light leading-relaxed text-left text-justify whitespace-pre-line">
+            {introRight}
+          </p>
+        </SlideUp>
       </div>
 
       {/* Tabs */}
@@ -103,11 +110,18 @@ export default function Page() {
 
       {/* Final Diagram */}
       <div className="py-16 text-center">
-        <h2 className="text-3xl font-bold">Talent Intelligence Process Flow</h2>
-        <img
-          src="/intelligence/a4.webp"
-          className="w-[980px] mx-auto mt-4"
-        />
+        <SlideUp>
+          <h2 className="text-3xl font-extralight">
+            Talent Intelligence Process Flow
+          </h2>
+        </SlideUp>
+
+        <SlideUp>
+          <img
+            src="/intelligence/a4.webp"
+            className="w-[980px] mx-auto mt-4"
+          />
+        </SlideUp>
       </div>
 
       <Footer />

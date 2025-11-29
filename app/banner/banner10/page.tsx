@@ -4,11 +4,10 @@ import Footer from "@/components/Footer";
 
 const Box = ({ title, text }: { title: string; text: string }) => (
   <div className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm">
-    <h3 className="text-xl font-semibold text-[#D60000] leading-snug">{title}</h3>
-    <p className="text-gray-700 mt-3 text-sm leading-relaxed">{text}</p>
+    <h3 className="text-xl font-medium text-[#D60000] leading-snug">{title}</h3>
+    <p className="text-gray-700 mt-3 text-sm leading-relaxed font-light">{text}</p>
   </div>
 );
-
 
 export default function KeptelAIPage() {
   return (
@@ -20,14 +19,14 @@ export default function KeptelAIPage() {
 
           {/* LEFT TEXT */}
           <div>
-            <h1 className="text-5xl font-bold mb-4">Unlock the power of AI with Keptel.AI</h1>
+            <h1 className="text-5xl font-extralight mb-4">Unlock the power of AI with Keptel.AI</h1>
 
             <div className="h-[3px] w-16 bg-[#D60000] mb-6"></div>
 
-            <p className="text-gray-700 leading-relaxed max-w-md">
+            <p className="text-gray-700 leading-relaxed max-w-md font-light">
               Keptel.AI unifies data, automation, and intelligence into a single seamless ecosystem.
-From raw, fragmented data to enterprise-grade AI deployment, Keptel accelerates every step of the journey.
-Built for scale, speed, and real-world impact, it empowers organizations to operate smarter, faster, and more efficiently.
+              From raw, fragmented data to enterprise-grade AI deployment, Keptel accelerates every step of the journey.
+              Built for scale, speed, and real-world impact, it empowers organizations to operate smarter, faster, and more efficiently.
             </p>
           </div>
 
@@ -38,8 +37,7 @@ Built for scale, speed, and real-world impact, it empowers organizations to oper
             <Box title="Open cloud architecture" text="smooth integration with AWS, Azure, GCP, and Fabric." />
             <Box title="Full observability dashboards" text="track cost, model drift, compliance, and performance." />
             <Box title="5+ years of AI expertise" text="delivering scalable, production-grade AI systems across global industries." />
-<Box title="Unified data-to-AI pipeline" text="from ingestion to deployment, ensuring your data becomes AI-ready with zero friction." />
-
+            <Box title="Unified data-to-AI pipeline" text="from ingestion to deployment, ensuring your data becomes AI-ready with zero friction." />
           </div>
 
         </div>
@@ -49,39 +47,39 @@ Built for scale, speed, and real-world impact, it empowers organizations to oper
       <section className="w-full py-24 bg-white">
         <div className="max-w-6xl mx-auto px-6">
 
-          <h2 className="text-4xl font-bold">Key benefits of Keptel</h2>
+          <h2 className="text-4xl font-extralight">Key benefits of Keptel</h2>
           <div className="h-[3px] w-16 bg-[#D60000] mt-3 mb-12"></div>
 
           <div className="grid md:grid-cols-4 gap-10">
 
             <div>
-              <h3 className="text-xl font-semibold text-[#D60000]">Seamless AI integration</h3>
-              <p className="text-gray-700 mt-3 leading-relaxed">
-                Integrates into existing workflows with cloud-agnostic design.  
+              <h3 className="text-xl font-medium text-[#D60000]">Seamless AI integration</h3>
+              <p className="text-gray-700 mt-3 leading-relaxed font-light">
+                Integrates into existing workflows with cloud-agnostic design.
                 No disruptive overhauls — deploy AI instantly across hybrid environments.
               </p>
             </div>
 
             <div>
-              <h3 className="text-xl font-semibold text-[#D60000]">Efficiency & cost savings</h3>
-              <p className="text-gray-700 mt-3 leading-relaxed">
-                Automate processes, reduce delays, eliminate human error,  
+              <h3 className="text-xl font-medium text-[#D60000]">Efficiency & cost savings</h3>
+              <p className="text-gray-700 mt-3 leading-relaxed font-light">
+                Automate processes, reduce delays, eliminate human error,
                 and streamline operations with built-in governance.
               </p>
             </div>
 
             <div>
-              <h3 className="text-xl font-semibold text-[#D60000]">Analytics at your fingertips</h3>
-              <p className="text-gray-700 mt-3 leading-relaxed">
-                Leverage Keptel’s domain-specific datasets + third-party data  
+              <h3 className="text-xl font-medium text-[#D60000]">Analytics at your fingertips</h3>
+              <p className="text-gray-700 mt-3 leading-relaxed font-light">
+                Leverage Keptel’s domain-specific datasets + third-party data
                 for real-time insights and faster decision-making.
               </p>
             </div>
 
             <div>
-              <h3 className="text-xl font-semibold text-[#D60000]">Personalized experiences</h3>
-              <p className="text-gray-700 mt-3 leading-relaxed">
-                AI tools adapt to customer needs, enhancing user experience  
+              <h3 className="text-xl font-medium text-[#D60000]">Personalized experiences</h3>
+              <p className="text-gray-700 mt-3 leading-relaxed font-light">
+                AI tools adapt to customer needs, enhancing user experience
                 while reducing operational effort and increasing satisfaction.
               </p>
             </div>
@@ -94,12 +92,12 @@ Built for scale, speed, and real-world impact, it empowers organizations to oper
       <section className="w-full py-24 bg-[#1F2937] text-white">
         <div className="max-w-6xl mx-auto px-6">
 
-          <h2 className="text-4xl font-bold">Keptel impact</h2>
+          <h2 className="text-4xl font-extralight">Keptel impact</h2>
           <div className="h-[3px] w-16 bg-[#D60000] mt-3 mb-10"></div>
 
-          <p className="max-w-3xl text-gray-300 leading-relaxed">
-            Keptel.AI empowers organizations to scale AI with control, speed,  
-            and measurable business results — across automotive, aerospace,  
+          <p className="max-w-3xl text-gray-300 leading-relaxed font-light">
+            Keptel.AI empowers organizations to scale AI with control, speed,
+            and measurable business results — across automotive, aerospace,
             embedded, and digital transformation programs.
           </p>
 
@@ -118,13 +116,12 @@ Built for scale, speed, and real-world impact, it empowers organizations to oper
     </div>
   );
 }
-function ImpactCard(
-  { metric, text }: { metric: string | number; text: string }
-) {
+
+function ImpactCard({ metric, text }: { metric: string | number; text: string }) {
   return (
     <div className="bg-white text-gray-900 rounded-xl p-6 shadow-md border border-gray-200">
-      <h3 className="text-4xl font-bold text-[#D60000]">{metric}</h3>
-      <p className="mt-3 text-gray-700 leading-relaxed text-sm">{text}</p>
+      <h3 className="text-4xl font-light text-[#D60000]">{metric}</h3>
+      <p className="mt-3 text-gray-700 leading-relaxed text-sm font-light">{text}</p>
     </div>
   );
 }

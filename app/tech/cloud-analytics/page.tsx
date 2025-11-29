@@ -11,10 +11,10 @@ export default function CloudAnalytics() {
         <div className="max-w-5xl mx-auto px-6">
 
           {/* Title */}
-          <h1 className="text-4xl font-bold mb-6">Cloud & Analytics</h1>
+          <h1 className="text-4xl font-extralight mb-6">Cloud & Analytics</h1>
 
           {/* Intro */}
-          <p className="text-black leading-relaxed max-w-3xl">
+          <p className="text-black leading-relaxed max-w-3xl font-light">
             Keptel delivers complete cloud and analytics solutions across AWS,
             Azure, and Google Cloud. We help enterprises modernize data systems,
             build secure cloud ecosystems, and enable real-time decision-making
@@ -23,9 +23,9 @@ export default function CloudAnalytics() {
 
           {/* Feature Block — What We Do */}
           <div className="mt-12 p-6 rounded-3xl bg-white border border-slate-300 shadow-sm">
-            <h2 className="text-2xl font-semibold mb-4">What We Do</h2>
+            <h2 className="text-2xl font-medium mb-4">What We Do</h2>
 
-            <ul className="text-sm text-gray-700 space-y-2">
+            <ul className="text-sm text-gray-700 space-y-2 font-light">
               <li>• Cloud migration & modernization</li>
               <li>• Data Lake & Data Warehouse engineering</li>
               <li>• End-to-end BI & dashboard development</li>
@@ -36,9 +36,9 @@ export default function CloudAnalytics() {
 
           {/* Feature Block — Technologies */}
           <div className="mt-10 p-6 rounded-3xl bg-white border border-slate-300 shadow-sm">
-            <h2 className="text-2xl font-semibold mb-4">Technologies</h2>
+            <h2 className="text-2xl font-medium mb-4">Technologies</h2>
 
-            <p className="text-sm text-gray-700 leading-relaxed">
+            <p className="text-sm text-gray-700 leading-relaxed font-light">
               AWS, Azure, GCP, BigQuery, Snowflake, Hive, Power BI, Tableau,
               Looker, Qlik, Talend, Informatica, AWS Glue.
             </p>
@@ -46,9 +46,9 @@ export default function CloudAnalytics() {
 
           {/* Feature Block — Use Cases */}
           <div className="mt-10 p-6 rounded-3xl bg-white border border-slate-300 shadow-sm">
-            <h2 className="text-2xl font-semibold mb-4">Use Cases</h2>
+            <h2 className="text-2xl font-medium mb-4">Use Cases</h2>
 
-            <ul className="text-sm text-gray-700 space-y-2">
+            <ul className="text-sm text-gray-700 space-y-2 font-light">
               <li>• Real-time analytics dashboards</li>
               <li>• Customer behavior & personalization</li>
               <li>• End-to-end CI/CD data pipelines</li>

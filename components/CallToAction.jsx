@@ -14,7 +14,7 @@ export default function CallToAction() {
 
         {/* Heading */}
         <div className="text-center mb-12">
-    <h2 className="text-3xl font-bold text-[#0e355d]">
+    <h2 className="text-3xl font-light text-[#0e355d]">
       Our Clients
     </h2>
     <div className="h-1 w-20 bg-red-400 mx-auto mt-3 rounded-full"></div>

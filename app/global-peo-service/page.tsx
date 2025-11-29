@@ -5,6 +5,7 @@ import ServiceTabs from "@/components/ServiceTabs";
 import ServiceSection from "@/components/ServiceSection";
 import { useState } from "react";
 import Footer from "@/components/Footer";
+import SlideUp from "@/components/SlideUp";
 
 export default function Page() {
   // 1) PAGE DATA
@@ -20,10 +21,7 @@ export default function Page() {
   const bottomText =
     "Hassle-free global hiring with assured compliance, seamless onboarding, and complete workforce governance—without setting up an entity in any country.";
 
-  // --------------------------------------------------------------------
-  //  TAB SET 1
-  // --------------------------------------------------------------------
-
+  // TAB SET 1
   const tabs1 = [
     { id: "fulltime", label: "Hiring, Benefits & Payroll", icon: "/icon/shield.svg" },
     { id: "flexi", label: "Legal & Financial Guidance", icon: "/icon/laptop.svg" },
@@ -51,14 +49,11 @@ export default function Page() {
     },
   };
 
-  const [currentTab1, setCurrentTab1] = useState<
-    "fulltime" | "flexi" | "strategic"
-  >("fulltime");
+  const [currentTab1, setCurrentTab1] = useState<"fulltime" | "flexi" | "strategic">(
+    "fulltime"
+  );
 
-  // --------------------------------------------------------------------
-  //  TAB SET 2
-  // --------------------------------------------------------------------
-
+  // TAB SET 2
   const tabs2 = [
     { id: "alpha", label: "International Expansion", icon: "/icon/shield.svg" },
     { id: "beta", label: "International Recruitment", icon: "/icon/laptop.svg" },
@@ -94,29 +89,34 @@ export default function Page() {
 
   return (
     <div>
-      {/* Hero */}
+      {/* HERO */}
       <FullHero title={title} bg={bg} />
 
-      {/* Intro Section */}
+      {/* INTRO SECTION */}
       <div className="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10">
+        
         <div>
-          <p className="text-3xl font-semibold leading-snug mb-10 text-left text-justify">
-            {introLeft}
-          </p>
+          <SlideUp>
+            <p className="text-3xl font-extralight leading-snug mb-10 text-left text-justify">
+              {introLeft}
+            </p>
+          </SlideUp>
 
-          <p className="text-gray-600 text-left text-justify max-w-sm">
-            {bottomText}
-          </p>
+          <SlideUp>
+            <p className="text-gray-600 font-light text-left text-justify max-w-sm">
+              {bottomText}
+            </p>
+          </SlideUp>
         </div>
 
-        <p className="text-gray-700 leading-relaxed whitespace-pre-line text-left text-justify">
-          {introRight}
-        </p>
+        <SlideUp>
+          <p className="text-gray-700 font-light leading-relaxed whitespace-pre-line text-left text-justify">
+            {introRight}
+          </p>
+        </SlideUp>
       </div>
 
-      {/* --------------------------------------------------------------- */}
       {/* TAB SET 1 */}
-      {/* --------------------------------------------------------------- */}
       <ServiceTabs
         tabs={tabs1}
         onSelect={(id: string) =>
@@ -131,9 +131,7 @@ export default function Page() {
         text={sections1[currentTab1].text}
       />
 
-      {/* --------------------------------------------------------------- */}
       {/* TAB SET 2 */}
-      {/* --------------------------------------------------------------- */}
       <div className="mt-20" />
 
       <ServiceTabs

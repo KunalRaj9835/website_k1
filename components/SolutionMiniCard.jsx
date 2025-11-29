@@ -1,3 +1,7 @@
+"use client";
+
+import SlideUp from "@/components/SlideUp";
+
 export default function SolutionMiniCard({ title, img, href }) {
   return (
     <a
@@ -5,14 +9,15 @@ export default function SolutionMiniCard({ title, img, href }) {
       className="block bg-white border rounded-xl shadow-sm p-5 hover:shadow-md transition cursor-pointer"
     >
       {img && (
-        <div className="w-full h-36 rounded-lg overflow-hidden mb-4">
-          <img src={img} alt={title} className="w-full h-full object-cover" />
-        </div>
+          <div className="w-full h-36 rounded-lg overflow-hidden mb-4">
+            <img src={img} alt={title} className="w-full h-full object-cover" />
+          </div>
       )}
 
-      <h3 className="text-lg font-semibold hover:text-red-600">
-        {title}
-      </h3>
+        <h3 className="text-lg font-extralight hover:text-red-600">
+          {title}
+        </h3>
+
     </a>
   );
 }
