@@ -1,7 +1,9 @@
 'use client';
 
-import Footer from '@/components/Footer';
 import React, { useState } from 'react';
+import PhoneInput from 'react-phone-number-input';
+import 'react-phone-number-input/style.css';
+import { getCountryCallingCode } from 'react-phone-number-input';
 
 interface FormData {
   name: string;
@@ -31,9 +33,11 @@ export default function ContactPage() {
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [recaptchaChecked, setRecaptchaChecked] = useState(false);
+  const [selectedCountry, setSelectedCountry] = useState<any>('IN');
+  const [phoneInput, setPhoneInput] = useState('');
 
   const [serverMsg, setServerMsg] = useState("");
-  const [serverMsgType, setServerMsgType] = useState(""); // success | error
+  const [serverMsgType, setServerMsgType] = useState("");
 
   const validateForm = (): boolean => {
     const newErrors: FormErrors = {};
@@ -44,7 +48,14 @@ export default function ContactPage() {
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       newErrors.email = 'Email is invalid';
     }
-    if (!formData.phone.trim()) newErrors.phone = 'Phone number is required';
+    if (!formData.phone) {
+      newErrors.phone = 'Phone number is required';
+    } else {
+      const digitsOnly = formData.phone.replace(/\D/g, '');
+      if (digitsOnly.length !== 10) {
+        newErrors.phone = 'Phone number must be exactly 10 digits';
+      }
+    }
     if (!formData.company.trim()) newErrors.company = 'Company name is required';
     if (!formData.message.trim()) newErrors.message = 'Message is required';
     
@@ -67,12 +78,21 @@ export default function ContactPage() {
     setIsSubmitting(true);
 
     try {
+      // Get country calling code and combine with phone number
+      const countryCode = selectedCountry ? getCountryCallingCode(selectedCountry) : '91';
+      const phoneWithCountryCode = `+${countryCode}${formData.phone.replace(/\D/g, '')}`;
+      
+      const submissionData = {
+        ...formData,
+        phone: phoneWithCountryCode
+      };
+
       const res = await fetch(
         `${process.env.NEXT_PUBLIC_API_URL}/api/contact/submit`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(formData),
+          body: JSON.stringify(submissionData),
         }
       );
 
@@ -82,7 +102,6 @@ export default function ContactPage() {
         setServerMsg("Form submitted successfully!");
         setServerMsgType("success");
 
-        // Reset form fields
         setFormData({
           name: "",
           email: "",
@@ -91,6 +110,7 @@ export default function ContactPage() {
           message: "",
         });
 
+        setPhoneInput('');
         setRecaptchaChecked(false);
 
       } else if (res.status === 400) {
@@ -120,16 +140,36 @@ export default function ContactPage() {
     }
   };
 
+  const handlePhoneInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    // Extract only digits and limit to 10
+    const digitsOnly = value.replace(/\D/g, '').slice(0, 10);
+    setPhoneInput(digitsOnly);
+    setFormData(prev => ({ ...prev, phone: digitsOnly }));
+    
+    if (errors.phone) {
+      setErrors(prev => ({ ...prev, phone: undefined }));
+    }
+  };
+
+  // Handle autofill - extract last 10 digits from any format
+  const handlePhoneBlur = () => {
+    if (phoneInput) {
+      const digitsOnly = phoneInput.replace(/\D/g, '');
+      const last10Digits = digitsOnly.slice(-10);
+      setPhoneInput(last10Digits);
+      setFormData(prev => ({ ...prev, phone: last10Digits }));
+    }
+  };
+
   return (
     <div className="min-h-screen bg-white">
       
-      {/* MAIN CONTACT SECTION */}
       <div className="relative py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             
-            {/* LEFT SIDE */}
             <div className="text-black">
               <h1 className="text-4xl md:text-5xl font-extralight mb-6">
                 Get in Touch with<br />Keptel Tech
@@ -175,7 +215,6 @@ export default function ContactPage() {
               </p>
             </div>
 
-            {/* RIGHT SIDE FORM */}
             <div className="bg-white rounded-lg shadow-xl p-8">
               
               <h2 className="text-3xl font-extralight text-gray-900 mb-2">
@@ -187,131 +226,139 @@ export default function ContactPage() {
                 Order our services today!
               </p>
 
-              
-              {/* FORM FIELDS */}
-              {/* FORM FIELDS */}
-<div className="space-y-5">
+              <div className="space-y-5">
 
-  {/* Name */}
-  <div>
-    <label className="block text-sm text-gray-700 mb-2">
-      Name <span className="text-red-500">*</span>
-    </label>
-    <input
-      type="text"
-      name="name"
-      value={formData.name}
-      onChange={handleChange}
-      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-    />
-    {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
-  </div>
+                <div>
+                  <label className="block text-sm text-gray-700 mb-2">
+                    Name <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  />
+                  {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
+                </div>
 
-  {/* Email */}
-  <div>
-    <label className="block text-sm text-gray-700 mb-2">
-      Email <span className="text-red-500">*</span>
-    </label>
-    <input
-      type="email"
-      name="email"
-      value={formData.email}
-      onChange={handleChange}
-      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-    />
-    {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
-  </div>
+                <div>
+                  <label className="block text-sm text-gray-700 mb-2">
+                    Email <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  />
+                  {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
+                </div>
 
-  {/* Phone */}
-  <div>
-    <label className="block text-sm text-gray-700 mb-2">
-      Phone Number <span className="text-red-500">*</span>
-    </label>
-    <input
-      type="tel"
-      name="phone"
-      value={formData.phone}
-      onChange={handleChange}
-      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-    />
-    {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone}</p>}
-  </div>
+                <div>
+                  <label className="block text-sm text-gray-700 mb-2">
+                    Phone Number <span className="text-red-500">*</span>
+                  </label>
+                  <div className="flex gap-2">
+                    <PhoneInput
+                      international={false}
+                      withCountryCallingCode={false}
+                      defaultCountry="IN"
+                      country={selectedCountry}
+                      onCountryChange={setSelectedCountry}
+                      value=""
+                      onChange={() => {}}
+                      className="w-16"
+                      countrySelectProps={{
+                        className: "border border-gray-300 rounded-md px-2 py-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      }}
+                      numberInputProps={{
+                        style: { display: 'none' }
+                      }}
+                    />
+                    <input
+                      type="text"
+                      value={phoneInput}
+                      onChange={handlePhoneInputChange}
+                      onBlur={handlePhoneBlur}
+                      placeholder="Enter 10 digit number"
+                      maxLength={10}
+                      className="flex-1 px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    />
+                  </div>
+                  {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone}</p>}
+                </div>
 
-  {/* Company */}
-  <div>
-    <label className="block text-sm text-gray-700 mb-2">
-      Company Name <span className="text-red-500">*</span>
-    </label>
-    <input
-      type="text"
-      name="company"
-      value={formData.company}
-      onChange={handleChange}
-      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-    />
-    {errors.company && <p className="text-red-500 text-sm mt-1">{errors.company}</p>}
-  </div>
+                <div>
+                  <label className="block text-sm text-gray-700 mb-2">
+                    Company Name <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="company"
+                    value={formData.company}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  />
+                  {errors.company && <p className="text-red-500 text-sm mt-1">{errors.company}</p>}
+                </div>
 
-  {/* Message */}
-  <div>
-    <label className="block text-sm text-gray-700 mb-2">
-      Comment or Message <span className="text-red-500">*</span>
-    </label>
-    <textarea
-      name="message"
-      value={formData.message}
-      onChange={handleChange}
-      rows={4}
-      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
-    />
-    {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
-  </div>
+                <div>
+                  <label className="block text-sm text-gray-700 mb-2">
+                    Comment or Message <span className="text-red-500">*</span>
+                  </label>
+                  <textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    rows={4}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+                  />
+                  {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
+                </div>
 
-  {/* Recaptcha */}
-  <div className="flex items-start space-x-3">
-    <input
-      type="checkbox"
-      id="recaptcha"
-      checked={recaptchaChecked}
-      onChange={(e) => setRecaptchaChecked(e.target.checked)}
-      className="mt-1 h-5 w-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
-    />
-    <label htmlFor="recaptcha" className="text-sm text-gray-700">
-      I'm not a robot
-    </label>
-  </div>
+                <div className="flex items-start space-x-3">
+                  <input
+                    type="checkbox"
+                    id="recaptcha"
+                    checked={recaptchaChecked}
+                    onChange={(e) => setRecaptchaChecked(e.target.checked)}
+                    className="mt-1 h-5 w-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                  />
+                  <label htmlFor="recaptcha" className="text-sm text-gray-700">
+                    I'm not a robot
+                  </label>
+                </div>
 
-  {/* SERVER MESSAGE ABOVE BUTTON — ALWAYS EXPANDED */}
-  <div className="h-12">
-    {serverMsg && (
-      <div
-        className={`p-3 rounded-md text-sm h-full flex items-center ${
-          serverMsgType === "success"
-            ? "bg-green-100 text-green-800"
-            : "bg-red-100 text-red-800"
-        }`}
-      >
-        {serverMsg}
-      </div>
-    )}
-  </div>
+                <div className="h-12">
+                  {serverMsg && (
+                    <div
+                      className={`p-3 rounded-md text-sm h-full flex items-center ${
+                        serverMsgType === "success"
+                          ? "bg-green-100 text-green-800"
+                          : "bg-red-100 text-red-800"
+                      }`}
+                    >
+                      {serverMsg}
+                    </div>
+                  )}
+                </div>
 
-  {/* Submit Button */}
-  <button
-    onClick={handleSubmit}
-    disabled={isSubmitting}
-    className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-md transition-colors disabled:bg-blue-400"
-  >
-    {isSubmitting ? 'Submitting...' : 'Submit'}
-  </button>
-</div>
+                <button
+                  onClick={handleSubmit}
+                  disabled={isSubmitting}
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-md transition-colors disabled:bg-blue-400"
+                >
+                  {isSubmitting ? 'Submitting...' : 'Submit'}
+                </button>
+              </div>
 
             </div>
           </div>
         </div>
       </div>
 
-      {/* MAP */}
       <div className="bg-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-lg shadow-lg overflow-hidden">
@@ -327,8 +374,6 @@ export default function ContactPage() {
           </div>
         </div>
       </div>
-
-      <Footer />
     </div>
   );
 }

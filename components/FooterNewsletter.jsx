@@ -7,9 +7,19 @@ export default function FooterNewsletter() {
   const [msg, setMsg] = useState("");
   const [msgType, setMsgType] = useState(""); // success | error
 
+  const isValidEmail = (value) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+  };
+
   const handleSubscribe = async () => {
     setMsg("");
     setMsgType("");
+
+    if (!email || !isValidEmail(email)) {
+      setMsg("Enter a valid email address.");
+      setMsgType("error");
+      return;
+    }
 
     try {
       const res = await fetch(
@@ -46,7 +56,6 @@ export default function FooterNewsletter() {
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 relative z-10">
 
-        {/* Left text */}
         <div>
           <h2 className="text-2xl font-semibold text-red-500 leading-snug">
             Don't Miss Out on Our Monthly  
@@ -54,10 +63,8 @@ export default function FooterNewsletter() {
           </h2>
         </div>
 
-        {/* Right form */}
         <div className="flex flex-col gap-3">
 
-          {/* Message Area - Always rendered with fixed height */}
           <div className="h-10">
             {msg && (
               <div
