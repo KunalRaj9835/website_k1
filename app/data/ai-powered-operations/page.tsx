@@ -106,7 +106,7 @@ export default function Page() {
 
         <SideBySideCard
   title="Business Operations"
-  text="Unify processes and enable real-time, data-driven decisioning by redesigning workflows with automation, intelligence, and end-to-end operational visibility."
+  text="Unify processes and enable real time, data-driven decisioning by redesigning workflows with automation, intelligence, and end-to-end operational visibility."
   image="/pic/Business Operations.png"
   color="#ffffff"
   href="/data/ai-powered-operations/1"

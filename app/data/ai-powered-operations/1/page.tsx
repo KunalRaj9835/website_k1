@@ -118,7 +118,7 @@ export default function Page() {
 
 <SideBySideCard
   title="Operational analytics"
-  text="Capture real-time performance insights to strengthen decision-making and forecasting."
+  text="Capture real time performance insights to strengthen decision-making and forecasting."
   image="/pic/Operational analytics1.png"
   color="#eaeaea"
 />

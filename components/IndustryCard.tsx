@@ -3,13 +3,21 @@
 import Link from "next/link";
 import SlideUp from "@/components/SlideUp";
 
-export default function IndustryCard({ 
-  title, 
-  description, 
-  icon, 
-  href, 
-  dark = false 
-}) {
+interface IndustryCardProps {
+  title: string;
+  description: string;
+  icon: string;
+  href: string;
+  dark?: boolean;
+}
+
+export default function IndustryCard({
+  title,
+  description,
+  icon,
+  href,
+  dark = false,
+}: IndustryCardProps) {
   return (
     <div
       className="

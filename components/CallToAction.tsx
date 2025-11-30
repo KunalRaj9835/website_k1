@@ -1,5 +1,5 @@
 export default function CallToAction() {
-  const logos = [
+  const logos: string[] = [
     "/client/amazon.svg",
     "/client/cocacola.svg",
     "/client/imax.svg",
@@ -14,13 +14,11 @@ export default function CallToAction() {
 
         {/* Heading */}
         <div className="text-center mb-12">
-    <h2 className="text-3xl font-light text-[#0e355d]">
-      Our Clients
-    </h2>
-    <div className="h-1 w-20 bg-red-400 mx-auto mt-3 rounded-full"></div>
-  </div>
-
-        
+          <h2 className="text-3xl font-light text-[#0e355d]">
+            Our Clients
+          </h2>
+          <div className="h-1 w-20 bg-red-400 mx-auto mt-3 rounded-full"></div>
+        </div>
 
         {/* Infinite Logo Carousel */}
         <div className="w-full overflow-hidden py-6">

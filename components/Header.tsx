@@ -3,7 +3,11 @@
 import { useEffect, useState, useRef } from "react";
 import { Menu, X } from "lucide-react";
 
-const Arrow = ({ isOpen }) => (
+interface ArrowProps {
+  isOpen: boolean;
+}
+
+const Arrow = ({ isOpen }: ArrowProps) => (
   <img
     src={isOpen ? "/move/up.svg" : "/move/down.svg"}
     alt="arrow"
@@ -11,21 +15,34 @@ const Arrow = ({ isOpen }) => (
   />
 );
 
+type MenuKey =
+  | "tech"
+  | "domain"
+  | "services"
+  | "company"
+  | "tech-mobile"
+  | "domain-mobile"
+  | "services-mobile"
+  | "company-mobile"
+  | null;
+
 export default function Header() {
-  const [showTop, setShowTop] = useState(true);
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [openMenu, setOpenMenu] = useState(null);
-  const closeTimeoutRef = useRef(null);
+  const [showTop, setShowTop] = useState<boolean>(true);
+  const [menuOpen, setMenuOpen] = useState<boolean>(false);
+  const [openMenu, setOpenMenu] = useState<MenuKey>(null);
+
+  const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
       setShowTop(window.scrollY <= 10);
     };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleEnter = (menuName) => {
+  const handleEnter = (menuName: MenuKey) => {
     if (closeTimeoutRef.current) clearTimeout(closeTimeoutRef.current);
     closeTimeoutRef.current = null;
     setOpenMenu(menuName);
@@ -59,7 +76,7 @@ export default function Header() {
       </div>
 
       {/* Navigation */}
-      <nav className="bg-white ">
+      <nav className="bg-white">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
 
           {/* Logo */}
@@ -70,11 +87,11 @@ export default function Header() {
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-6 font-medium text-[#0e355d] text-sm">
 
-            {/* 1. WHY US */}
+            {/* WHY US */}
             <a href="/#whyus" className="hover:text-red-500">Why Us</a>
 
-            {/* 2. TECHNOLOGY EXPERTISE */}
-            <div 
+            {/* TECHNOLOGY EXPERTISE */}
+            <div
               className="relative"
               onMouseEnter={() => handleEnter("tech")}
               onMouseLeave={handleLeave}
@@ -84,11 +101,12 @@ export default function Header() {
                 <Arrow isOpen={openMenu === "tech"} />
               </button>
 
-              <div className={`absolute left-0 mt-2 bg-white shadow-lg rounded p-4 w-64
-                transition-all duration-300 origin-top
-                ${openMenu === "tech"
-                  ? "opacity-100 translate-y-0 max-h-96"
-                  : "opacity-0 -translate-y-2 max-h-0 pointer-events-none"}
+              <div
+                className={`absolute left-0 mt-2 bg-white shadow-lg rounded p-4 w-64
+                  transition-all duration-300 origin-top
+                  ${openMenu === "tech"
+                    ? "opacity-100 translate-y-0 max-h-96"
+                    : "opacity-0 -translate-y-2 max-h-0 pointer-events-none"}
               `}
               >
                 <a href="/data/data-modernization" className="block py-2 hover:text-red-500">Data Modernization</a>
@@ -97,8 +115,8 @@ export default function Header() {
               </div>
             </div>
 
-            {/* 3. DOMAIN */}
-            <div 
+            {/* DOMAIN */}
+            <div
               className="relative"
               onMouseEnter={() => handleEnter("domain")}
               onMouseLeave={handleLeave}
@@ -108,11 +126,12 @@ export default function Header() {
                 <Arrow isOpen={openMenu === "domain"} />
               </button>
 
-              <div className={`absolute left-0 mt-2 bg-white shadow-lg rounded p-4 w-72
-                transition-all duration-300 origin-top
-                ${openMenu === "domain"
-                  ? "opacity-100 translate-y-0 max-h-96"
-                  : "opacity-0 -translate-y-2 max-h-0 pointer-events-none"}
+              <div
+                className={`absolute left-0 mt-2 bg-white shadow-lg rounded p-4 w-72
+                  transition-all duration-300 origin-top
+                  ${openMenu === "domain"
+                    ? "opacity-100 translate-y-0 max-h-96"
+                    : "opacity-0 -translate-y-2 max-h-0 pointer-events-none"}
               `}
               >
                 <a href="/case-study/case1" className="block py-2 hover:text-red-500">IT Services & Digital Engineering</a>
@@ -124,8 +143,8 @@ export default function Header() {
               </div>
             </div>
 
-            {/* 4. SERVICES */}
-            <div 
+            {/* SERVICES */}
+            <div
               className="relative"
               onMouseEnter={() => handleEnter("services")}
               onMouseLeave={handleLeave}
@@ -135,11 +154,12 @@ export default function Header() {
                 <Arrow isOpen={openMenu === "services"} />
               </button>
 
-              <div className={`absolute left-0 mt-2 bg-white shadow-lg rounded p-4 w-80
-                transition-all duration-300 origin-top
-                ${openMenu === "services"
-                  ? "opacity-100 translate-y-0 max-h-96"
-                  : "opacity-0 -translate-y-2 max-h-0 pointer-events-none"}
+              <div
+                className={`absolute left-0 mt-2 bg-white shadow-lg rounded p-4 w-80
+                  transition-all duration-300 origin-top
+                  ${openMenu === "services"
+                    ? "opacity-100 translate-y-0 max-h-96"
+                    : "opacity-0 -translate-y-2 max-h-0 pointer-events-none"}
               `}
               >
                 <a href="/talent-intelligence" className="block py-2 hover:text-red-500">Talent Intelligence</a>
@@ -150,8 +170,8 @@ export default function Header() {
               </div>
             </div>
 
-            {/* 5. COMPANY (contact moved here) */}
-            <div 
+            {/* COMPANY */}
+            <div
               className="relative"
               onMouseEnter={() => handleEnter("company")}
               onMouseLeave={handleLeave}
@@ -161,11 +181,12 @@ export default function Header() {
                 <Arrow isOpen={openMenu === "company"} />
               </button>
 
-              <div className={`absolute left-0 mt-2 bg-white shadow-lg rounded p-4 w-44 
-                transition-all duration-300 origin-top
-                ${openMenu === "company"
-                  ? "opacity-100 translate-y-0 max-h-52"
-                  : "opacity-0 -translate-y-2 max-h-0 pointer-events-none"}
+              <div
+                className={`absolute left-0 mt-2 bg-white shadow-lg rounded p-4 w-44
+                  transition-all duration-300 origin-top
+                  ${openMenu === "company"
+                    ? "opacity-100 translate-y-0 max-h-52"
+                    : "opacity-0 -translate-y-2 max-h-0 pointer-events-none"}
               `}
               >
                 <a href="/about" className="block py-2 hover:text-red-500">About Us</a>
@@ -196,43 +217,51 @@ export default function Header() {
         >
           <div className="flex flex-col px-6 gap-4 font-medium text-[#0e355d] text-sm">
 
-            {/* 1. WHY US */}
+            {/* WHY US */}
             <a href="/#whyus" className="hover:text-red-500">Why Us</a>
 
-            {/* 2. TECH */}
+            {/* TECH */}
             <div>
-              <button 
-                onClick={() => setOpenMenu(openMenu === "tech-mobile" ? null : "tech-mobile")}
+              <button
+                onClick={() =>
+                  setOpenMenu(openMenu === "tech-mobile" ? null : "tech-mobile")
+                }
                 className="hover:text-red-500 flex items-center gap-1 w-full text-left"
               >
                 Technology Expertise
                 <Arrow isOpen={openMenu === "tech-mobile"} />
               </button>
 
-              <div className={`
-                overflow-hidden transition-all duration-300 pl-4
-                ${openMenu === "tech-mobile" ? "max-h-80 mt-2" : "max-h-0"}
-              `}>
+              <div
+                className={`
+                  overflow-hidden transition-all duration-300 pl-4
+                  ${openMenu === "tech-mobile" ? "max-h-80 mt-2" : "max-h-0"}
+                `}
+              >
                 <a href="/data/data-modernization" className="block py-2 hover:text-red-500">Data Modernization</a>
                 <a href="/data/aritifical-intelligence" className="block py-2 hover:text-red-500">Aritifical Intelligence</a>
                 <a href="/data/ai-powered-operations" className="block py-2 hover:text-red-500">AI powerd opertaion</a>
               </div>
             </div>
 
-            {/* 3. DOMAIN */}
+            {/* DOMAIN */}
             <div>
-              <button 
-                onClick={() => setOpenMenu(openMenu === "domain-mobile" ? null : "domain-mobile")}
+              <button
+                onClick={() =>
+                  setOpenMenu(openMenu === "domain-mobile" ? null : "domain-mobile")
+                }
                 className="hover:text-red-500 flex items-center gap-1 w-full text-left"
               >
                 Domain
                 <Arrow isOpen={openMenu === "domain-mobile"} />
               </button>
 
-              <div className={`
-                overflow-hidden transition-all duration-300 pl-4
-                ${openMenu === "domain-mobile" ? "max-h-96 mt-2" : "max-h-0"}
-              `}>
+              <div
+                className={`
+                  overflow-hidden transition-all duration-300 pl-4
+                  ${openMenu === "domain-mobile" ? "max-h-96 mt-2" : "max-h-0"}
+                `}
+              >
                 <a href="/case-study/case1" className="block py-2">IT Services & Digital Engineering</a>
                 <a href="/case-study/case2" className="block py-2">Automotive Engineering</a>
                 <a href="/case-study/case3" className="block py-2">Aerospace & Defence</a>
@@ -242,20 +271,24 @@ export default function Header() {
               </div>
             </div>
 
-            {/* 4. SERVICES */}
+            {/* SERVICES */}
             <div>
-              <button 
-                onClick={() => setOpenMenu(openMenu === "services-mobile" ? null : "services-mobile")}
+              <button
+                onClick={() =>
+                  setOpenMenu(openMenu === "services-mobile" ? null : "services-mobile")
+                }
                 className="hover:text-red-500 flex items-center gap-1 w-full text-left"
               >
                 Services
                 <Arrow isOpen={openMenu === "services-mobile"} />
               </button>
 
-              <div className={`
-                overflow-hidden transition-all duration-300 pl-4
-                ${openMenu === "services-mobile" ? "max-h-96 mt-2" : "max-h-0"}
-              `}>
+              <div
+                className={`
+                  overflow-hidden transition-all duration-300 pl-4
+                  ${openMenu === "services-mobile" ? "max-h-96 mt-2" : "max-h-0"}
+                `}
+              >
                 <a href="/talent-intelligence" className="block py-2">Talent Intelligence</a>
                 <a href="/talent-acquisition" className="block py-2">Talent Acquisition</a>
                 <a href="/global-peo-service" className="block py-2">Global PEO Service</a>
@@ -264,20 +297,24 @@ export default function Header() {
               </div>
             </div>
 
-            {/* 5. COMPANY */}
+            {/* COMPANY */}
             <div>
-              <button 
-                onClick={() => setOpenMenu(openMenu === "company-mobile" ? null : "company-mobile")}
+              <button
+                onClick={() =>
+                  setOpenMenu(openMenu === "company-mobile" ? null : "company-mobile")
+                }
                 className="hover:text-red-500 flex items-center gap-1 w-full text-left"
               >
                 Company
                 <Arrow isOpen={openMenu === "company-mobile"} />
               </button>
 
-              <div className={`
-                overflow-hidden transition-all duration-300 pl-4
-                ${openMenu === "company-mobile" ? "max-h-60 mt-2" : "max-h-0"}
-              `}>
+              <div
+                className={`
+                  overflow-hidden transition-all duration-300 pl-4
+                  ${openMenu === "company-mobile" ? "max-h-60 mt-2" : "max-h-0"}
+                `}
+              >
                 <a href="/about" className="block py-2">About Us</a>
                 <a href="/careers" className="block py-2">Careers</a>
                 <a href="/blog" className="block py-2">Blog</a>

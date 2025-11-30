@@ -8,7 +8,6 @@ import SlideUp from "@/components/SlideUp";
 export default function AboutUs() {
   return (
     <section className="max-w-7xl mx-auto px-6 py-20">
-
       <div className="text-center mb-12">
         <SlideUp>
           <h2 className="text-[2.5rem] font-extralight text-[#0e355d]">About Us</h2>
@@ -20,7 +19,6 @@ export default function AboutUs() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-
         <div className="flex justify-center md:justify-start">
           <Lottie
             animationData={officeAnimation}
@@ -63,7 +61,6 @@ export default function AboutUs() {
             <YellowButton text="Know More" href="/about" />
           </SlideUp>
         </div>
-
       </div>
     </section>
   );

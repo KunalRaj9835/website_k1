@@ -106,7 +106,7 @@ export default function Page() {
        <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0">
   <SideBySideCard
     title="Data maturity assessment"
-    text="Evaluate current data capabilities, identify gaps, and determine readiness for large-scale transformation and AI adoption."
+    text="Evaluate current data capabilities, identify gaps, and determine readiness for large scale transformation and AI adoption."
     image="/pic/Data maturity assessment.png"
     color="#ffffff"
   />
@@ -120,7 +120,7 @@ export default function Page() {
 
   <SideBySideCard
     title="Enterprise data architecture"
-    text="Blueprint future-ready architecture including data lakes, warehouses, lakehouses, and integration frameworks."
+    text="Blueprint future ready architecture including data lakes, warehouses, lakehouses, and integration frameworks."
     image="/pic/Enterprise data architecture.png"
     color="#eaeaea"
   />

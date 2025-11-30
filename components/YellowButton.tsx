@@ -1,6 +1,11 @@
 import Link from "next/link";
 
-export default function YellowButton({ text, href }) {
+interface YellowButtonProps {
+  text: string;
+  href: string;
+}
+
+export default function YellowButton({ text, href }: YellowButtonProps) {
   return (
     <Link
       href={href}

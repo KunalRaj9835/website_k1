@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import PhoneInput from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';
 import { getCountryCallingCode } from 'react-phone-number-input';
-
+import Footer from '@/components/Footer';
 interface FormData {
   name: string;
   email: string;
@@ -163,6 +163,7 @@ export default function ContactPage() {
   };
 
   return (
+    <div>
     <div className="min-h-screen bg-white">
       
       <div className="relative py-20">
@@ -260,33 +261,37 @@ export default function ContactPage() {
                   <label className="block text-sm text-gray-700 mb-2">
                     Phone Number <span className="text-red-500">*</span>
                   </label>
-                  <div className="flex gap-2">
-                    <PhoneInput
-                      international={false}
-                      withCountryCallingCode={false}
-                      defaultCountry="IN"
-                      country={selectedCountry}
-                      onCountryChange={setSelectedCountry}
-                      value=""
-                      onChange={() => {}}
-                      className="w-16"
-                      countrySelectProps={{
-                        className: "border border-gray-300 rounded-md px-2 py-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      }}
-                      numberInputProps={{
-                        style: { display: 'none' }
-                      }}
-                    />
-                    <input
-                      type="text"
-                      value={phoneInput}
-                      onChange={handlePhoneInputChange}
-                      onBlur={handlePhoneBlur}
-                      placeholder="Enter 10 digit number"
-                      maxLength={10}
-                      className="flex-1 px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    />
-                  </div>
+                  <div className="flex gap-2 items-center">
+  <div className="shrink-0">
+    <PhoneInput
+      international={false}
+      withCountryCallingCode={false}
+      defaultCountry="IN"
+      country={selectedCountry}
+      onCountryChange={setSelectedCountry}
+      value=""
+      onChange={() => {}}
+      countrySelectProps={{
+        className:
+          "border border-gray-300 rounded-md px-2 py-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+      }}
+      numberInputProps={{
+        style: { display: 'none' }
+      }}
+    />
+  </div>
+
+  <input
+    type="text"
+    value={phoneInput}
+    onChange={handlePhoneInputChange}
+    onBlur={handlePhoneBlur}
+    placeholder="Enter 10 digit number"
+    maxLength={10}
+    className="flex-1 min-w-0 px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+  />
+</div>
+
                   {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone}</p>}
                 </div>
 
@@ -374,6 +379,8 @@ export default function ContactPage() {
           </div>
         </div>
       </div>
+    </div>
+    <Footer/>
     </div>
   );
 }

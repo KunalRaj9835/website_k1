@@ -103,7 +103,7 @@ export default function Page() {
       {/* -------------------------------------------------- */}
       {/* CARD GRID */}
       {/* -------------------------------------------------- */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0">
+       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 auto-rows-fr">
   <SideBySideCard
     title="Legacy platform assessment"
     text="Evaluate technical debt, performance gaps, and modernization opportunities to determine the fastest migration path."
@@ -132,6 +132,7 @@ export default function Page() {
     color="#d6d7d9"
   />
 </div>
+
 
     
 

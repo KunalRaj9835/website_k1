@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import BlogCard from "@/components/BlogCard";
 import SolutionMiniCard from "@/components/SolutionMiniCard";
 import ExlCard from "@/components/ExlCard";
-
+import Link from "next/link";
 export default function DataAIPage() {
   const blogData = [
     {
@@ -80,42 +80,46 @@ export default function DataAIPage() {
               Transforming enterprises through AI-driven insights, advanced data engineering, and intelligent automation powered by unified, high-quality data.
             </p>
 
-            <button className="mt-8 px-6 py-3 border border-red-500 text-red-500 rounded-md hover:bg-red-500 hover:text-black transition">
-              Request a demo →
-            </button>
+            
+<Link href="/contact-us">
+  <button className="mt-8 px-6 py-3 border border-red-500 text-red-500 rounded-md hover:bg-red-500 hover:text-black transition">
+    Request a demo →
+  </button>
+</Link>
           </div>
         </div>
       </section>
 
       {/* ================= TRUE CAPABILITY ================= */}
       <section className="w-full py-20 bg-white">
-        <div className="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-14 items-center ml-40">
-          
-          <div>
-            <h2 className="text-4xl font-extralight mb-6">
-              Unlock the true potential of your enterprise data
-            </h2>
+  <div className="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-14 items-center">
 
-            <p className="text-gray-600 leading-relaxed font-light">
-              Most organizations face silos, unstructured information, and slow data workflows. 
-              A modern AI-native foundation enables seamless insights, automation, and faster decision-making 
-              across the enterprise.
-            </p>
-          </div>
+    <div>
+      <h2 className="text-4xl font-extralight mb-6">
+        Unlock the true potential of your enterprise data
+      </h2>
 
-          <div className="rounded-xl overflow-hidden shadow-lg w-full h-64 md:h-80 ml-30">
-            <iframe
-              className="w-full h-full"
-              src="https://www.youtube.com/embed/VIDEO_ID_HERE"
-              title="YouTube video"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
-          </div>
+      <p className="text-gray-600 leading-relaxed font-light">
+        Most organizations face silos, unstructured information, and slow data workflows. 
+        A modern AI-native foundation enables seamless insights, automation, and faster decision-making 
+        across the enterprise.
+      </p>
+    </div>
 
-        </div>
-      </section>
+    <div className="rounded-xl overflow-hidden shadow-lg w-full h-64 md:h-80">
+      <iframe
+        className="w-full h-full"
+        src="https://www.youtube.com/embed/VIDEO_ID_HERE"
+        title="YouTube video"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      ></iframe>
+    </div>
+
+  </div>
+</section>
+
 
       {/* ================= MODULAR APPROACH ================= */}
       <section className="w-full py-20 bg-white">

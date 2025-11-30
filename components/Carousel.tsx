@@ -5,44 +5,52 @@ import useEmblaCarousel from "embla-carousel-react";
 import SlideUp from "@/components/SlideUp";
 import ChargingButton from "./ChargingButton";
 
+interface SlideItem {
+  id: number;
+  title: string;
+  text: string;
+  bg: string;
+  href: string;
+  gifPosition?: string;
+}
 
 export default function Carousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
-  const [selectedIndex, setSelectedIndex] = useState(0);
-  const [progress, setProgress] = useState(0);
 
- const SLIDES = [
-  {
-    id: 1,
-    title: "Introduce to Keptel",
-    text: "Transforming enterprises through AI-driven insights, advanced data engineering, and intelligent automation powered by unified, high-quality data.",
-    bg: "ball.gif",
-    href: "/banner/banner7",
-    gifPosition: "right",
-  },
-  {
-    id: 2,
-    title: "Clean, monetize, and power AI with your data",
-    text: "ensure data quality through cleaning, generate revenue through monetization, and enable intelligent automation with AI-ready pipelines.",
-    bg: "ai.gif",
-    href: "/banner/banner11",
-  },
-  {
-    id: 3,
-    title: "A proven leader in AI innovation and data modernization",
-    text: "Keptel recognized for its excellence in AI engineering, scalable data platforms, and enterprise-wide modernization solutions across industries.",
-    bg: "s.jpeg",
-    href: "/banner/banner9",
-  },
-  {
-    id: 4,
-    title: "Unlock the power of AI with Keptel.AI",
-    text: "Keptel.AI unifies data, automation, and intelligence into a single seamless ecosystem. From raw, fragmented data to enterprise-grade AI deployment, Keptel accelerates every step of the journey.",
-    bg: "lightr.jpeg",
-    href: "/banner/banner10",
-  },
-];
+  const [selectedIndex, setSelectedIndex] = useState<number>(0);
+  const [progress, setProgress] = useState<number>(0);
 
+  const SLIDES: SlideItem[] = [
+    {
+      id: 1,
+      title: "Introduce to Keptel",
+      text: "Transforming enterprises through AI-driven insights, advanced data engineering, and intelligent automation powered by unified, high-quality data.",
+      bg: "ball.gif",
+      href: "/banner/banner7",
+      gifPosition: "right",
+    },
+    {
+      id: 2,
+      title: "Clean, monetize, and power AI with your data",
+      text: "ensure data quality through cleaning, generate revenue through monetization, and enable intelligent automation with AI-ready pipelines.",
+      bg: "ai.gif",
+      href: "/banner/banner11",
+    },
+    {
+      id: 3,
+      title: "A proven leader in AI innovation and data modernization",
+      text: "Keptel recognized for its excellence in AI engineering, scalable data platforms, and enterprise-wide modernization solutions across industries.",
+      bg: "s.jpeg",
+      href: "/banner/banner9",
+    },
+    {
+      id: 4,
+      title: "Unlock the power of AI with Keptel.AI",
+      text: "Keptel.AI unifies data, automation, and intelligence into a single seamless ecosystem. From raw, fragmented data to enterprise-grade AI deployment, Keptel accelerates every step of the journey.",
+      bg: "lightr.jpeg",
+      href: "/banner/banner10",
+    },
+  ];
 
   const autoplay = useCallback(() => {
     if (!emblaApi) return;
@@ -52,29 +60,34 @@ export default function Carousel() {
 
   useEffect(() => {
     if (!emblaApi) return;
+
     setProgress(0);
-    const interval = setInterval(autoplay, 5000);
+
+    const autoInterval = setInterval(autoplay, 5000);
+
     const progressInterval = setInterval(() => {
       setProgress((prev) => (prev >= 100 ? 0 : prev + 2));
     }, 100);
 
     return () => {
-      clearInterval(interval);
+      clearInterval(autoInterval);
       clearInterval(progressInterval);
     };
   }, [emblaApi, autoplay, selectedIndex]);
 
   useEffect(() => {
     if (!emblaApi) return;
+
     const onSelect = () => setSelectedIndex(emblaApi.selectedScrollSnap());
     emblaApi.on("select", onSelect);
     onSelect();
   }, [emblaApi]);
 
-  const isGif = (url) => url.toLowerCase().endsWith(".gif");
+  const isGif = (url: string): boolean =>
+    url.toLowerCase().endsWith(".gif");
 
   return (
-    <div className={` relative overflow-hidden h-[95vh]`}>
+    <div className={`relative overflow-hidden h-[95vh]`}>
       <div className="overflow-hidden h-full" ref={emblaRef}>
         <div className="flex h-full">
           {SLIDES.map((slide) => {
@@ -179,7 +192,7 @@ export default function Carousel() {
                       </SlideUp>
 
                       <SlideUp>
-                        <p className="text-xl leading-relaxed mb-8 font-light ">
+                        <p className="text-xl leading-relaxed mb-8 font-light">
                           {slide.text}
                         </p>
                       </SlideUp>

@@ -31,14 +31,15 @@ export default function KeptelAIPage() {
           </div>
 
           {/* RIGHT GRID */}
-          <div className="grid grid-cols-2 gap-6">
-            <Box title="100+ AI accelerators" text="to optimize and automate operations end-to-end." />
-            <Box title="AI agents tailored by industry" text="built for automotive, aerospace, IT, and automation." />
-            <Box title="Open cloud architecture" text="smooth integration with AWS, Azure, GCP, and Fabric." />
-            <Box title="Full observability dashboards" text="track cost, model drift, compliance, and performance." />
-            <Box title="5+ years of AI expertise" text="delivering scalable, production-grade AI systems across global industries." />
-            <Box title="Unified data-to-AI pipeline" text="from ingestion to deployment, ensuring your data becomes AI-ready with zero friction." />
-          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+  <Box title="100+ AI accelerators" text="to optimize and automate operations end-to-end." />
+  <Box title="AI agents tailored by industry" text="built for automotive, aerospace, IT, and automation." />
+  <Box title="Open cloud architecture" text="smooth integration with AWS, Azure, GCP, and Fabric." />
+  <Box title="Full observability dashboards" text="track cost, model drift, compliance, and performance." />
+  <Box title="5+ years of AI expertise" text="delivering scalable, production-grade AI systems across global industries." />
+  <Box title="Unified data-to-AI pipeline" text="from ingestion to deployment, ensuring your data becomes AI-ready with zero friction." />
+</div>
+
 
         </div>
       </section>

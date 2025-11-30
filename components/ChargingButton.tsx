@@ -1,6 +1,11 @@
 import Link from "next/link";
 
-export default function ChargingButton({ text, href }) {
+interface ChargingButtonProps {
+  text: string;
+  href: string;
+}
+
+export default function ChargingButton({ text, href }: ChargingButtonProps) {
   return (
     <Link
       href={href}
@@ -16,18 +21,16 @@ export default function ChargingButton({ text, href }) {
         hover:-translate-y-1
       "
     >
-
       <span
         className="
           absolute inset-0 
           bg-red-600
-          -translate-x-full        /* start from left side */
+          -translate-x-full
           transition-transform duration-500
           group-hover:translate-x-0
         "
       />
 
-      {/* Text */}
       <span
         className="
           relative z-10 

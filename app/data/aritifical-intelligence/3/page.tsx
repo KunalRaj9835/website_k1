@@ -104,7 +104,7 @@ export default function Page() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0">
         <SideBySideCard
   title="Customer segmentation"
-  text="Build precise, behaviour-driven segments powered by predictive analytics."
+  text="Build precise, behaviour driven segments powered by predictive analytics."
   image="/pic/Customer segmentation.png"
   color="#ffffff"
 />

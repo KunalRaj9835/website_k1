@@ -103,11 +103,12 @@ export default function Page() {
       {/* CARD GRID */}
       {/* -------------------------------------------------- */}
 
-        <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0 auto-rows-fr">
+
 
           <SideBySideCard
             title="Enterprise data strategy"
-            text="Evaluate current data capabilities and build a strategic blueprint that aligns business priorities with governance, AI adoption, and scalable future-ready platforms."
+            text="Evaluate current data capabilities and build a strategic blueprint that aligns the business priorities with governance, AI adoption, and scalable future-ready platforms."
             image="/pic/Enterprise data strategy.png"
             color="#ffffff"
             href="/data/data-modernization/1"
@@ -115,7 +116,7 @@ export default function Page() {
 
           <SideBySideCard
             title="Data platform modernization"
-            text="Transform legacy systems and modernize cloud ecosystems with automated migration, lakehouse frameworks, and intelligent orchestration across AWS, Azure, GCP, Databricks, and Snowflake."
+           text = "Transform legacy environments and modernize cloud ecosystems through automated migration, lakehouse architectures, and intelligent orchestration across AWS, Azure, GCP, Databricks, and Snowflake."
             image="/pic/Data platform modernization1.png"
             color="#f9f9f9"
             href="/data/data-modernization/2"
@@ -123,7 +124,7 @@ export default function Page() {
 
           <SideBySideCard
             title="Data management"
-            text="Establish robust governance, quality, security, and privacy processes supported by automated controls—creating trusted, high-performance data foundations for AI and analytics."
+            text="Establish robust governance, quality, security, and privacy processes supported by automated controls creating trusted, high performance data foundations for AI and analytics."
             image="/pic/Data management.png"
             color="#eaeaea"
             href="/data/data-modernization/3"
@@ -131,7 +132,7 @@ export default function Page() {
 
           <SideBySideCard
             title="Managed services and data operations"
-            text="Enable uninterrupted data operations through continuous monitoring, optimization, and lifecycle management, ensuring reliable pipelines while your teams focus on innovation."
+            text="Enable seamless data operations with continuous monitoring, optimization, and lifecycle management delivering reliable pipelines that let your teams stay focused on innovation."
             image="/pic/Managed services and data operations.png"
             color="#d6d7d9"
             href="/data/data-modernization/4"

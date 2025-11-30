@@ -107,7 +107,7 @@ export default function Page() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0">
   <SideBySideCard
     title="Advanced analytics"
-    text="Leverage predictive and prescriptive models to uncover trends, behaviours, and high-value opportunities."
+    text="Leverage predictive and prescriptive models to uncover trends, behaviours, and high value opportunities."
     image="/pic/Advanced analytics.png"
     color="#ffffff"
   />
@@ -121,7 +121,7 @@ export default function Page() {
 
   <SideBySideCard
     title="Real-time intelligence"
-    text="Transform live data into actionable insights with streaming analytics and real-time dashboards."
+    text="Transform live data into actionable insights with streaming analytics and real time dashboards."
     image="/pic/Real-time intelligence.png"
     color="#eaeaea"
   />

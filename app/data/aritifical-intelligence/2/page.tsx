@@ -105,7 +105,7 @@ export default function Page() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0">
           <SideBySideCard
   title="Automated governance"
-  text="Apply enterprise-wide rules, access policies, and compliance controls with automation."
+  text="Apply enterprise wide rules, access policies, and compliance controls with automation."
   image="/pic/Automated governance1.png"
   color="#ffffff"
 />

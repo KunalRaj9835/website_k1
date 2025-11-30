@@ -112,7 +112,7 @@ export default function Page() {
 
 <SideBySideCard
   title="AI-assisted service"
-  text="Enable agents and customers with real-time recommendations and automated resolutions."
+  text="Enable agents and customers with real time recommendations and automated resolutions."
   image="/pic/AI-assisted service.png"
   color="#f9f9f9"
 />

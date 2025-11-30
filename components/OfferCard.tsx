@@ -1,6 +1,13 @@
 import Link from "next/link";
 
-export default function OfferCard({ icon, title, description, href }) {
+interface OfferCardProps {
+  icon: string;
+  title: string;
+  description: string;
+  href: string;
+}
+
+export default function OfferCard({ icon, title, description, href }: OfferCardProps) {
   return (
     <Link href={href}>
       <div

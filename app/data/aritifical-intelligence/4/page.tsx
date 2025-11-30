@@ -105,14 +105,14 @@ export default function Page() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-0">
   <SideBySideCard
     title="RAG & enterprise search systems"
-    text="Enable accurate, context-rich answers using retrieval-augmented generation tailored to your data."
+    text="Enable accurate, context rich answers using retrieval-augmented generation tailored to your data."
     image="/pic/RAG & enterprise search systems.png"
     color="#ffffff"
   />
 
   <SideBySideCard
     title="Custom model development"
-    text="Train or fine-tune LLMs specifically for your workflows, industries, and proprietary datasets."
+    text="Train or fine tune LLMs specifically for your workflows, industries, and proprietary datasets."
     image="/pic/Custom model development.png"
     color="#f9f9f9"
   />

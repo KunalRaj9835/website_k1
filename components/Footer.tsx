@@ -3,7 +3,6 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="bg-[#0e355d] text-gray-200 pt-16 pb-8 px-6 text-sm">
-
       <div className="max-w-7xl mx-auto">
 
         <hr className="border-gray-600 mb-8" />
@@ -20,18 +19,19 @@ export default function Footer() {
             />
           </div>
 
-          {/* New York Office */}
+          {/* Office */}
           <div>
             <h3 className="font-semibold text-base mb-2">Hyderabad , India</h3>
             <p className="leading-relaxed">
               767, 2nd floor, Tngos colony,
-Gachibowli, Hyderabad
-Email: info@kepteltech.com
-Ph : +91 8884344442
+              Gachibowli, Hyderabad
+              <br />
+              Email: info@kepteltech.com
+              <br />
+              Ph : +91 8884344442
             </p>
           </div>
 
-          
         </div>
 
         {/* Disclaimer */}

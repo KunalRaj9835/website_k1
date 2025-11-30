@@ -108,7 +108,7 @@ export default function Page() {
 
          <SideBySideCard
   title="Analytics & AI"
-  text="Unlock enterprise-wide intelligence by transforming raw data into clear insights through advanced analytics, machine learning, and scalable AI solutions."
+  text="Unlock enterprise wide intelligence by transforming raw data into clear insights through advanced analytics, machine learning, and scalable AI solutions."
   image="/pic/Analytics & AI.png"
   color="#ffffff"
   href="/data/aritifical-intelligence/1"
@@ -116,7 +116,7 @@ export default function Page() {
 
 <SideBySideCard
   title="Data management"
-  text="Organize, standardize, and govern data across your ecosystem with modern platforms and practices that ensure reliability, accessibility, and enterprise-wide trust."
+  text="Organize, standardize, and govern data across your ecosystem with modern platforms and practices that ensure reliability, accessibility, and enterprise wide trust."
   image="/pic/Data management.png"
   color="#f9f9f9"
   href="/data/aritifical-intelligence/2"

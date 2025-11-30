@@ -1,17 +1,18 @@
 "use client";
+
 import { useState } from "react";
 import Link from "next/link";
 
 export default function FooterNewsletter() {
-  const [email, setEmail] = useState("");
-  const [msg, setMsg] = useState("");
-  const [msgType, setMsgType] = useState(""); // success | error
+  const [email, setEmail] = useState<string>("");
+  const [msg, setMsg] = useState<string>("");
+  const [msgType, setMsgType] = useState<"success" | "error" | "">("");
 
-  const isValidEmail = (value) => {
+  const isValidEmail = (value: string): boolean => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
   };
 
-  const handleSubscribe = async () => {
+  const handleSubscribe = async (): Promise<void> => {
     setMsg("");
     setMsgType("");
 
@@ -31,7 +32,7 @@ export default function FooterNewsletter() {
         }
       );
 
-      const data = await res.json();
+      const data: { message?: string } = await res.json();
 
       if (res.status === 200) {
         setMsg("Subscribed successfully");
@@ -65,6 +66,7 @@ export default function FooterNewsletter() {
 
         <div className="flex flex-col gap-3">
 
+          {/* Message Container */}
           <div className="h-10">
             {msg && (
               <div
@@ -79,14 +81,18 @@ export default function FooterNewsletter() {
             )}
           </div>
 
+          {/* Email Input */}
           <input
             type="email"
             placeholder="Email ID"
             className="w-full p-3 rounded-lg bg-white text-gray-700 outline-none text-sm"
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+              setEmail(e.target.value)
+            }
           />
 
+          {/* Submit Button */}
           <button
             onClick={handleSubscribe}
             className="inline-flex items-center justify-center bg-[#0e72b5] text-white font-medium w-full h-11 rounded-md transition-all duration-300 hover:bg-[#095c92] text-sm"

@@ -2,8 +2,16 @@
 
 import { useEffect, useRef, useState } from "react";
 
-export default function AnimationFadeUp({ children, className = "" }) {
-  const ref = useRef(null);
+interface AnimationFadeUpProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+export default function AnimationFadeUp({
+  children,
+  className = "",
+}: AnimationFadeUpProps) {
+  const ref = useRef<HTMLDivElement | null>(null);
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {

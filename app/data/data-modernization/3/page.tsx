@@ -120,14 +120,14 @@ export default function Page() {
 
 <SideBySideCard
   title="Privacy, security & compliance"
-  text="Implement enterprise-grade controls, encryption, masking, and privacy frameworks that protect sensitive data."
+  text="Implement enterprise grade controls, encryption, masking, and privacy frameworks that protect sensitive data."
   image="/pic/security & compliance.png"
   color="#eaeaea"
 />
 
 <SideBySideCard
   title="Data quality engineering"
-  text="Enhance reliability with AI-driven anomaly detection, scoring models, and automated remediation workflows."
+  text="Enhance reliability with AI driven anomaly detection, scoring models, and automated remediation workflows."
   image="/pic/Data quality engineering1.png"
   color="#d6d7d9"
 />
