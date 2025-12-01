@@ -37,13 +37,30 @@ export default function Footer() {
         {/* Disclaimer */}
         <div className="mt-12 text-xs text-gray-300 leading-relaxed">
           <span className="font-semibold">Disclaimer:</span> Keptel does not charge
-          any money from job seekers. Report suspicious activities to legal@keptel.com.
+          any money from job seekers. Report suspicious activities to info@kepteltech.com.
         </div>
 
-        {/* Copyright */}
-        <p className="text-center text-xs mt-8">
-          © {new Date().getFullYear()} Keptel Analytics Space. All Rights Reserved.
-        </p>
+
+<div className="flex flex-col sm:flex-row gap-2 sm:gap-8 lg:gap-22 justify-center items-center mt-6">
+  <p className="text-xs">
+    © 2025 Developed by{" "}
+    <Link
+      href="https://www.conzuragroups.com/"
+      className="underline hover:text-red-600 transition"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Conzura Soft Solutions
+    </Link>
+  </p>
+
+  <p className="text-xs">
+    © {new Date().getFullYear()} Keptel Analytics Space. All Rights Reserved.
+  </p>
+</div>
+
+
+
 
       </div>
     </footer>

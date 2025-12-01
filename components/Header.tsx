@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useRef } from "react";
 import { Menu, X } from "lucide-react";
-
+import Image from "next/image";
 interface ArrowProps {
   isOpen: boolean;
 }
@@ -63,16 +63,34 @@ export default function Header() {
           ${showTop ? "max-h-16 opacity-100" : "max-h-0 opacity-0"}
         `}
       >
-        <div className="max-w-7xl mx-auto px-6 py-3 flex justify-end gap-6 text-sm text-gray-700">
-          <div className="flex items-center gap-2">
-            <span>📞</span>
-            <span>+918884344442</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <span>✉️</span>
-            <span>info@kepteltech.com</span>
-          </div>
-        </div>
+
+
+<div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-end gap-6 text-sm text-gray-700">
+
+  <div className="flex items-center gap-2">
+    <Image
+      src="/header/phone2.svg"
+      alt="phone"
+      width={20}
+      height={20}
+    />
+    <span>+918884344442</span>
+  </div>
+
+  <div className="flex items-center gap-2">
+    <Image
+      src="/header/email.svg"
+      alt="email"
+      width={20}
+      height={20}
+    />
+    <span>info@kepteltech.com</span>
+  </div>
+
+</div>
+
+
+
       </div>
 
       {/* Navigation */}
@@ -80,7 +98,7 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
 
           {/* Logo */}
-          <a href="/" className="flex items-center">
+          <a href="/" className="flex items-center -ml-12">
             <img src="/logo.svg" alt="Logo" className="h-28 w-auto" />
           </a>
 
