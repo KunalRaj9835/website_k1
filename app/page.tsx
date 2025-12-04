@@ -11,6 +11,7 @@ import OurSolutions from "@/components/OurSolutions";
 export default function Home() {
   return (
     <main>
+      <div id="top"></div>
   <Carousel />
   <AboutUs />
   {/*

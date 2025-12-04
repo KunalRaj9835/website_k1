@@ -20,17 +20,20 @@ export default function CallToAction() {
           <div className="h-1 w-20 bg-red-400 mx-auto mt-3 rounded-full"></div>
         </div>
 
-        {/* Infinite Logo Carousel */}
+        {/* Infinite Logo Carousel — same logos on ALL screens */}
         <div className="w-full overflow-hidden py-6">
           <div className="flex gap-12 animate-scroll whitespace-nowrap">
-            {logos.concat(logos).map((logo, i) => (
+
+            {/* Repeat the full array twice for infinite effect */}
+            {[...logos, ...logos].map((logo, i) => (
               <img
                 key={i}
                 src={logo}
                 alt="Client Logo"
-                className="h-40 w-40 object-contain opacity-80 hover:opacity-100 transition"
+                className="h-24 w-24 sm:h-32 sm:w-32 md:h-40 md:w-40 object-contain opacity-80 hover:opacity-100 transition"
               />
             ))}
+
           </div>
         </div>
 

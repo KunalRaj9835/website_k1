@@ -174,6 +174,7 @@ export default function DataAIPage() {
               loop
               muted
               playsInline
+              controls
             />
           </div>
 

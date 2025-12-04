@@ -5,6 +5,7 @@ import PhoneInput from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';
 import { getCountryCallingCode } from 'react-phone-number-input';
 import Footer from '@/components/Footer';
+
 interface FormData {
   name: string;
   email: string;
@@ -12,6 +13,10 @@ interface FormData {
   company: string;
   message: string;
 }
+
+const MAX_LENGTHS = {
+  message: 100
+};
 
 interface FormErrors {
   name?: string;
@@ -48,14 +53,10 @@ export default function ContactPage() {
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
       newErrors.email = 'Email is invalid';
     }
-    if (!formData.phone) {
+    if (!formData.phone.trim()) {
       newErrors.phone = 'Phone number is required';
-    } else {
-      const digitsOnly = formData.phone.replace(/\D/g, '');
-      if (digitsOnly.length !== 10) {
-        newErrors.phone = 'Phone number must be exactly 10 digits';
-      }
     }
+
     if (!formData.company.trim()) newErrors.company = 'Company name is required';
     if (!formData.message.trim()) newErrors.message = 'Message is required';
     
@@ -133,6 +134,12 @@ export default function ContactPage() {
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
+    const maxLength = MAX_LENGTHS[name as keyof typeof MAX_LENGTHS];
+    
+    if (maxLength && value.length > maxLength) {
+      return;
+    }
+    
     setFormData(prev => ({ ...prev, [name]: value }));
 
     if (errors[name as keyof FormErrors]) {
@@ -142,23 +149,20 @@ export default function ContactPage() {
 
   const handlePhoneInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
-    // Extract only digits and limit to 10
-    const digitsOnly = value.replace(/\D/g, '').slice(0, 10);
+    const digitsOnly = value.replace(/\D/g, '');
     setPhoneInput(digitsOnly);
     setFormData(prev => ({ ...prev, phone: digitsOnly }));
-    
+
     if (errors.phone) {
       setErrors(prev => ({ ...prev, phone: undefined }));
     }
   };
 
-  // Handle autofill - extract last 10 digits from any format
   const handlePhoneBlur = () => {
     if (phoneInput) {
       const digitsOnly = phoneInput.replace(/\D/g, '');
-      const last10Digits = digitsOnly.slice(-10);
-      setPhoneInput(last10Digits);
-      setFormData(prev => ({ ...prev, phone: last10Digits }));
+      setPhoneInput(digitsOnly);
+      setFormData(prev => ({ ...prev, phone: digitsOnly }));
     }
   };
 
@@ -233,13 +237,16 @@ export default function ContactPage() {
                   <label className="block text-sm text-gray-700 mb-2">
                     Name <span className="text-red-500">*</span>
                   </label>
-                  <input
-                    type="text"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  />
+                  <div className="relative">
+                    <input
+                      type="text"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    />
+                    
+                  </div>
                   {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
                 </div>
 
@@ -247,13 +254,15 @@ export default function ContactPage() {
                   <label className="block text-sm text-gray-700 mb-2">
                     Email <span className="text-red-500">*</span>
                   </label>
-                  <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  />
+                  <div className="relative">
+                    <input
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    />
+                  </div>
                   {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
                 </div>
 
@@ -262,35 +271,34 @@ export default function ContactPage() {
                     Phone Number <span className="text-red-500">*</span>
                   </label>
                   <div className="flex gap-2 items-center">
-  <div className="shrink-0">
-    <PhoneInput
-      international={false}
-      withCountryCallingCode={false}
-      defaultCountry="IN"
-      country={selectedCountry}
-      onCountryChange={setSelectedCountry}
-      value=""
-      onChange={() => {}}
-      countrySelectProps={{
-        className:
-          "border border-gray-300 rounded-md px-2 py-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-      }}
-      numberInputProps={{
-        style: { display: 'none' }
-      }}
-    />
-  </div>
+                    <div className="shrink-0">
+                      <PhoneInput
+                        international={false}
+                        withCountryCallingCode={false}
+                        defaultCountry="IN"
+                        country={selectedCountry}
+                        onCountryChange={setSelectedCountry}
+                        value=""
+                        onChange={() => {}}
+                        countrySelectProps={{
+                          className:
+                            "border border-gray-300 rounded-md px-2 py-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        }}
+                        numberInputProps={{
+                          style: { display: 'none' }
+                        }}
+                      />
+                    </div>
 
-  <input
-    type="text"
-    value={phoneInput}
-    onChange={handlePhoneInputChange}
-    onBlur={handlePhoneBlur}
-    placeholder="Enter 10 digit number"
-    maxLength={10}
-    className="flex-1 min-w-0 px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-  />
-</div>
+                    <input
+                      type="text"
+                      value={phoneInput}
+                      onChange={handlePhoneInputChange}
+                      onBlur={handlePhoneBlur}
+                      placeholder="Enter phone number"
+                      className="flex-1 min-w-0 px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    />
+                  </div>
 
                   {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone}</p>}
                 </div>
@@ -299,13 +307,16 @@ export default function ContactPage() {
                   <label className="block text-sm text-gray-700 mb-2">
                     Company Name <span className="text-red-500">*</span>
                   </label>
-                  <input
-                    type="text"
-                    name="company"
-                    value={formData.company}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  />
+                  <div className="relative">
+                    <input
+                      type="text"
+                      name="company"
+                      value={formData.company}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    />
+
+                  </div>
                   {errors.company && <p className="text-red-500 text-sm mt-1">{errors.company}</p>}
                 </div>
 
@@ -313,13 +324,20 @@ export default function ContactPage() {
                   <label className="block text-sm text-gray-700 mb-2">
                     Comment or Message <span className="text-red-500">*</span>
                   </label>
-                  <textarea
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    rows={4}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
-                  />
+                  <div className="relative">
+                    <textarea
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      rows={4}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+                    />
+                    {formData.message.length < MAX_LENGTHS.message && (
+                      <div className="text-xs text-gray-400 mt-1 text-right">
+                        {formData.message.length}/{MAX_LENGTHS.message}
+                      </div>
+                    )}
+                  </div>
                   {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
                 </div>
 
@@ -332,22 +350,8 @@ export default function ContactPage() {
                     className="mt-1 h-5 w-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
                   />
                   <label htmlFor="recaptcha" className="text-sm text-gray-700">
-                    I'm not a robot
+                    I'm not a robot <span className="text-red-500">*</span>
                   </label>
-                </div>
-
-                <div className="h-12">
-                  {serverMsg && (
-                    <div
-                      className={`p-3 rounded-md text-sm h-full flex items-center ${
-                        serverMsgType === "success"
-                          ? "bg-green-100 text-green-800"
-                          : "bg-red-100 text-red-800"
-                      }`}
-                    >
-                      {serverMsg}
-                    </div>
-                  )}
                 </div>
 
                 <button
@@ -363,6 +367,40 @@ export default function ContactPage() {
           </div>
         </div>
       </div>
+
+      {/* Popup Notification */}
+      {serverMsg && (
+        <div className="fixed top-16 right-4 z-50 animate-slide-in">
+          <div
+            className={`min-w-[300px] max-w-md p-4 rounded-lg shadow-2xl flex items-start justify-between ${
+              serverMsgType === "success"
+                ? "bg-green-50 border-l-4 border-green-500"
+                : "bg-red-50 border-l-4 border-red-500"
+            }`}
+          >
+            <div className="flex items-start">
+              <span className={`text-2xl mr-3 ${
+                serverMsgType === "success" ? "text-green-500" : "text-red-500"
+              }`}>
+                {serverMsgType === "success" ? "✓" : "✕"}
+              </span>
+              <p className={`text-sm font-medium ${
+                serverMsgType === "success" ? "text-green-800" : "text-red-800"
+              }`}>
+                {serverMsg}
+              </p>
+            </div>
+            <button
+              onClick={() => setServerMsg("")}
+              className={`ml-4 text-xl font-bold hover:opacity-70 transition-opacity ${
+                serverMsgType === "success" ? "text-green-600" : "text-red-600"
+              }`}
+            >
+              ×
+            </button>
+          </div>
+        </div>
+      )}
 
       <div className="bg-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
