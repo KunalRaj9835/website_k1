@@ -3,6 +3,7 @@
 import { useEffect, useState, useRef } from "react";
 import { Menu, X } from "lucide-react";
 
+import { useRouter, usePathname } from "next/navigation";
 interface ArrowProps {
   isOpen: boolean;
 }
@@ -94,9 +95,23 @@ export default function Header() {
   const handleLeave = () => {
     closeTimeoutRef.current = setTimeout(() => setOpenMenu(null), 200);
   };
+const router = useRouter();
+  const pathname = usePathname();
 
   const handleLogoClick = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    // 1. If not on home → go to home
+    if (pathname !== "/") {
+      router.push("/");
+      return;
+    }
+
+    // 2. If on home → check scroll position
+    if (window.scrollY > 10) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+
+    // 3. If already at top → do nothing
   };
   const handleMobileNavigate = () => {
   setOpenMenu(null);        // closes dropdowns
@@ -130,17 +145,19 @@ export default function Header() {
 
             {activeCopy === "phone" && (
               <button
-                className="
-                  absolute top-0 left-0
-                  w-full h-full
-                  bg-black text-white text-xs 
-                  flex items-center justify-center
-                  rounded z-20
-                "
-                onClick={() => copyText("+918884344442")}
-              >
-                Copy
-              </button>
+  className="
+    absolute top-0 left-0
+    h-full
+    w-[calc(100%+20px)]
+    bg-black text-white text-xs 
+    flex items-center justify-center
+    rounded z-20
+  "
+  onClick={() => copyText("+918884344442")}
+>
+  Copy
+</button>
+
             )}
           </div>
 
@@ -160,10 +177,11 @@ export default function Header() {
               <button
                 className="
                   absolute top-0 left-0
-                  w-full h-full
-                  bg-black text-white text-xs 
-                  flex items-center justify-center 
-                  rounded z-20
+    h-full
+    w-[calc(100%+20px)]
+    bg-black text-white text-xs 
+    flex items-center justify-center
+    rounded z-20
                 "
                 onClick={() => copyText("info@kepteltech.com")}
               >
