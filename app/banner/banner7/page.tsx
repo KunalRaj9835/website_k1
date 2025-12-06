@@ -106,16 +106,18 @@ export default function DataAIPage() {
       </p>
     </div>
 
-    <div className="rounded-xl overflow-hidden shadow-lg w-full h-64 md:h-80">
-      <iframe
-        className="w-full h-full"
-        src="https://www.youtube.com/embed/VIDEO_ID_HERE"
-        title="YouTube video"
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-      ></iframe>
-    </div>
+<div className="rounded-xl overflow-hidden shadow-lg w-full h-64 md:h-80">
+  <video
+    className="w-full h-full object-cover"
+    src="/a.mp4"
+    autoPlay
+    loop
+    muted
+    playsInline
+    controls
+  />
+</div>
+
 
   </div>
 </section>
