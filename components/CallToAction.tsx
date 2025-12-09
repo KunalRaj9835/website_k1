@@ -3,7 +3,7 @@ export default function CallToAction() {
     "/client/amazon.svg",
     "/client/cocacola.svg",
     "/client/imax.svg",
-    "/client/Mercedesbenz.svg",
+    "/client/mercedesbenz.svg",
     "/client/samsung.svg",
     "/client/visa.svg",
   ];
