@@ -21,16 +21,20 @@ export default function Footer() {
 
           {/* Office */}
           <div>
-            <h3 className="font-semibold text-base mb-2">Hyderabad , India</h3>
-            <p className="leading-relaxed">
-              767, 2nd floor, Tngos colony,
-              Gachibowli, Hyderabad
-              <br />
-              Email: info@kepteltech.com
-              <br />
-              Ph : +91 8884344442
-            </p>
-          </div>
+  <h3 className="font-semibold text-base mb-2">Hyderabad, India</h3>
+  <p className="leading-relaxed">
+    Door No 1-60/8/A &amp; B, 3rd Floor, KNR Square,
+    <br />
+    Opp. ‘The Platina’, Gachibowli, Kondapur,
+    <br />
+    Hyderabad – 500032
+    <br />
+    Email: info@kepteltech.com
+    <br />
+    Ph: +91 8884344442
+  </p>
+</div>
+
 
         </div>
 
