@@ -25,7 +25,7 @@ export default function Footer() {
   <p className="leading-relaxed">
     Door No 1-60/8/A &amp; B, 3rd Floor, KNR Square,
     <br />
-    Opp. ‘The Platina’, Gachibowli, Kondapur,
+    Opp. The Platina , Gachibowli, Kondapur,
     <br />
     Hyderabad – 500032
     <br />
